@@ -77,8 +77,7 @@ comps['ProductCard'] = doc('Karta produktu', CHEAD, """
 <h3 class="pcName"><a class="pcLink" href="{{{{ href }}}}">{{{{ name }}}}</a></h3>
 
 <div class="pcBottom">
-<div class="pcAv AvailabilityView"><button class="{{{{ avCls }}}}" type="button"><span class="dot" aria-hidden="true"></span>{{{{ av }}}}</button>
-<div class="avPop" role="tooltip"><p><strong>{{{{ av }}}}</strong></p><sc-if value="{{{{ onStock }}}}" hint-placeholder-val="{{{{ true }}}}"><p>Osobní odběr: <span class="todo">{{{{ pickup }}}}</span></p><p>Doručení dopravcem: <span class="todo">{{{{ delivery }}}}</span></p></sc-if><sc-if value="{{{{ blue }}}}" hint-placeholder-val="{{{{ false }}}}"><p>Naskladníme do 5 pracovních dnů. <span class="todo">[OVĚŘIT lhůtu]</span></p></sc-if><a href="Doprava.dc.html">Doprava a platba</a></div></div>
+<div class="pcAv"><dc-import name="Availability" stock="{{{{ stock }}}}" text="{{{{ av }}}}" size="sm" pickup="{{{{ pickup }}}}" delivery="{{{{ delivery }}}}" hint-size="160px,20px"></dc-import></div>
 <div class="pcPrice"><div class="pm">{{{{ price }}}}</div><div class="ps">bez DPH · {{{{ priceVat }}}} s DPH</div></div>
 <div class="pcBuy AddToCartView">
 <div class="{{{{ qtyCls }}}}"><button type="button" aria-label="Snížit množství" disabled="{{{{ minDis }}}}" onClick="{{{{ dec }}}}">−</button><label><input inputmode="numeric" aria-label="Množství" size="{{{{ qtyLen }}}}" value="{{{{ qty }}}}" onChange="{{{{ setQty }}}}">{{{{ unit }}}}</label><button type="button" aria-label="Zvýšit množství" onClick="{{{{ inc }}}}">+</button></div>
@@ -97,7 +96,7 @@ class Component extends DCLogic {
   return {
    name:p.name, code:p.code, brand:p.brand||'', img:p.img||'', hasImg:!!p.img, noImg:!p.img, href:p.href||'Detail.dc.html', unit:p.unit||'ks',
    flags:(p.flags||[]).map((f)=>({t:f.t,cls:'pcFlag '+f.cls})),
-   av:p.av||'', blue:!!p.blue, onStock:!p.blue, avCls:'avBtn'+(p.blue?' blue':''),
+   av:p.av||'', stock:(p.stock==null?(p.blue?0:26):p.stock), blue:!!p.blue, onStock:!p.blue, avCls:'avBtn'+(p.blue?' blue':''),
    price:(p.from?'od ':'')+CZK(p.price), priceVat:(p.from?'od ':'')+CZK(p.price*VAT),
    hasPack:!!p.pack, noPack:!p.pack, packTxt:p.pack?p.pack+' ks':'',
    setPack:()=>{this.set(p.pack);this.setState({flash:true});clearTimeout(this.ft);this.ft=setTimeout(()=>this.setState({flash:false}),600);},
@@ -674,9 +673,32 @@ class Component extends DCLogic {
 }""".replace('__DEMO__', json.dumps(dict(id=79,name=DQ['name'],code=DQ['code'],brand=DQ['brand'],price=DQ['price'],stock=DQ['stock'],av='Skladem > 30 ks',img=DQ['img'],flags=DQ['flags'],desc=DQ.get('desc','')),ensure_ascii=False)), 960, 640,
  {"p": {"editor": None}, "pickup": {"editor": None}, "delivery": {"editor": None}, "onAdd": {"editor": None}, "onClose": {"editor": None}})
 
+
+# ---------------- Availability (skladovost) – velikost sm (karta) / lg (detail) ----------------
+comps['Availability'] = doc('Skladovost', CHEAD, """
+.avc{position:relative;display:inline-flex;""" + ROOTC + """}
+.avcBtn{display:inline-flex;align-items:center;gap:6px;border:0;background:none;padding:0;font:inherit;font-weight:600;line-height:1.3;color:var(--success-text,#15803d);cursor:help;text-align:left}
+.avc.blue .avcBtn{color:var(--info,#1f6fa8)}
+.avcBtn .ic{flex:none}
+.avc.sm .avcBtn{font-size:var(--fs-body-sm,14px)}.avc.sm .avcBtn .ic{width:16px;height:16px}
+.avc.lg .avcBtn{font-size:var(--fs-body,16px);gap:8px}.avc.lg .avcBtn .ic{width:22px;height:22px}
+.avcPop{display:none;position:absolute;bottom:calc(100% + 8px);left:0;width:260px;background:#fff;border:1px solid var(--line,#e4e4e7);border-radius:var(--radius-md,8px);box-shadow:0 8px 20px rgba(0,0,0,.12);padding:12px 14px;font-size:13px;font-weight:400;color:var(--text,#18181b);z-index:20}
+.avc.lg .avcPop{font-size:14px;width:300px}
+.avc:hover .avcPop,.avc:focus-within .avcPop{display:block}
+.avcPop p{margin:0 0 6px;display:flex;gap:8px;align-items:center}.avcPop p .ic{width:16px;height:16px;color:var(--text-muted,#71717a)}
+.avcPop a{color:var(--primary-d,#7f343d);font-weight:600}
+@supports (corner-shape:squircle){.avcPop{border-radius:16px}}
+""", f'''<div class="{{{{ cls }}}} AvailabilityView"><button class="avcBtn" type="button"><sc-if value="{{{{ ok }}}}" hint-placeholder-val="{{{{ true }}}}">{I('check-circle')}</sc-if><sc-if value="{{{{ blue }}}}" hint-placeholder-val="{{{{ false }}}}">{I('clock')}</sc-if><span>{{{{ text }}}}</span></button>
+<div class="avcPop" role="tooltip"><sc-if value="{{{{ ok }}}}" hint-placeholder-val="{{{{ true }}}}"><p>{I('storefront')}<span>Osobní odběr: <strong>{{{{ pickup }}}}</strong></span></p><p>{I('truck')}<span>Doručení dopravcem: <strong>{{{{ delivery }}}}</strong></span></p></sc-if><sc-if value="{{{{ blue }}}}" hint-placeholder-val="{{{{ false }}}}"><p>{I('clock')}<span>Naskladníme do 5 pracovních dnů.</span></p></sc-if><a href="Doprava.dc.html">Doprava a platba</a></div></div>''', r"""
+class Component extends DCLogic {
+ renderVals(){const p=this.props; const st=(p.stock==null?26:Number(p.stock)); const blue=st<=0;
+  const text=p.text||(blue?'Na objednávku':(st>5?'Skladem > '+(st>=100?Math.floor(st/50)*50:st)+' ks':'Skladem '+st+' ks'));
+  return {cls:'avc '+(p.size==='lg'?'lg':'sm')+(blue?' blue':' ok'),ok:!blue,blue:blue,text:text,pickup:p.pickup||'zítra',delivery:p.delivery||'pozítří'};}
+}""", 320, 40, {"stock": {"editor": "int", "default": 26}, "size": {"editor": "enum", "options": ["sm", "lg"], "default": "sm"}, "text": {"editor": None}, "pickup": {"editor": None}, "delivery": {"editor": None}})
+
 # ---------------- Gallery (sdílená galerie detailu) ----------------
 comps['Gallery'] = doc('Galerie produktu', CHEAD, """
-.gv{position:relative;display:grid;grid-template-columns:minmax(0,1fr);min-width:0;max-width:100%;""" + ROOTC + """}
+.gv{position:relative;display:grid;grid-template-columns:minmax(0,1fr);width:100%;min-width:0;max-width:100%;""" + ROOTC + """}
 .gv .gMain{position:relative;min-width:0}
 .gv .gTrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border:1px solid var(--line,#e4e4e7);border-radius:var(--card-radius,8px);background:#fff;aspect-ratio:4/3;overscroll-behavior-x:contain}
 .gv .gTrack::-webkit-scrollbar{display:none}

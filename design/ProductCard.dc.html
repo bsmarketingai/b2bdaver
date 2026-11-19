@@ -112,8 +112,7 @@
 <h3 class="pcName"><a class="pcLink" href="{{ href }}">{{ name }}</a></h3>
 
 <div class="pcBottom">
-<div class="pcAv AvailabilityView"><button class="{{ avCls }}" type="button"><span class="dot" aria-hidden="true"></span>{{ av }}</button>
-<div class="avPop" role="tooltip"><p><strong>{{ av }}</strong></p><sc-if value="{{ onStock }}" hint-placeholder-val="{{ true }}"><p>Osobní odběr: <span class="todo">{{ pickup }}</span></p><p>Doručení dopravcem: <span class="todo">{{ delivery }}</span></p></sc-if><sc-if value="{{ blue }}" hint-placeholder-val="{{ false }}"><p>Naskladníme do 5 pracovních dnů. <span class="todo">[OVĚŘIT lhůtu]</span></p></sc-if><a href="Doprava.dc.html">Doprava a platba</a></div></div>
+<div class="pcAv"><dc-import name="Availability" stock="{{ stock }}" text="{{ av }}" size="sm" pickup="{{ pickup }}" delivery="{{ delivery }}" hint-size="160px,20px"></dc-import></div>
 <div class="pcPrice"><div class="pm">{{ price }}</div><div class="ps">bez DPH · {{ priceVat }} s DPH</div></div>
 <div class="pcBuy AddToCartView">
 <div class="{{ qtyCls }}"><button type="button" aria-label="Snížit množství" disabled="{{ minDis }}" onClick="{{ dec }}">−</button><label><input inputmode="numeric" aria-label="Množství" size="{{ qtyLen }}" value="{{ qty }}" onChange="{{ setQty }}">{{ unit }}</label><button type="button" aria-label="Zvýšit množství" onClick="{{ inc }}">+</button></div>
@@ -139,7 +138,7 @@ class Component extends DCLogic {
   return {
    name:p.name, code:p.code, brand:p.brand||'', img:p.img||'', hasImg:!!p.img, noImg:!p.img, href:p.href||'Detail.dc.html', unit:p.unit||'ks',
    flags:(p.flags||[]).map((f)=>({t:f.t,cls:'pcFlag '+f.cls})),
-   av:p.av||'', blue:!!p.blue, onStock:!p.blue, avCls:'avBtn'+(p.blue?' blue':''),
+   av:p.av||'', stock:(p.stock==null?(p.blue?0:26):p.stock), blue:!!p.blue, onStock:!p.blue, avCls:'avBtn'+(p.blue?' blue':''),
    price:(p.from?'od ':'')+CZK(p.price), priceVat:(p.from?'od ':'')+CZK(p.price*VAT),
    hasPack:!!p.pack, noPack:!p.pack, packTxt:p.pack?p.pack+' ks':'',
    setPack:()=>{this.set(p.pack);this.setState({flash:true});clearTimeout(this.ft);this.ft=setTimeout(()=>this.setState({flash:false}),600);},

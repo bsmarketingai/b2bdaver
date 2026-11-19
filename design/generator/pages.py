@@ -328,7 +328,6 @@ det_html = f'''<div class="container">
 <sc-if value="{{{{ tab1 }}}}" hint-placeholder-val="{{{{ false }}}}"><table class="params"><tbody><tr><th scope="row">Výrobce</th><td>Meyco</td></tr><tr><th scope="row">Kód</th><td>14235</td></tr><tr><th scope="row">Tvar</th><td>plochý</td></tr><tr><th scope="row">Vlas</th><td>syntetický</td></tr><tr><th scope="row">Velikosti</th><td>č. 12, 16, 20</td></tr><tr><th scope="row">Počet v sadě</th><td>3 ks</td></tr><tr><th scope="row">Balení (karton)</th><td>12 ks</td></tr><tr><th scope="row">EAN</th><td>4006990142170</td></tr></tbody></table></sc-if>
 <sc-if value="{{{{ tab2 }}}}" hint-placeholder-val="{{{{ false }}}}"><p><a href="#pdf">{I('file-pdf')} Produktový list (PDF, 240 kB)</a></p></sc-if>
 
-<sc-if value="{{{{ tab3 }}}}" hint-placeholder-val="{{{{ false }}}}"><p>Máte dotaz k produktu? Odpovíme do 24 hodin v pracovní dny.</p><button class="btn btn-out" type="button">Položit dotaz</button></sc-if>
 </div></section>
 </div>
 <aside class="buyCol" aria-label="Nákup">
@@ -357,7 +356,7 @@ det_html = f'''<div class="container">
 </sc-if>'''
 det_css = """
 .detGrid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:var(--space-6);align-items:start}
-.detGrid>*,.detMain>*{min-width:0}
+.detGrid>*,.detMain>*{min-width:0}.detMain>*{width:100%;max-width:100%;margin-left:0;margin-right:0;justify-self:stretch;box-sizing:border-box}
 .detHead{display:flex;flex-direction:column;gap:6px;margin-bottom:var(--space-4)}
 .detMeta{display:flex;align-items:center;gap:6px;font-size:var(--fs-body-sm);color:var(--text-weaker);flex-wrap:wrap}
 .codeCopy{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 6px 0 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--text-weaker);font-size:var(--fs-body-sm);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
@@ -403,7 +402,7 @@ det_css = """
 .flagX{display:inline-block;background:var(--flag-doporucujeme);color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:2px}
 .bigPrice{font-size:32px;font-weight:700;line-height:1.1}.bigPrice small{font-size:var(--fs-body-sm);font-weight:400;color:var(--text-weaker)}
 .avPanel{list-style:none;margin:0;padding:12px;background:var(--bg-soft);border-radius:var(--radius-md);display:flex;flex-direction:column;gap:6px;font-size:var(--fs-body-sm)}
-.avPanel li{display:flex;gap:8px;align-items:center}
+.avPanel li{display:flex;gap:8px;align-items:center}.avPanel li.avLi{display:block}dc-import[name="Gallery"]{display:block;width:100%;min-width:0}
 .avOk{color:var(--success-text)}
 .buyRow{display:flex;gap:10px}
 .buyRow .btn{flex:1;min-height:var(--btn-h-lg)}
@@ -433,7 +432,7 @@ det_js = r"""
  pageMount(){this.setState({cmp:lsGet('CmpDetail')==='1'});}
  pageVals(){
   const s=this.state; const go=(i)=>this.setState({img:(i+4)%4}); const p=byId(14);
-  const T=['Popis','Parametry','Ke stažení','Diskuze'];
+  const T=['Popis','Parametry','Ke stažení'];
   const vals={
    imgNo:s.img+1, prevImg:()=>go(s.img-1), nextImg:()=>go(s.img+1),
    thumbs:[0,1,2,3].map((i)=>({n:i+1,cls:'thumb'+(i===s.img?' on':''),cur:i===s.img?'true':'false',label:'Obrázek '+(i+1),pick:()=>go(i)})),

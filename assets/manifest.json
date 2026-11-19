@@ -2123,5 +2123,27 @@
   "used_in": [
    "DetailVariant.dc.html (galerie)"
   ]
+ },
+ "/_blob/c16151cc66e63a519041f9c2a50eac38": {
+  "file": "assets/galerie/meyco-stippler-02-sada.webp",
+  "sha256": "ac34ba5877aa19e87ba254cc88ee34b9c75ea73fa42c90a6eb2150793b5b7c79",
+  "type": "image/webp",
+  "source": "odvozeno z fotky produktu Meyco Stippler (PIL kompozice)",
+  "product": "Meyco tupovací štětec Stippler",
+  "note": "DEMO fotka galerie (sada tří štětců) – nahradit skutečnou fotografií",
+  "used_in": [
+   "Detail.dc.html (galerie)"
+  ]
+ },
+ "/_blob/5006f279fa16e8860d22d7115444542b": {
+  "file": "assets/galerie/meyco-stippler-03-detail.webp",
+  "sha256": "0df7351c77820dcff55da9d61b0ad81ee72d02844d01e8fc6baa93041e978700",
+  "type": "image/webp",
+  "source": "odvozeno z fotky produktu Meyco Stippler (PIL kompozice)",
+  "product": "Meyco tupovací štětec Stippler",
+  "note": "DEMO fotka galerie (detail štětiny) – nahradit skutečnou fotografií",
+  "used_in": [
+   "Detail.dc.html (galerie)"
+  ]
  }
 }

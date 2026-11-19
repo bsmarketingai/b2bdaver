@@ -1,345 +1,354 @@
 {
- "v": 3,
- "createdOnFiles": {
-  "v": 1,
-  "at": "2026-11-18T09:57:15Z"
- },
- "title": "Daver.cz",
- "launch": {
-  "view": "canvas"
- },
- "pages": [],
- "boards": {
-  "Main.dc.html": {
-   "x": 0,
-   "y": 0,
-   "w": 1440,
-   "h": 4870,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Homepage"
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-18T09:57:15Z"
   },
-  "Kategorie.dc.html": {
-   "x": 1520,
-   "y": 0,
-   "w": 1440,
-   "h": 4320,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Kategorie – výpis"
+  "title": "Daver.cz",
+  "launch": {
+    "view": "canvas"
   },
-  "Detail.dc.html": {
-   "x": 3040,
-   "y": 0,
-   "w": 1440,
-   "h": 3300,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Detail produktu"
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 4870,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Homepage"
+    },
+    "Kategorie.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 4320,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Kategorie – výpis"
+    },
+    "Detail.dc.html": {
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 3300,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Detail produktu"
+    },
+    "Porovnani.dc.html": {
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 2820,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Porovnání"
+    },
+    "LoginPopup.dc.html": {
+      "x": 4560,
+      "y": 0,
+      "w": 320,
+      "h": 420,
+      "is_interactive": true
+    },
+    "UserMenu.dc.html": {
+      "x": 4960,
+      "y": 0,
+      "w": 320,
+      "h": 420,
+      "is_interactive": true
+    },
+    "CartPopup.dc.html": {
+      "x": 5360,
+      "y": 0,
+      "w": 360,
+      "h": 440,
+      "is_interactive": true
+    },
+    "ProductCard.dc.html": {
+      "x": 4560,
+      "y": 560,
+      "w": 300,
+      "h": 540,
+      "is_interactive": true
+    },
+    "FilterChip.dc.html": {
+      "x": 4940,
+      "y": 560,
+      "w": 120,
+      "h": 40,
+      "is_interactive": true
+    },
+    "Breadcrumb.dc.html": {
+      "x": 5140,
+      "y": 560,
+      "w": 800,
+      "h": 48,
+      "is_interactive": true
+    },
+    "Footer.dc.html": {
+      "x": 4560,
+      "y": 1220,
+      "w": 1440,
+      "h": 600,
+      "is_interactive": true
+    },
+    "CookieModal.dc.html": {
+      "x": 4560,
+      "y": 1940,
+      "w": 640,
+      "h": 330,
+      "is_interactive": true
+    },
+    "PromoModal.dc.html": {
+      "x": 5280,
+      "y": 1940,
+      "w": 560,
+      "h": 620,
+      "is_interactive": true
+    },
+    "FontSizeSwitch.dc.html": {
+      "x": 4560,
+      "y": 2680,
+      "w": 300,
+      "h": 440,
+      "is_interactive": true
+    },
+    "Onas.dc.html": {
+      "x": 0,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "O nás"
+    },
+    "Kontakt.dc.html": {
+      "x": 1520,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Kontakt"
+    },
+    "ObchodniPodminky.dc.html": {
+      "x": 3040,
+      "y": 5400,
+      "w": 1440,
+      "h": 2320,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Obchodní podmínky"
+    },
+    "Reklamace.dc.html": {
+      "x": 4560,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Reklamace"
+    },
+    "Doprava.dc.html": {
+      "x": 6080,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Doprava a platba"
+    },
+    "Spoluprace.dc.html": {
+      "x": 7600,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Velkoobchodní spolupráce"
+    },
+    "Gdpr.dc.html": {
+      "x": 9120,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "GDPR"
+    },
+    "Kariera.dc.html": {
+      "x": 10640,
+      "y": 5400,
+      "w": 1440,
+      "h": 2020,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Kariéra"
+    },
+    "Kosik.dc.html": {
+      "x": 0,
+      "y": 7800,
+      "w": 1440,
+      "h": 2400,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "P1 Košík"
+    },
+    "Udaje.dc.html": {
+      "x": 1520,
+      "y": 7800,
+      "w": 1440,
+      "h": 2600,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "P2 Kontaktní údaje"
+    },
+    "Kontrola.dc.html": {
+      "x": 3040,
+      "y": 7800,
+      "w": 1440,
+      "h": 2000,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "P3 Kontrola"
+    },
+    "Dekujeme.dc.html": {
+      "x": 4560,
+      "y": 7800,
+      "w": 1440,
+      "h": 1900,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "P4 Děkujeme"
+    },
+    "BrandStrip.dc.html": {
+      "x": 4560,
+      "y": 3200,
+      "w": 1440,
+      "h": 200,
+      "is_interactive": true,
+      "title": "BrandStrip – pás log výrobců"
+    },
+    "QuickView.dc.html": {
+      "x": 4560,
+      "y": 3480,
+      "w": 960,
+      "h": 640,
+      "is_interactive": true,
+      "title": "QuickView – rychlý náhled z výpisu"
+    },
+    "DetailVariant.dc.html": {
+      "x": 7920,
+      "y": 0,
+      "w": 1440,
+      "h": 9120,
+      "expand": "fill",
+      "is_interactive": true,
+      "title": "Detail – variantní produkt"
+    },
+    "Gallery.dc.html": {
+      "x": 4560,
+      "y": 4200,
+      "w": 720,
+      "h": 620,
+      "title": "Galerie produktu (komponenta)",
+      "is_interactive": true
+    },
+    "Availability.dc.html": {
+      "x": 5360,
+      "y": 4200,
+      "w": 360,
+      "h": 260,
+      "title": "Skladovost (komponenta, sm / lg)",
+      "is_interactive": true
+    }
   },
-  "Porovnani.dc.html": {
-   "x": 6400,
-   "y": 0,
-   "w": 1440,
-   "h": 2820,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Porovnání"
+  "order": [
+    "Main.dc.html",
+    "Kategorie.dc.html",
+    "Detail.dc.html",
+    "Porovnani.dc.html",
+    "DetailVariant.dc.html",
+    "LoginPopup.dc.html",
+    "UserMenu.dc.html",
+    "CartPopup.dc.html",
+    "ProductCard.dc.html",
+    "FilterChip.dc.html",
+    "Breadcrumb.dc.html",
+    "Footer.dc.html",
+    "CookieModal.dc.html",
+    "PromoModal.dc.html",
+    "FontSizeSwitch.dc.html",
+    "BrandStrip.dc.html",
+    "QuickView.dc.html",
+    "Onas.dc.html",
+    "Kontakt.dc.html",
+    "ObchodniPodminky.dc.html",
+    "Reklamace.dc.html",
+    "Doprava.dc.html",
+    "Spoluprace.dc.html",
+    "Gdpr.dc.html",
+    "Kariera.dc.html",
+    "Kosik.dc.html",
+    "Udaje.dc.html",
+    "Kontrola.dc.html",
+    "Dekujeme.dc.html",
+    "Gallery.dc.html",
+    "Availability.dc.html"
+  ],
+  "notes": {
+    "r1": {
+      "x": 0,
+      "y": -300,
+      "text": "Daver – Homepage → Výpis → Detail",
+      "kind": "title1",
+      "maxW": 4480
+    },
+    "rc": {
+      "x": 4560,
+      "y": -300,
+      "text": "Komponenty",
+      "kind": "title1",
+      "maxW": 1440
+    },
+    "rp": {
+      "x": 6400,
+      "y": -300,
+      "text": "Porovnání",
+      "kind": "title1",
+      "maxW": 1440
+    },
+    "r2": {
+      "x": 0,
+      "y": 5100,
+      "text": "Informační stránky z patičky",
+      "kind": "title1",
+      "maxW": 13600
+    },
+    "r3": {
+      "x": 0,
+      "y": 7500,
+      "text": "Průchod košíkem: Košík → Kontaktní údaje → Kontrola → Děkujeme",
+      "kind": "title1",
+      "maxW": 5920
+    },
+    "n1": {
+      "x": 6040,
+      "y": 1220,
+      "w": 320,
+      "text": "Kostra: neutrální šedé tokeny a systémové písmo – barvy a typografie se doladí. Žluté [DOPLNIT] = chybí údaj od klienta.",
+      "fill": "orange"
+    },
+    "rv": {
+      "x": 7920,
+      "y": -300,
+      "text": "Variantní detail",
+      "kind": "title1",
+      "maxW": 1440
+    }
   },
-  "LoginPopup.dc.html": {
-   "x": 4560,
-   "y": 0,
-   "w": 320,
-   "h": 420,
-   "is_interactive": true
-  },
-  "UserMenu.dc.html": {
-   "x": 4960,
-   "y": 0,
-   "w": 320,
-   "h": 420,
-   "is_interactive": true
-  },
-  "CartPopup.dc.html": {
-   "x": 5360,
-   "y": 0,
-   "w": 360,
-   "h": 440,
-   "is_interactive": true
-  },
-  "ProductCard.dc.html": {
-   "x": 4560,
-   "y": 560,
-   "w": 300,
-   "h": 540,
-   "is_interactive": true
-  },
-  "FilterChip.dc.html": {
-   "x": 4940,
-   "y": 560,
-   "w": 120,
-   "h": 40,
-   "is_interactive": true
-  },
-  "Breadcrumb.dc.html": {
-   "x": 5140,
-   "y": 560,
-   "w": 800,
-   "h": 48,
-   "is_interactive": true
-  },
-  "Footer.dc.html": {
-   "x": 4560,
-   "y": 1220,
-   "w": 1440,
-   "h": 600,
-   "is_interactive": true
-  },
-  "CookieModal.dc.html": {
-   "x": 4560,
-   "y": 1940,
-   "w": 640,
-   "h": 330,
-   "is_interactive": true
-  },
-  "PromoModal.dc.html": {
-   "x": 5280,
-   "y": 1940,
-   "w": 560,
-   "h": 620,
-   "is_interactive": true
-  },
-  "FontSizeSwitch.dc.html": {
-   "x": 4560,
-   "y": 2680,
-   "w": 300,
-   "h": 440,
-   "is_interactive": true
-  },
-  "Onas.dc.html": {
-   "x": 0,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "O nás"
-  },
-  "Kontakt.dc.html": {
-   "x": 1520,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Kontakt"
-  },
-  "ObchodniPodminky.dc.html": {
-   "x": 3040,
-   "y": 5400,
-   "w": 1440,
-   "h": 2320,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Obchodní podmínky"
-  },
-  "Reklamace.dc.html": {
-   "x": 4560,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Reklamace"
-  },
-  "Doprava.dc.html": {
-   "x": 6080,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Doprava a platba"
-  },
-  "Spoluprace.dc.html": {
-   "x": 7600,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Velkoobchodní spolupráce"
-  },
-  "Gdpr.dc.html": {
-   "x": 9120,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "GDPR"
-  },
-  "Kariera.dc.html": {
-   "x": 10640,
-   "y": 5400,
-   "w": 1440,
-   "h": 2020,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Kariéra"
-  },
-  "Kosik.dc.html": {
-   "x": 0,
-   "y": 7800,
-   "w": 1440,
-   "h": 2400,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "P1 Košík"
-  },
-  "Udaje.dc.html": {
-   "x": 1520,
-   "y": 7800,
-   "w": 1440,
-   "h": 2600,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "P2 Kontaktní údaje"
-  },
-  "Kontrola.dc.html": {
-   "x": 3040,
-   "y": 7800,
-   "w": 1440,
-   "h": 2000,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "P3 Kontrola"
-  },
-  "Dekujeme.dc.html": {
-   "x": 4560,
-   "y": 7800,
-   "w": 1440,
-   "h": 1900,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "P4 Děkujeme"
-  },
-  "BrandStrip.dc.html": {
-   "x": 4560,
-   "y": 3200,
-   "w": 1440,
-   "h": 200,
-   "is_interactive": true,
-   "title": "BrandStrip – pás log výrobců"
-  },
-  "QuickView.dc.html": {
-   "x": 4560,
-   "y": 3480,
-   "w": 960,
-   "h": 640,
-   "is_interactive": true,
-   "title": "QuickView – rychlý náhled z výpisu"
-  },
-  "DetailVariant.dc.html": {
-   "x": 7920,
-   "y": 0,
-   "w": 1440,
-   "h": 9120,
-   "expand": "fill",
-   "is_interactive": true,
-   "title": "Detail – variantní produkt"
-  },
-  "Gallery.dc.html": {
-   "x": 4560,
-   "y": 4200,
-   "w": 720,
-   "h": 620,
-   "title": "Galerie produktu (komponenta)",
-   "is_interactive": true
-  }
- },
- "order": [
-  "Main.dc.html",
-  "Kategorie.dc.html",
-  "Detail.dc.html",
-  "Porovnani.dc.html",
-  "DetailVariant.dc.html",
-  "LoginPopup.dc.html",
-  "UserMenu.dc.html",
-  "CartPopup.dc.html",
-  "ProductCard.dc.html",
-  "FilterChip.dc.html",
-  "Breadcrumb.dc.html",
-  "Footer.dc.html",
-  "CookieModal.dc.html",
-  "PromoModal.dc.html",
-  "FontSizeSwitch.dc.html",
-  "BrandStrip.dc.html",
-  "QuickView.dc.html",
-  "Onas.dc.html",
-  "Kontakt.dc.html",
-  "ObchodniPodminky.dc.html",
-  "Reklamace.dc.html",
-  "Doprava.dc.html",
-  "Spoluprace.dc.html",
-  "Gdpr.dc.html",
-  "Kariera.dc.html",
-  "Kosik.dc.html",
-  "Udaje.dc.html",
-  "Kontrola.dc.html",
-  "Dekujeme.dc.html",
-  "Gallery.dc.html"
- ],
- "notes": {
-  "r1": {
-   "x": 0,
-   "y": -300,
-   "text": "Daver – Homepage → Výpis → Detail",
-   "kind": "title1",
-   "maxW": 4480
-  },
-  "rc": {
-   "x": 4560,
-   "y": -300,
-   "text": "Komponenty",
-   "kind": "title1",
-   "maxW": 1440
-  },
-  "rp": {
-   "x": 6400,
-   "y": -300,
-   "text": "Porovnání",
-   "kind": "title1",
-   "maxW": 1440
-  },
-  "r2": {
-   "x": 0,
-   "y": 5100,
-   "text": "Informační stránky z patičky",
-   "kind": "title1",
-   "maxW": 13600
-  },
-  "r3": {
-   "x": 0,
-   "y": 7500,
-   "text": "Průchod košíkem: Košík → Kontaktní údaje → Kontrola → Děkujeme",
-   "kind": "title1",
-   "maxW": 5920
-  },
-  "n1": {
-   "x": 6040,
-   "y": 1220,
-   "w": 320,
-   "text": "Kostra: neutrální šedé tokeny a systémové písmo – barvy a typografie se doladí. Žluté [DOPLNIT] = chybí údaj od klienta.",
-   "fill": "orange"
-  },
-  "rv": {
-   "x": 7920,
-   "y": -300,
-   "text": "Variantní detail",
-   "kind": "title1",
-   "maxW": 1440
-  }
- },
- "designSystems": []
+  "designSystems": []
 }

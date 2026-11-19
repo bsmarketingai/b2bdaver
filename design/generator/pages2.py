@@ -312,7 +312,7 @@ rep = [
  ('<div class="flags"><span class="flagX">Doporučujeme</span></div>\n', ''),
  ('<div class="bigPrice">69,38&nbsp;Kč <small>bez DPH</small></div>', '<div class="bigPrice">{{ dPrice }} <small>bez DPH</small></div>'),
  ('<div class="priceSub">83,95&nbsp;Kč s DPH', '<div class="priceSub">{{ dPriceVat }} s DPH'),
- ('<li class="avOk">' + I('check-circle') + 'Skladem &gt; 30 ks</li>', '<li class="avOk">' + I('check-circle') + 'Skladem &gt; 50 ks</li>'),
+ ('<li class="avOk">' + I('check-circle') + 'Skladem &gt; 30 ks</li>', '<li class="avLi"><dc-import name="Availability" stock="50" text="Skladem &gt; 50 ks" size="lg" hint-size="240px,28px"></dc-import></li>'),
  ('<dl class="short"><div><dt>Výrobce</dt><dd>Meyco</dd></div><div><dt>Tvar</dt><dd>plochý</dd></div><div><dt>Velikosti</dt><dd>č. 12, 16, 20</dd></div></dl>',
   '<dl class="short"><div><dt>Výrobce</dt><dd>Meyco</dd></div><div><dt>Tvar</dt><dd>Stippler (tupovací)</dd></div><div><dt>Velikosti</dt><dd>15, 25, 35 mm</dd></div><div><dt>Počet v sadě</dt><dd>3 ks</dd></div></dl>'),
  ('<p>Sada tří plochých štětců se syntetickým vlasem ve velikostech 12, 16 a 20. <span class="todo">[DOPLNIT popis z Pohody / webu]</span></p>',
@@ -379,7 +379,7 @@ det_js = det_js.replace("  };\n  T.forEach((n,i)=>{vals['tab'+i]=s.tab===i;});",
      this.setState({cart:cart,aq:{},pop:'',dlg:{id:ids[0],qty:ids.reduce((x,id)=>x+s.aq[id],0),shades:items,multi:true}});}
   };
   T.forEach((n,i)=>{vals['tab'+i]=s.tab===i;});""", 1)
-det_js = det_js.replace("const IM=[p.img];", "const IM=[p.img]; const ACC=[IDS.cistic,IDS.pebeoCistic,IDS.tupovaci];", 1)
+det_js = det_js.replace("const IM=[p.img];", "const IM=[p.img,'/_blob/c16151cc66e63a519041f9c2a50eac38','/_blob/5006f279fa16e8860d22d7115444542b']; const ACC=[IDS.cistic,IDS.pebeoCistic,IDS.tupovaci];", 1)
 assert 'accAdd' in det_js and 'gList:IM' in det_js and 'const ACC=' in det_js
 pages['Detail'] = shop_page('Detail produktu', det_css, det_html, det_js, 2700, 'Štětce pomůcky')
 
@@ -445,7 +445,6 @@ dv_html = f'''<div class="container">
 <div class="tabPanel" role="tabpanel">
 <sc-if value="{{{{ tab0 }}}}" hint-placeholder-val="{{{{ true }}}}"><div class="longDesc">{_long(_po)}</div></sc-if>
 <sc-if value="{{{{ tab1 }}}}" hint-placeholder-val="{{{{ false }}}}"><table class="params"><tbody><tr><th scope="row">Výrobce</th><td>Amsterdam (Royal Talens)</td></tr><tr><th scope="row">Produktová řada</th><td>Amsterdam Standard Series</td></tr><tr><th scope="row">Objem</th><td>120 ml</td></tr><tr><th scope="row">Báze</th><td>akrylová, ředitelná vodou</td></tr><tr><th scope="row">Počet odstínů</th><td>{len(AV)}</td></tr><tr><th scope="row">Vybraný odstín</th><td>{{{{ vNo }}}} {{{{ vName }}}}</td></tr></tbody></table></sc-if>
-<sc-if value="{{{{ tab2 }}}}" hint-placeholder-val="{{{{ false }}}}"><p>Máte dotaz k produktu nebo k odstínu? Napište nám na <a href="mailto:daver@daver.cz">daver@daver.cz</a>.</p><button class="btn btn-out" type="button">Položit dotaz</button></sc-if>
 </div></section>
 <section class="section bulkSec" id="hromadna" aria-labelledby="hBulk">
 <div class="bulkTop"><div><h2 id="hBulk">Hromadná objednávka odstínů</h2><p>Nastavte množství u odstínů kvantifikátorem a vložte vše do košíku najednou. Jednotlivé odstíny můžete přidat i samostatně ikonou košíku.</p></div>
@@ -475,7 +474,7 @@ dv_html = f'''<div class="container">
 </div>
 </sc-if>
 </div>
-<ul class="avPanel"><li class="{{{{ vAvCls }}}}">{I('check-circle')}{{{{ vAv }}}}</li><sc-if value="{{{{ vOnStock }}}}" hint-placeholder-val="{{{{ true }}}}"><li>{I('storefront')}Osobně na prodejně: <strong>zítra</strong></li><li>{I('truck')}Přepravní společností: <strong>pozítří</strong></li></sc-if></ul>
+<ul class="avPanel"><li class="avLi"><dc-import name="Availability" stock="{{{{ vSt }}}}" text="{{{{ vAv }}}}" size="lg" hint-size="240px,28px"></dc-import></li><sc-if value="{{{{ vOnStock }}}}" hint-placeholder-val="{{{{ true }}}}"><li>{I('storefront')}Osobně na prodejně: <strong>zítra</strong></li><li>{I('truck')}Přepravní společností: <strong>pozítří</strong></li></sc-if></ul>
 <div class="buyRow"><div class="qty"><button type="button" aria-label="Snížit množství" disabled="{{{{ minDis }}}}" onClick="{{{{ dec }}}}">−</button><label><input inputmode="numeric" aria-label="Množství" size="{{{{ qtyLen }}}}" value="{{{{ qty }}}}" onChange="{{{{ setQty }}}}">ks</label><button type="button" aria-label="Zvýšit množství" onClick="{{{{ inc }}}}">+</button></div><button class="btn btn-main btn-lg" type="button" disabled="{{{{ buyDis }}}}" onClick="{{{{ buy }}}}">{I('shopping-cart')}Koupit</button></div>
 <button class="btn btn-ghost" type="button" onClick="{{{{ toBulk }}}}">{I('rows')}Objednat více odstínů najednou</button>
 </div>
@@ -628,10 +627,10 @@ dv_js = r"""
     if(e.key==='Escape'){e.stopPropagation();this.setState({dd:false,vq:''});const b=document.querySelector('.ddBtn');if(b)b.focus();}
     else if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();k=Math.max(0,Math.min(ids.length-1,k+(e.key==='ArrowDown'?1:-1)));const n=ids[k];this.setState({act:n});setTimeout(()=>{const el=document.querySelector('[data-dd="'+n+'"]');if(el)el.scrollIntoView({block:'nearest'});},0);}
     else if(e.key==='Enter'&&k>=0){e.preventDefault();pickV(ids[k]);}};
-  const T=['Popis','Parametry','Diskuze'];
+  const T=['Popis','Parametry'];
   const bulkCount=Object.values(s.bq).filter((x)=>x>0).length;
   const vals={
-   vIdx:String(s.v),vNo:String(v.no),vName:v.n,vCode:v.code,vHex:v.hex,vPrice:CZK(v.price),grpOn:isAuth(),vPriceVat:CZK(v.price*VAT),vAv:v.av,vOnStock:v.st>0,vAvCls:v.st>0?'avOk':'avBlue',
+   vIdx:String(s.v),vNo:String(v.no),vName:v.n,vCode:v.code,vHex:v.hex,vPrice:CZK(v.price),grpOn:isAuth(),vPriceVat:CZK(v.price*VAT),vAv:v.av,vSt:v.st,vOnStock:v.st>0,vAvCls:v.st>0?'avOk':'avBlue',
    isSelect:s.ui!=='swatch',isSwatch:s.ui==='swatch',groups:groups,swGroups:swGroups,swNone:(s.ui==='swatch'?swGroups:ddGroups).length===0,
    ddOpen:s.dd,ddOpenStr:s.dd?'true':'false',ddAria:'Odstín: '+v.no+' '+v.n+', '+v.av+'. Změnit odstín',ddToggle:()=>this.setState({dd:!s.dd,act:s.v,vq:''}),ddGroups:ddGroups,ddKey:ddKey,vq:s.vq,onVq:(e)=>this.setState({vq:e.target.value}),
    pickSel:(e)=>this.setState({v:num(e.target.value)}),
