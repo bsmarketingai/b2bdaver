@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Rychlý náhled produktu</title>
+<script src="./support.js"></script>
+<style>
+:root{
+  color-scheme: light;
+  /* značka – zatím neutrální šedá škála */
+  --primary:#9b414b; --primary-d:#7f343d; --primary-10:#f8eeef; /* značka Daver – vínová; konverzní (--main) zůstává černá */
+  --main:#27272a; --main-d:#09090b;
+  --nav-bg:#9b414b; --nav-fg:#fff; --nav-hover:#7f343d;
+  --footer-bg:#27272a;
+  --text:rgba(24,24,27,.92); --text-weaker:rgba(24,24,27,.68); --text-muted:#71717a;
+  --bg:#fff; --bg-soft:#f8f8f8; --line:#e4e4e7;
+  --input-border:#d4d4d8; --input-bg-soft:#f4f4f5;
+  --success:#15803d; --success-text:#15803d; --primary-text:#27272a; --info:#1f6fa8; --danger:#b91c1c;
+  --flag-discount:#ffc107; --flag-discount-fg:#1e1e1e;
+  --flag-akce:#c2410c; --flag-novinka:#0277bd; --flag-doporucujeme:#1f6fa8; --flag-vyprodej:#3867d6;
+  --radius-xs:2px; --radius-sm:4px; --radius-md:6px; --radius-lg:8px;
+  --corner-shape:squircle; /* squircle rohy: karty a tlačítka */
+  --btn-radius:6px; --card-radius:8px; /* fallback bez podpory corner-shape */
+  --btn-h-sm:32px; --btn-h-md:44px; --btn-h-lg:56px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+  --gutter-xxs:12px; --gutter-xs:16px; --gutter-s:16px; --gutter-m:24px; --gutter-l:24px; --gutter-xl:32px; --gutter-xxl:32px;
+  --gutter:var(--gutter-xxs);
+  --content-max:1560px;
+  --section-gap:var(--space-6); --card-pad:var(--space-4); --grid-gap:var(--space-3);
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs-h1:29px; --fs-h2:23px; --fs-h3:19px; --fs-h4:17px; --fs-body:16px; --fs-body-sm:14px; --fs-caption:13px;
+  --fs-price-md:21px; --fs-price-sm:16px; --lh-body:1.5;
+  --header-h:0px;
+}
+@supports (corner-shape:squircle){:root{--btn-radius:16px;--card-radius:24px;--radius-xs:4px;--radius-sm:12px;--radius-md:16px;--radius-lg:24px}}
+@media (min-width:420px){:root{--gutter:var(--gutter-xs)}}
+@media (min-width:550px){:root{--gutter:var(--gutter-s)}}
+@media (min-width:820px){:root{--gutter:var(--gutter-m);--section-gap:var(--space-7);--card-pad:var(--space-5);--grid-gap:var(--space-4);--fs-h1:34px;--fs-h2:26px;--fs-h3:21px}}
+@media (min-width:1000px){:root{--gutter:var(--gutter-l)}}
+@media (min-width:1150px){:root{--gutter:var(--gutter-xl);--section-gap:var(--space-8);--fs-h1:42px;--fs-h2:30px;--fs-h3:23px;--fs-h4:19px;--fs-body:17px;--fs-body-sm:15px;--fs-caption:13px;--fs-price-md:23px;--fs-price-sm:17px}}
+@media (min-width:1440px){:root{--gutter:var(--gutter-xxl)}}
+
+*,*::before,*::after{box-sizing:border-box}
+@supports (corner-shape:squircle){.qty,.miniQty,.rowQty,.searchBox,.ddBtn,.coupon input,.field input,.field select,.field textarea,.pickTools input,.perPage select,input[type=text],input[type=search],input[type=email],input[type=tel],input[type=password],input[type=number],select,textarea{corner-shape:squircle}}
+@supports (corner-shape:squircle){*,*::before,*::after{corner-shape:squircle}}
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}
+.qv{position:relative;width:960px;max-width:100%;background:#fff;border-radius:var(--radius-lg,8px);padding:28px;font-family:var(--font,system-ui,sans-serif);color:var(--text,#18181b);font-size:var(--fs-body,15px);line-height:1.5}
+.qvClose{position:absolute;top:12px;right:12px}
+.qv h2{margin:0 48px 20px 0;font-size:var(--fs-h3,22px);line-height:1.25}
+.qvGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.qvImg{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line,#e4e4e7);border-radius:var(--card-radius,8px);padding:24px}
+.qvImg img{max-width:100%;max-height:100%;object-fit:contain}
+.qvImg .ph{width:100%;height:100%}
+.qvFlags{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.qvFlag{font-size:13px;font-weight:700;padding:3px 10px;border-radius:var(--radius-xs,2px);color:#fff}
+.qvFlag.discount{background:var(--flag-discount,#ffc107);color:var(--flag-discount-fg,#1e1e1e)}
+.qvFlag.flag00{background:var(--flag-novinka,#0277bd)}.qvFlag.flag01{background:var(--flag-akce,#c2410c)}.qvFlag.flag02{background:var(--flag-doporucujeme,#1f6fa8)}.qvFlag.flag03{background:var(--flag-vyprodej,#3867d6)}
+.qvSide{display:flex;flex-direction:column;gap:16px}
+.qvOld{font-size:var(--fs-body-sm,14px);color:var(--text-weaker,rgba(24,24,27,.68))}
+.qvOld s{margin:0 4px}.qvOld strong{color:var(--text,#18181b)}
+.qvPrice{font-size:30px;font-weight:700;line-height:1.1}.qvPrice small{font-size:var(--fs-body-sm,14px);font-weight:400;color:var(--text-weaker,rgba(24,24,27,.68))}
+.qvVat{font-size:var(--fs-caption,12px);color:var(--text-weaker,rgba(24,24,27,.68));margin-top:2px}
+.qvVar{font-size:var(--fs-caption,12px);color:var(--text-weaker,rgba(24,24,27,.68));margin-top:6px}
+.qvBuy{display:flex;gap:10px}
+.qvBuy .btn{flex:1;min-height:var(--btn-h-lg,56px)}
+.qty{display:flex;align-items:center;min-width:132px;border:1px solid var(--input-border,#d4d4d8);border-radius:var(--btn-radius,4px);background:#fff}
+.qty button{width:40px;height:100%;border:0;background:none;font-size:18px;cursor:pointer;color:inherit}
+.qty button:disabled{color:#c4c4c8;cursor:not-allowed}
+.qty label{flex:1;display:flex;align-items:center;justify-content:center;gap:4px;padding:0 4px;white-space:nowrap}
+.qty input{field-sizing:content;width:auto;min-width:1ch;max-width:6ch;border:0;outline:0;text-align:center;font:inherit;padding:0;background:transparent}
+.qvAv{border:1px solid var(--line,#e4e4e7);border-radius:var(--card-radius,8px);padding:14px 16px;font-size:var(--fs-body-sm,14px);display:flex;flex-direction:column;gap:6px}
+.qvAvHead{display:flex;justify-content:space-between;gap:12px;font-weight:600}
+.qvAvHead .ok{color:var(--success-text,#15803d)}.qvAvHead .blue{color:var(--info,#1f6fa8)}
+.qvAv .q{font-weight:600;margin-top:4px}
+.qvRow{display:flex;justify-content:space-between;gap:12px;color:var(--text-weaker,rgba(24,24,27,.68))}.qvRow strong{color:var(--text,#18181b)}
+.qvMeta{margin:0;display:flex;flex-direction:column;gap:6px;font-size:var(--fs-body-sm,14px)}
+.qvMeta div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line,#e4e4e7);padding-bottom:6px}
+.qvMeta dt{color:var(--text-weaker,rgba(24,24,27,.68))}.qvMeta dd{margin:0;font-weight:600}
+.qvDesc{margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line,#e4e4e7);color:var(--text-weaker,rgba(24,24,27,.68));font-size:var(--fs-body-sm,14px);line-height:1.6}
+.qvMore{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:var(--primary-d,#27272a);font-weight:600;font-size:var(--fs-body-sm,14px)}
+@supports (corner-shape:squircle){.qvImg,.qvAv{corner-shape:var(--corner-shape,squircle)}}
+@media (max-width:719px){.qv{padding:20px}.qvGrid{grid-template-columns:1fr;gap:20px}.qvImg{aspect-ratio:4/3}}
+.qv .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:var(--btn-radius,6px);border:1px solid transparent;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;white-space:nowrap}
+.qv .btn-main{background:var(--main,#27272a);color:#fff}.qv .btn-main:hover{background:var(--main-d,#09090b);color:#fff}
+.qv .btn-out{background:#fff;border-color:var(--input-border,#d4d4d8);color:inherit}.qv .btn-out:hover{border-color:var(--primary-d,#27272a)}
+.qv .iconBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent;border-radius:var(--btn-radius,6px);cursor:pointer;color:inherit}.qv .iconBtn:hover{background:var(--primary-10,#f4f4f5)}
+.qv .ic{width:20px;height:20px;flex:none}
+.qv .ph{display:flex;align-items:center;justify-content:center;background:var(--bg-soft,#f8f8f8);border:1px dashed var(--input-border,#d4d4d8);color:var(--text-muted,#71717a);font-size:12px;text-align:center;padding:6px;border-radius:4px}
+.qv .todo{background:#fff7d6;color:#5c4a00;padding:0 4px;border-radius:2px}
+@supports (corner-shape:squircle){.qv .btn,.qv .iconBtn{corner-shape:var(--corner-shape,squircle)}}
+.qv :focus-visible{outline:2px solid var(--primary-d,#27272a);outline-offset:2px}</style>
+</helmet>
+<div class="qv ProductQuickView" role="dialog" aria-modal="true" aria-labelledby="qvT" onKeyDown="{{ onKey }}">
+<button class="iconBtn qvClose" type="button" aria-label="Zavřít náhled" autoFocus="{{ true }}" onClick="{{ close }}"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></button>
+<h2 id="qvT">{{ name }}</h2>
+<div class="qvGrid">
+<div class="qvImg"><div class="qvFlags"><sc-for list="{{ flags }}" as="f" hint-placeholder-count="1"><span class="{{ f.cls }}">{{ f.t }}</span></sc-for></div>
+<sc-if value="{{ hasImg }}" hint-placeholder-val="{{ true }}"><img src="{{ img }}" alt="{{ name }}"></sc-if><sc-if value="{{ noImg }}" hint-placeholder-val="{{ false }}"><div class="ph">[FOTO]</div></sc-if></div>
+<div class="qvSide">
+<div>
+<sc-if value="{{ hasOld }}" hint-placeholder-val="{{ false }}"><div class="qvOld">Běžná cena<s>{{ oldTxt }}</s><strong>Ušetříte {{ saveTxt }}</strong></div></sc-if>
+<div class="qvPrice">{{ price }} <small>bez DPH</small></div>
+<div class="qvVat">{{ priceVat }} s DPH</div><sc-if value="{{ hasVar }}" hint-placeholder-val="{{ false }}"><div class="qvVar">{{ variants }}</div></sc-if>
+</div>
+<div class="qvAv AvailabilityView"><div class="qvAvHead"><span>Dostupnost</span><span class="{{ avCls }}">{{ av }}</span></div>
+<sc-if value="{{ onStock }}" hint-placeholder-val="{{ true }}"><div class="q">Kdy zboží obdržím, pokud nyní objednám?</div><div class="qvRow"><span>Osobně na prodejně</span><strong>{{ pickup }}</strong></div><div class="qvRow"><span>Přepravní společností</span><strong>{{ delivery }}</strong></div></sc-if>
+<sc-if value="{{ blue }}" hint-placeholder-val="{{ false }}"><div class="qvRow"><span>Naskladnění</span><strong>do 5 pracovních dnů</strong></div></sc-if></div>
+<div class="qvBuy AddToCartView"><div class="qty"><button type="button" aria-label="Snížit množství" disabled="{{ minDis }}" onClick="{{ dec }}">−</button><label><input inputmode="numeric" aria-label="Množství" size="{{ qtyLen }}" value="{{ qty }}" onChange="{{ setQty }}">ks</label><button type="button" aria-label="Zvýšit množství" onClick="{{ inc }}">+</button></div>
+<button class="btn btn-main" type="button" onClick="{{ add }}"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"></path></svg>Koupit</button></div>
+<dl class="qvMeta"><div><dt>Kód produktu</dt><dd>{{ code }}</dd></div><div><dt>Výrobce</dt><dd>{{ brand }}</dd></div></dl>
+</div></div>
+<p class="qvDesc">{{ desc }}</p>
+<a class="qvMore" href="{{ href }}">Zobrazit detail produktu<svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg></a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 960, "height": 640}, "p": {"editor": null}, "pickup": {"editor": null}, "delivery": {"editor": null}, "onAdd": {"editor": null}, "onClose": {"editor": null}}'>
+const CZK=(n)=>n.toLocaleString('cs-CZ',{minimumFractionDigits:2,maximumFractionDigits:2})+' Kč';
+const VAT=1.21;
+const lsGet=(k)=>{try{return localStorage.getItem('daver'+k)}catch(e){return null}};
+const lsSet=(k,v)=>{try{localStorage.setItem('daver'+k,v)}catch(e){}};
+
+const DEMO={"id": 79, "name": "Jovi samotvrdnoucí modelovací hmota 7 x 500 g v boxu s příslušenstvím", "code": "80", "brand": "Jovi", "price": 343.0, "stock": 31, "av": "Skladem > 30 ks", "img": "/_blob/05bedfb117720440a027a7bb034b8d75", "flags": [{"cls": "discount", "t": "-10 %"}], "desc": "Samotvrdnoucí hmota, na vzduchu přirozeně ztvrdne za cca 24 hod (záleží na tloušťce výrobku), není třeba keramické vypalování. Výrobek lze dále upravovat – barvit, brousit, lepit, lakovat (stává se voděodolným). Může sloužit jako odrazový můstek pro sochaření. Tvaruje se ručně, ale mohou se využívat různé pomůcky na modelování. Aby nespotřebovaná hmota nevyschla, je třeba ji uchovat v hermeticky uzavřené nádobce nebo zabalit do igelitu. Vyrobeno ve Španělsku."};
+class Component extends DCLogic {
+ constructor(p){super(p);this.state={qty:1};}
+ componentDidUpdate(prev){const a=prev.p&&prev.p.id,b=this.props.p&&this.props.p.id;if(a!==b)this.setState({qty:1});}
+ renderVals(){
+  const p=this.props.p||DEMO; const q=this.state.qty; const disc=(p.flags||[]).find((f)=>f.cls==='discount');
+  const pct=disc?parseInt(disc.t.replace(/\D/g,''),10):0; const old=pct?p.price/(1-pct/100):0;
+  const close=()=>{if(this.props.onClose)this.props.onClose();};
+  const blue=p.stock===0;
+  return {name:p.name,img:p.img||'',hasImg:!!p.img,noImg:!p.img,flags:(p.flags||[]).map((f)=>({t:f.t,cls:'qvFlag '+f.cls})),
+   hasOld:!!pct,oldTxt:CZK(old),saveTxt:CZK(old-p.price)+' / '+pct+' %',price:(p.from?'od ':'')+CZK(p.price),priceVat:(p.from?'od ':'')+CZK(p.price*VAT),hasVar:!!p.variants,variants:p.variants||'',
+   qty:q,qtyLen:Math.max(1,String(q).length),minDis:q<=1,dec:()=>this.setState({qty:Math.max(1,q-1)}),inc:()=>this.setState({qty:q+1}),
+   setQty:(e)=>{const v=parseInt(e.target.value.replace(/\D/g,''),10);this.setState({qty:isNaN(v)?1:Math.max(1,v)});},
+   add:()=>{if(this.props.onAdd)this.props.onAdd(p,q);},
+   av:p.av||'',blue:blue,onStock:!blue,avCls:blue?'blue':'ok',pickup:this.props.pickup||'zítra',delivery:this.props.delivery||'pozítří',
+   code:p.code||'',href:p.href||'Detail.dc.html',brand:(p.brand||'').toUpperCase(),desc:p.desc||'Kvalitní výtvarná potřeba z nabídky velkoobchodu Daver.',
+   close:close,onKey:(e)=>{if(e.key==='Escape'){e.stopPropagation();close();}}};
+ }
+}
+</script>
+</body>
+</html>

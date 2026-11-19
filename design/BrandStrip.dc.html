@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Pás log výrobců</title>
+<script src="./support.js"></script>
+<style>
+:root{
+  color-scheme: light;
+  /* značka – zatím neutrální šedá škála */
+  --primary:#9b414b; --primary-d:#7f343d; --primary-10:#f8eeef; /* značka Daver – vínová; konverzní (--main) zůstává černá */
+  --main:#27272a; --main-d:#09090b;
+  --nav-bg:#9b414b; --nav-fg:#fff; --nav-hover:#7f343d;
+  --footer-bg:#27272a;
+  --text:rgba(24,24,27,.92); --text-weaker:rgba(24,24,27,.68); --text-muted:#71717a;
+  --bg:#fff; --bg-soft:#f8f8f8; --line:#e4e4e7;
+  --input-border:#d4d4d8; --input-bg-soft:#f4f4f5;
+  --success:#15803d; --success-text:#15803d; --primary-text:#27272a; --info:#1f6fa8; --danger:#b91c1c;
+  --flag-discount:#ffc107; --flag-discount-fg:#1e1e1e;
+  --flag-akce:#c2410c; --flag-novinka:#0277bd; --flag-doporucujeme:#1f6fa8; --flag-vyprodej:#3867d6;
+  --radius-xs:2px; --radius-sm:4px; --radius-md:6px; --radius-lg:8px;
+  --corner-shape:squircle; /* squircle rohy: karty a tlačítka */
+  --btn-radius:6px; --card-radius:8px; /* fallback bez podpory corner-shape */
+  --btn-h-sm:32px; --btn-h-md:44px; --btn-h-lg:56px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+  --gutter-xxs:12px; --gutter-xs:16px; --gutter-s:16px; --gutter-m:24px; --gutter-l:24px; --gutter-xl:32px; --gutter-xxl:32px;
+  --gutter:var(--gutter-xxs);
+  --content-max:1560px;
+  --section-gap:var(--space-6); --card-pad:var(--space-4); --grid-gap:var(--space-3);
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs-h1:29px; --fs-h2:23px; --fs-h3:19px; --fs-h4:17px; --fs-body:16px; --fs-body-sm:14px; --fs-caption:13px;
+  --fs-price-md:21px; --fs-price-sm:16px; --lh-body:1.5;
+  --header-h:0px;
+}
+@supports (corner-shape:squircle){:root{--btn-radius:16px;--card-radius:24px;--radius-xs:4px;--radius-sm:12px;--radius-md:16px;--radius-lg:24px}}
+@media (min-width:420px){:root{--gutter:var(--gutter-xs)}}
+@media (min-width:550px){:root{--gutter:var(--gutter-s)}}
+@media (min-width:820px){:root{--gutter:var(--gutter-m);--section-gap:var(--space-7);--card-pad:var(--space-5);--grid-gap:var(--space-4);--fs-h1:34px;--fs-h2:26px;--fs-h3:21px}}
+@media (min-width:1000px){:root{--gutter:var(--gutter-l)}}
+@media (min-width:1150px){:root{--gutter:var(--gutter-xl);--section-gap:var(--space-8);--fs-h1:42px;--fs-h2:30px;--fs-h3:23px;--fs-h4:19px;--fs-body:17px;--fs-body-sm:15px;--fs-caption:13px;--fs-price-md:23px;--fs-price-sm:17px}}
+@media (min-width:1440px){:root{--gutter:var(--gutter-xxl)}}
+
+*,*::before,*::after{box-sizing:border-box}
+@supports (corner-shape:squircle){.qty,.miniQty,.rowQty,.searchBox,.ddBtn,.coupon input,.field input,.field select,.field textarea,.pickTools input,.perPage select,input[type=text],input[type=search],input[type=email],input[type=tel],input[type=password],input[type=number],select,textarea{corner-shape:squircle}}
+@supports (corner-shape:squircle){*,*::before,*::after{corner-shape:squircle}}
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}
+.bs{font-family:var(--font,system-ui,sans-serif);color:var(--text,#18181b);font-size:var(--fs-body,15px);line-height:1.5;width:100%}
+.bsHead{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.bsHead h2{margin:0;font-size:var(--fs-h2,24px);line-height:1.2}
+.bsHead a{color:var(--primary-d,#27272a);font-size:var(--fs-body-sm,14px)}
+.bsNav{display:flex;gap:8px;align-items:center}
+.bsNav .iconBtn{border:1px solid var(--line,#e4e4e7);background:#fff;border-radius:var(--btn-radius,6px);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.bsNav .iconBtn:hover{background:var(--primary-10,#f4f4f5)}
+.bsViewport{position:relative}
+.bsViewport::before,.bsViewport::after{content:"";position:absolute;top:0;bottom:0;width:96px;z-index:1;pointer-events:none}
+.bsViewport::before{left:0;background:linear-gradient(90deg,var(--bs-bg,var(--bg-soft,#f8f8f8)) 10%,transparent)}
+.bsViewport::after{right:0;background:linear-gradient(270deg,var(--bs-bg,var(--bg-soft,#f8f8f8)) 10%,transparent)}
+.bsTrack{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;padding:16px 0;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.bsTrack::-webkit-scrollbar{display:none}
+.bsItem{flex:none;display:flex;align-items:center;justify-content:center;width:168px;height:80px;border-radius:var(--card-radius,8px);text-decoration:none;color:var(--text-weaker,rgba(24,24,27,.68))}
+.bsItem{background:transparent}
+/* logo: jednobarevné, po najetí v barvě */
+.bsItem img{max-width:136px;max-height:56px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s,transform .3s}
+.bsItem:hover img,.bsItem:focus-visible img{filter:none;opacity:1;transform:scale(1.06)}
+/* placeholder do doby, než přijdou loga */
+.bsPh{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:136px;height:56px;border:1px dashed var(--input-border,#d4d4d8);border-radius:var(--radius-sm,4px);font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-align:center;line-height:1.15;color:#71717a;transition:color .3s,border-color .3s}
+.bsPh small{font-weight:400;font-size:10px;text-transform:none;letter-spacing:0}
+.bsItem:hover .bsPh{color:var(--text,#18181b);border-color:var(--primary-d,#27272a)}
+@supports (corner-shape:squircle){.bsItem{corner-shape:var(--corner-shape,squircle)}}
+@media (max-width:549px){.bsItem{width:136px;height:68px}.bsPh{width:116px;height:48px;font-size:12px}}
+@media (prefers-reduced-motion:reduce){.bsItem img,.bsPh{transition:none}}
+.bs .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:var(--btn-radius,6px);border:1px solid transparent;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;white-space:nowrap}
+.bs .btn-main{background:var(--main,#27272a);color:#fff}.bs .btn-main:hover{background:var(--main-d,#09090b);color:#fff}
+.bs .btn-out{background:#fff;border-color:var(--input-border,#d4d4d8);color:inherit}.bs .btn-out:hover{border-color:var(--primary-d,#27272a)}
+.bs .iconBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent;border-radius:var(--btn-radius,6px);cursor:pointer;color:inherit}.bs .iconBtn:hover{background:var(--primary-10,#f4f4f5)}
+.bs .ic{width:20px;height:20px;flex:none}
+.bs .ph{display:flex;align-items:center;justify-content:center;background:var(--bg-soft,#f8f8f8);border:1px dashed var(--input-border,#d4d4d8);color:var(--text-muted,#71717a);font-size:12px;text-align:center;padding:6px;border-radius:4px}
+.bs .todo{background:#fff7d6;color:#5c4a00;padding:0 4px;border-radius:2px}
+@supports (corner-shape:squircle){.bs .btn,.bs .iconBtn{corner-shape:var(--corner-shape,squircle)}}
+.bs :focus-visible{outline:2px solid var(--primary-d,#27272a);outline-offset:2px}</style>
+</helmet>
+<section class="bs BrandsView" aria-labelledby="bsT" onMouseEnter="{{ hoverIn }}" onMouseLeave="{{ hoverOut }}" onFocus="{{ hoverIn }}" onBlur="{{ hoverOut }}">
+<div class="bsHead"><h2 id="bsT">Naši výrobci</h2>
+<div class="bsNav"><a href="#vyrobci">Všichni výrobci (43)</a>
+
+<button class="iconBtn" type="button" aria-label="Předchozí výrobci" onClick="{{ prev }}" data-arrow="1"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></button>
+<button class="iconBtn" type="button" aria-label="Další výrobci" onClick="{{ next }}"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></button></div></div>
+<div class="bsViewport"><div class="bsTrack" data-bs="1" onTouchStart="{{ touch }}">
+<sc-for list="{{ items }}" as="b" hint-placeholder-count="8">
+<a class="bsItem" href="{{ b.href }}" aria-label="{{ b.label }}" aria-hidden="{{ b.hidden }}" tabIndex="{{ b.tab }}">
+<sc-if value="{{ b.hasLogo }}" hint-placeholder-val="{{ false }}"><img src="{{ b.logo }}" alt=""></sc-if>
+<sc-if value="{{ b.noLogo }}" hint-placeholder-val="{{ true }}"><span class="bsPh">{{ b.n }}<small>[LOGO]</small></span></sc-if>
+</a>
+</sc-for>
+</div></div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 200}, "speed": {"editor": "range", "min": 4, "max": 40, "step": 1, "unit": "px/s", "default": 14}, "brands": {"editor": null}}'>
+
+/* Loga se doplní do LOGOS (url /_blob/… podle manifestu). Prázdné = placeholder. */
+const BRANDS=["Knorr Prandell", "Jovi", "Talens", "Royal & Langnickel", "Pebeo", "Meyco", "Sizzix", "Van Gogh", "Darwi", "Sakura", "Cernit", "Golden", "Docrafts", "Amsterdam", "Essdee", "Rembrandt", "Clairefontaine", "Ecoline", "Leane Creatief", "Bruynzeel", "Efco", "Cobra"];
+const LOGOS_ALL={"Knorr Prandell": "/_blob/7964e46b49bbe85310209b3fb6f2513e", "Pebeo": "/_blob/4564541216b3ed637265a552e481d40e", "Sizzix": "/_blob/bfc375c97a273c5cd56246133ff4265d", "Sakura": "/_blob/176e0540b5a76461c64685b57d248184", "Talens": "/_blob/35823966a4225b2c1a54ebf7cd4bc2a1", "Golden": "/_blob/fbf4acd183155c752611ed204980f731", "Amsterdam": "/_blob/58683c1b00625d986f7d587a0b2be9c3", "Bruynzeel": "/_blob/a495b657fd3ddbf49c0732e7e7fd2d85", "Cobra": "/_blob/29d6a75d9d3c15b4af2df847b53673fb", "Ecoline": "/_blob/fefbb421e9f34b50bc836e15d1c45214", "Rembrandt": "/_blob/a2896ae5939161b84d53b7272a85f44d", "Van Gogh": "/_blob/5699b57ecb87decc4bd919a81ac77301"};
+const LOGOS=LOGOS_ALL;
+class Component extends DCLogic {
+ constructor(p){super(p);this.state={hover:false,manual:false,playing:true};this.pos=0;this.last=0;
+  this.tick=(ts)=>{this.raf=requestAnimationFrame(this.tick);const t=this.track();const dt=this.last?Math.min(64,ts-this.last):0;this.last=ts;
+   if(!t||!this.state.playing||this.state.hover||this.state.manual||this.reduced)return;
+   if(Math.abs(t.scrollLeft-this.pos)>2)this.pos=t.scrollLeft;
+   const half=t.scrollWidth/2; this.pos+=(this.props.speed||14)*dt/1000; if(this.pos>=half)this.pos-=half;
+   t.scrollLeft=this.pos;};}
+ track(){return this.root||(this.root=document.querySelector('[data-bs="1"]'));}
+ componentDidMount(){this.reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(this.reduced)this.setState({playing:false});this.raf=requestAnimationFrame(this.tick);}
+ componentWillUnmount(){cancelAnimationFrame(this.raf);clearTimeout(this.mt);}
+ pauseFor(ms){this.setState({manual:true});clearTimeout(this.mt);this.mt=setTimeout(()=>{const t=this.track();if(t)this.pos=t.scrollLeft;this.setState({manual:false});},ms);}
+ move(d){const t=this.track();if(!t)return;this.pauseFor(4000);const half=t.scrollWidth/2;
+  if(d<0&&t.scrollLeft<t.clientWidth){t.scrollLeft+=half;}
+  t.scrollBy({left:d*t.clientWidth*0.6,behavior:'smooth'});}
+ renderVals(){const s=this.state; const list=(this.props.brands||BRANDS).filter((n)=>LOGOS[n]).map((n)=>({n:n,logo:LOGOS[n]}));
+  const items=list.concat(list).map((b,i)=>({n:b.n,logo:b.logo,hasLogo:!!b.logo,noLogo:!b.logo,label:'Výrobce '+b.n,href:'Kategorie.dc.html',
+   hidden:i>=list.length?'true':'false',tab:i>=list.length?-1:0}));
+  return {items:items,hoverIn:()=>this.setState({hover:true}),hoverOut:()=>this.setState({hover:false}),
+   prev:()=>this.move(-1),next:()=>this.move(1),touch:()=>this.pauseFor(5000)};}
+}
+</script>
+</body>
+</html>

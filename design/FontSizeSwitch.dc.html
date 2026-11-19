@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Prezentační přepínač</title>
+<script src="./support.js"></script>
+<style>
+:root{
+  color-scheme: light;
+  /* značka – zatím neutrální šedá škála */
+  --primary:#9b414b; --primary-d:#7f343d; --primary-10:#f8eeef; /* značka Daver – vínová; konverzní (--main) zůstává černá */
+  --main:#27272a; --main-d:#09090b;
+  --nav-bg:#9b414b; --nav-fg:#fff; --nav-hover:#7f343d;
+  --footer-bg:#27272a;
+  --text:rgba(24,24,27,.92); --text-weaker:rgba(24,24,27,.68); --text-muted:#71717a;
+  --bg:#fff; --bg-soft:#f8f8f8; --line:#e4e4e7;
+  --input-border:#d4d4d8; --input-bg-soft:#f4f4f5;
+  --success:#15803d; --success-text:#15803d; --primary-text:#27272a; --info:#1f6fa8; --danger:#b91c1c;
+  --flag-discount:#ffc107; --flag-discount-fg:#1e1e1e;
+  --flag-akce:#c2410c; --flag-novinka:#0277bd; --flag-doporucujeme:#1f6fa8; --flag-vyprodej:#3867d6;
+  --radius-xs:2px; --radius-sm:4px; --radius-md:6px; --radius-lg:8px;
+  --corner-shape:squircle; /* squircle rohy: karty a tlačítka */
+  --btn-radius:6px; --card-radius:8px; /* fallback bez podpory corner-shape */
+  --btn-h-sm:32px; --btn-h-md:44px; --btn-h-lg:56px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+  --gutter-xxs:12px; --gutter-xs:16px; --gutter-s:16px; --gutter-m:24px; --gutter-l:24px; --gutter-xl:32px; --gutter-xxl:32px;
+  --gutter:var(--gutter-xxs);
+  --content-max:1560px;
+  --section-gap:var(--space-6); --card-pad:var(--space-4); --grid-gap:var(--space-3);
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs-h1:29px; --fs-h2:23px; --fs-h3:19px; --fs-h4:17px; --fs-body:16px; --fs-body-sm:14px; --fs-caption:13px;
+  --fs-price-md:21px; --fs-price-sm:16px; --lh-body:1.5;
+  --header-h:0px;
+}
+@supports (corner-shape:squircle){:root{--btn-radius:16px;--card-radius:24px;--radius-xs:4px;--radius-sm:12px;--radius-md:16px;--radius-lg:24px}}
+@media (min-width:420px){:root{--gutter:var(--gutter-xs)}}
+@media (min-width:550px){:root{--gutter:var(--gutter-s)}}
+@media (min-width:820px){:root{--gutter:var(--gutter-m);--section-gap:var(--space-7);--card-pad:var(--space-5);--grid-gap:var(--space-4);--fs-h1:34px;--fs-h2:26px;--fs-h3:21px}}
+@media (min-width:1000px){:root{--gutter:var(--gutter-l)}}
+@media (min-width:1150px){:root{--gutter:var(--gutter-xl);--section-gap:var(--space-8);--fs-h1:42px;--fs-h2:30px;--fs-h3:23px;--fs-h4:19px;--fs-body:17px;--fs-body-sm:15px;--fs-caption:13px;--fs-price-md:23px;--fs-price-sm:17px}}
+@media (min-width:1440px){:root{--gutter:var(--gutter-xxl)}}
+
+*,*::before,*::after{box-sizing:border-box}
+@supports (corner-shape:squircle){.qty,.miniQty,.rowQty,.searchBox,.ddBtn,.coupon input,.field input,.field select,.field textarea,.pickTools input,.perPage select,input[type=text],input[type=search],input[type=email],input[type=tel],input[type=password],input[type=number],select,textarea{corner-shape:squircle}}
+@supports (corner-shape:squircle){*,*::before,*::after{corner-shape:squircle}}
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}
+.fss{position:fixed;left:16px;bottom:16px;z-index:2600;font-family:var(--font,system-ui,sans-serif);color:var(--text,#18181b);font-size:var(--fs-body,15px);line-height:1.5;font-size:13px}
+.fssBtn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border-radius:var(--btn-radius,12px);border:1px solid var(--line,#e4e4e7);background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.14);cursor:pointer;color:var(--text,#18181b);transition:transform .15s,border-color .2s}
+.fssBtn:hover{border-color:var(--primary-d,#7f343d)}.fssBtn:active{transform:scale(.94)}
+.fssBtn .ic{width:22px;height:22px}
+.fssHide{display:flex;align-items:center;gap:8px;width:100%;min-height:40px;margin-top:4px;padding:8px 10px;border:0;border-top:1px solid var(--line,#e4e4e7);background:none;color:var(--text-weaker,rgba(24,24,27,.68));font:inherit;font-size:13px;text-align:left;cursor:pointer;border-radius:0}
+.fssHide:hover{color:var(--primary-d,#7f343d)}
+.fssHide .ic{width:18px;height:18px;flex:none}
+.fssBtn[aria-expanded="true"]{background:var(--primary,#9b414b);border-color:var(--primary,#9b414b);color:#fff}
+.fssMenu{position:absolute;left:0;bottom:calc(100% + 8px);width:280px;background:#fff;border:1px solid var(--line,#e4e4e7);border-radius:var(--radius-lg,8px);box-shadow:0 12px 28px rgba(0,0,0,.16);padding:12px}
+.fssMenu fieldset{border:0;margin:0 0 8px;padding:0}
+.fssMenu legend{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-weaker,rgba(24,24,27,.68));margin-bottom:4px}
+.fssMenu label{display:flex;align-items:center;gap:8px;min-height:40px;cursor:pointer}
+.fssMenu input{accent-color:var(--primary-d,#27272a);width:18px;height:18px}
+</style>
+</helmet>
+<sc-if value="{{ shown }}" hint-placeholder-val="{{ true }}"><div class="fss" onKeyDown="{{ onKey }}">
+<sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+<div class="fssMenu" role="dialog" aria-label="Nastavení prezentace">
+<fieldset><legend>Velikost písma na celém webu</legend>
+<label><input type="radio" name="fssF" checked="{{ std }}" onChange="{{ setStd }}">Standardní</label>
+<label><input type="radio" name="fssF" checked="{{ big }}" onChange="{{ setBig }}">Velké (× 1,125)</label></fieldset>
+<fieldset><legend>Zákazník</legend>
+<label><input type="radio" name="fssA" checked="{{ out }}" onChange="{{ setOut }}">Nepřihlášen</label>
+<label><input type="radio" name="fssA" checked="{{ inn }}" onChange="{{ setIn }}">Přihlášen (Jan Novák · Velkoobchod)</label></fieldset>
+<fieldset><legend>Výběr varianty na detailu</legend>
+<label><input type="radio" name="fssV" checked="{{ vSel }}" onChange="{{ setVSel }}">Rozbalovací seznam</label>
+<label><input type="radio" name="fssV" checked="{{ vSw }}" onChange="{{ setVSw }}">Barevné vzorky</label></fieldset>
+<button class="fssHide" type="button" onClick="{{ hide }}"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M53.92,34.62A8,8,0,1,0,42.08,45.38L61.32,66.55C25,88.84,9.38,123.2,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208a127.11,127.11,0,0,0,52.07-10.83l22,24.21a8,8,0,1,0,11.84-10.76Zm47.33,75.84,41.67,45.85a32,32,0,0,1-41.67-45.85ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.16,133.16,0,0,1,25,128c4.69-8.79,19.66-33.39,47.35-49.38l18,19.75a48,48,0,0,0,63.66,70l14.73,16.2A112,112,0,0,1,128,192Zm6-95.43a8,8,0,0,1,3-15.72,48.16,48.16,0,0,1,38.77,42.64,8,8,0,0,1-7.22,8.71,6.39,6.39,0,0,1-.75,0,8,8,0,0,1-8-7.26A32.09,32.09,0,0,0,134,96.57Zm113.28,34.69c-.42.94-10.55,23.37-33.36,43.8a8,8,0,1,1-10.67-11.92A132.77,132.77,0,0,0,231.05,128a133.15,133.15,0,0,0-23.12-30.77C185.67,75.19,158.78,64,128,64a118.37,118.37,0,0,0-19.36,1.57A8,8,0,1,1,106,49.79,134,134,0,0,1,128,48c34.88,0,66.57,13.26,91.66,38.35,18.83,18.83,27.3,37.62,27.65,38.41A8,8,0,0,1,247.31,131.26Z"></path></svg>Skrýt panel (vrátí se po obnovení stránky)</button>
+</div>
+</sc-if>
+<button class="fssBtn" type="button" aria-expanded="{{ open }}" aria-label="{{ aria }}" title="{{ aria }}" onClick="{{ toggle }}"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M87.24,52.59a8,8,0,0,0-14.48,0l-64,136a8,8,0,1,0,14.48,6.81L39.9,160h80.2l16.66,35.4a8,8,0,1,0,14.48-6.81ZM47.43,144,80,74.79,112.57,144ZM200,96c-12.76,0-22.73,3.47-29.63,10.32a8,8,0,0,0,11.26,11.36c3.8-3.77,10-5.68,18.37-5.68,13.23,0,24,9,24,20v3.22A42.76,42.76,0,0,0,200,128c-22.06,0-40,16.15-40,36s17.94,36,40,36a42.73,42.73,0,0,0,24-7.25,8,8,0,0,0,16-.75V132C240,112.15,222.06,96,200,96Zm0,88c-13.23,0-24-9-24-20s10.77-20,24-20,24,9,24,20S213.23,184,200,184Z"></path></svg></button>
+</div></sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 300, "height": 440}}'>
+
+const lsGet=(k)=>{try{return localStorage.getItem('daver'+k)}catch(e){return null}};
+const lsSet=(k,v)=>{try{localStorage.setItem('daver'+k,v)}catch(e){}};
+class Component extends DCLogic {
+ constructor(p){super(p);this.state={open:false,big:false,auth:false,vui:'select',hidden:false};
+  this.onAuth=()=>this.setState({auth:lsGet('AuthV1')==='in'});}
+ componentDidMount(){
+  const big=lsGet('FontSizeV1')==='big'; this.setState({big:big,vui:lsGet('VariantUiV1')||'select'}); this.onAuth();
+  window.addEventListener('daver-auth',this.onAuth); window.addEventListener('storage',this.onAuth);
+  this.mo=new MutationObserver((ms)=>{if(!this.state.big)return; ms.forEach((m)=>m.addedNodes.forEach((n)=>{if(n.nodeType===1)this.scale(n);}));});
+  this.mo.observe(document.body,{childList:true,subtree:true});
+  if(big)setTimeout(()=>this.apply(true),50);
+ }
+ componentWillUnmount(){window.removeEventListener('daver-auth',this.onAuth);window.removeEventListener('storage',this.onAuth);if(this.mo)this.mo.disconnect();}
+ scale(root){
+  const els=[root].concat(Array.from(root.querySelectorAll('*')));
+  els.forEach((el)=>{if(el.dataset.fsOrig||el.closest('.fss'))return;
+   const fs=parseFloat(getComputedStyle(el).fontSize); if(!fs)return;
+   el.dataset.fsOrig=String(fs); el.dataset.fsInline=el.style.fontSize||'';});
+  els.forEach((el)=>{if(el.dataset.fsOrig&&!el.dataset.fsDone){el.style.fontSize=Math.round(parseFloat(el.dataset.fsOrig)*1.125)+'px';el.dataset.fsDone='1';}});
+ }
+ apply(big){
+  if(big){this.scale(document.body);}
+  else{document.querySelectorAll('[data-fs-orig]').forEach((el)=>{el.style.fontSize=el.dataset.fsInline||'';delete el.dataset.fsOrig;delete el.dataset.fsInline;delete el.dataset.fsDone;});}
+ }
+ setBig(b){lsSet('FontSizeV1',b?'big':'std');this.setState({big:b});this.apply(b);}
+ setVui(v){lsSet('VariantUiV1',v);window.dispatchEvent(new Event('daver-variant'));this.setState({vui:v});}
+ setAuth(a){lsSet('AuthV1',a?'in':'out');window.dispatchEvent(new Event('daver-auth'));this.setState({auth:a});}
+ renderVals(){const s=this.state;
+  return {open:s.open,std:!s.big,big:s.big,out:!s.auth,inn:s.auth,
+   shown:!s.hidden,hide:()=>this.setState({hidden:true,open:false}),aria:'Nastavení prezentace: '+(s.big?'velké písmo':'standardní písmo')+', '+(s.auth?'přihlášen':'nepřihlášen'),
+   toggle:()=>this.setState({open:!s.open}), onKey:(e)=>{if(e.key==='Escape'&&s.open){e.stopPropagation();this.setState({open:false});}},
+   vSel:s.vui!=='swatch',vSw:s.vui==='swatch',setVSel:()=>this.setVui('select'),setVSw:()=>this.setVui('swatch'),setStd:()=>this.setBig(false),setBig:()=>this.setBig(true),setOut:()=>this.setAuth(false),setIn:()=>this.setAuth(true)};}
+}
+</script>
+</body>
+</html>

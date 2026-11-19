@@ -1,0 +1,2127 @@
+{
+ "_info": "Bloby v canvasu Daver.cz. 'file' = odvozená WebP verze (max 600 px, q82) vytvořená z originálu v 'source' (zip) / 'source_entry'. Při Synchronizuj vygenerovat znovu stejným postupem a ověřit sha256. Hero (assets/hero) a ikony dopravy/plateb (assets/dopravy-platby) jsou v repu uložené přímo. PNG soubory se při zápisu přes most na disk překomprimují (bajty se liší, pixely ne) – u PNG proto ověřovat 'pixel_sha256' (sha256 z RGBA pixelů).",
+ "/_blob/aee33865f02f71b834821c165a17deb0": {
+  "file": "assets/produkty/barvy-media/01-amsterdam-akrylova-barva-120-ml.webp",
+  "sha256": "0d7b882a19d9aed8b985afb4ca85fd45d4cc4ea6d4aed076f8bd965697472a44",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "01-amsterdam-akrylova-barva-120-ml.jpg",
+  "product": "Amsterdam akrylová barva 120 ml",
+  "url": "https://www.b2bdaver.cz/amsterdam-akrylova-barva-120-ml-p48168/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7597fae7f1b8123ae21435de0a5955fb": {
+  "file": "assets/produkty/barvy-media/02-van-gogh-akvarelova-barva-pulpanvicka-2-ml.webp",
+  "sha256": "a53284d7eb875fe803c17aadae5071e91151821c47cea2e14b1f714c87cb9e52",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "02-van-gogh-akvarelova-barva-pulpanvicka-2-ml.jpg",
+  "product": "Van Gogh akvarelová barva půlpánvička 2 ml",
+  "url": "https://www.b2bdaver.cz/van-gogh-akvarelova-barva-pulpanvicka-2-ml-p48209/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/fef1413fdd2647d960a9482430744067": {
+  "file": "assets/produkty/barvy-media/03-rembrandt-olejova-barva-40-ml.webp",
+  "sha256": "5b7b9bc979b0454b7a0014cdc49df468e36a61d69048530173fa0ada610edc2e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "03-rembrandt-olejova-barva-40-ml.jpg",
+  "product": "Rembrandt olejová barva 40 ml",
+  "url": "https://www.b2bdaver.cz/rembrandt-olejova-barva-40-ml-p48249/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/be4f278a50c4215951cb83c8f87a4825": {
+  "file": "assets/produkty/barvy-media/04-amsterdam-akrylovy-akrylovy-inkoust-30-ml.webp",
+  "sha256": "186f11a2d7a80a500cbb0f2f03eb6857c6d114f0aaa268d1d6a5e723ae80f7a1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "04-amsterdam-akrylovy-akrylovy-inkoust-30-ml.png",
+  "product": "Amsterdam akrylový akrylový inkoust 30 ml",
+  "url": "https://www.b2bdaver.cz/amsterdam-akrylovy-akrylovy-inkoust-30-ml-p48216/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/706b987847d5d005f76b442cc21c6894": {
+  "file": "assets/produkty/barvy-media/05-pebeo-kvasovy-lak-ve-spreji-200-ml.webp",
+  "sha256": "6542446aadd0106cb6a457d8ff0c2b8e8577a4ccee204410546925ce36db2df1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "05-pebeo-kvasovy-lak-ve-spreji-200-ml.jpg",
+  "product": "Pebeo kvašový lak ve spreji 200 ml",
+  "url": "https://www.b2bdaver.cz/pebeo-kvasovy-lak-ve-spreji-200-ml-p31275/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/ab5b1557c09e3117e6486938c65ee85e": {
+  "file": "assets/produkty/barvy-media/06-darwi-tex-barva-na-textil-250-ml.webp",
+  "sha256": "1d6739f8eab70a830e29b6c8faf869d65ef48f1917d57481f2ec17c430e367e5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "06-darwi-tex-barva-na-textil-250-ml.jpg",
+  "product": "Darwi Tex barva na textil 250 ml",
+  "url": "https://www.b2bdaver.cz/darwi-tex-barva-na-textil-250-ml-p48232/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/4acf2051b414ee89923c0d83ea753755": {
+  "file": "assets/produkty/barvy-media/07-arasilk-barva-na-hedvabi-50-ml.webp",
+  "sha256": "fac0c3b3321eb4d243d4fad53e793c120fbcad3511e58ead7b409b588e758fc0",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "07-arasilk-barva-na-hedvabi-50-ml.jpg",
+  "product": "Arasilk barva na hedvábí 50 ml",
+  "url": "https://www.b2bdaver.cz/arasilk-barva-na-hedvabi-50-ml-p48219/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/2fbd3a9d7d58a260eb66cd87f0567d2e": {
+  "file": "assets/produkty/barvy-media/08-pebeo-ceramic-barva-na-keramiku-45-ml.webp",
+  "sha256": "4d22d26b34ce8cb63c4e2b07d54e9c26bf4033dca544675c509c329a2c578d2f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "08-pebeo-ceramic-barva-na-keramiku-45-ml.jpg",
+  "product": "Pebeo Ceramic barva na keramiku 45 ml",
+  "url": "https://www.b2bdaver.cz/pebeo-ceramic-barva-na-keramiku-45-ml-p48228/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/c14add0f43bcac99d9dc1840b7ab90ac": {
+  "file": "assets/produkty/barvy-media/09-darwi-armerina-barva-na-porcelan-50-ml.webp",
+  "sha256": "fe94b3a70aa38eda59f35420e2ddd502094ebf0a3f0d7225f3931b59fdcfd801",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "09-darwi-armerina-barva-na-porcelan-50-ml.jpg",
+  "product": "Darwi Armerina barva na porcelán 50 ml",
+  "url": "https://www.b2bdaver.cz/darwi-armerina-barva-na-porcelan-50-ml-p48230/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/843ea3ed7d44256d715c3f92babf8311": {
+  "file": "assets/produkty/barvy-media/10-darwi-glass-redidlo-na-vitrazni-barvy-30-ml.webp",
+  "sha256": "401e63e77fe6d71923c08d6676c5c44060516b12508ef2cd37cd89ac10faefc5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "10-darwi-glass-redidlo-na-vitrazni-barvy-30-ml.jpg",
+  "product": "Darwi Glass ředidlo na vitrážní barvy 30 ml",
+  "url": "https://www.b2bdaver.cz/darwi-glass-redidlo-na-vitrazni-barvy-30-ml-p297/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/f75dff40222e60087762ddc606cc9217": {
+  "file": "assets/produkty/barvy-media/11-talens-blob-paint-sada-barev-3-x-80-ml-pink.webp",
+  "sha256": "3893680d05dcaaa673173eb2aa5dd78143ff4f9c02bc7c0a87297bb92d72b36f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "11-talens-blob-paint-sada-barev-3-x-80-ml-pink.png",
+  "product": "Talens Blob Paint sada barev 3 x 80 ml Pink",
+  "url": "https://www.b2bdaver.cz/talens-blob-paint-sada-barev-3-x-80-ml-pink-p29560/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/2f67c3e11797da38de52aae96f9db1b8": {
+  "file": "assets/produkty/barvy-media/12-royal-langnickel-velka-cestovatelska-vytvarna-sada-96-ks.webp",
+  "sha256": "6cdfad1a3d40bed9d35315ce76cc79d67c392c9fd7ee9140e1e06eff15f75171",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "12-royal-langnickel-velka-cestovatelska-vytvarna-sada-96-ks.jpg",
+  "product": "Royal & Langnickel velká cestovatelská výtvarná sada 96 ks",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-velka-cestovatelska-vytvarna-sada-96-ks-p18232/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7df7b0f912c198b6dc3ca6a10557c282": {
+  "file": "assets/produkty/barvy-media/13-golden-heavy-body-akrylova-barva-59-ml.webp",
+  "sha256": "a6bb10ea890dbeaea2cb231916db27c179488c56f851b6e9bc067ccd9cb2007c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "13-golden-heavy-body-akrylova-barva-59-ml.jpg",
+  "product": "Golden Heavy Body akrylová barva 59 ml",
+  "url": "https://www.b2bdaver.cz/golden-heavy-body-akrylova-barva-59-ml-p48200/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/72e144380191ae2fbeb84c00dc20ade9": {
+  "file": "assets/produkty/barvy-media/14-qor-akvarelova-barva-11-ml-cadmium.webp",
+  "sha256": "8a45c8c10ea960d73f31c815af63491c4e0782d0840324e41f2d61d83110f516",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "14-qor-akvarelova-barva-11-ml-cadmium.jpg",
+  "product": "QoR akvarelová barva 11 ml Cadmium",
+  "url": "https://www.b2bdaver.cz/qor-akvarelova-barva-11-ml-cadmium-p48213/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/cd64a8a86b76f265a8d2cdd374f144a1": {
+  "file": "assets/produkty/barvy-media/15-cobra-wm-vodou-reditelna-olejova-barva-40-ml.webp",
+  "sha256": "82778c91765ca606761584b356720e4605d5e66d6384e6bea12f84a3386793c2",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-barvy-media.zip",
+  "source_entry": "15-cobra-wm-vodou-reditelna-olejova-barva-40-ml.png",
+  "product": "Cobra WM vodou ředitelná olejová barva 40 ml",
+  "url": "https://www.b2bdaver.cz/cobra-wm-vodou-reditelna-olejova-barva-40-ml-p48252/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/0f24f34f89db3630a8cf4d6bf1f91d04": {
+  "file": "assets/produkty/deti-skola/01-jovi-drevene-pastelky-sestihranne-12-ks.webp",
+  "sha256": "c7c7570322c3243298d718296bedc2c97fc587418a67400662bd9fa660d1b4e6",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "01-jovi-drevene-pastelky-sestihranne-12-ks.jpg",
+  "product": "Jovi dřevěné pastelky šestihranné 12 ks",
+  "url": "https://www.b2bdaver.cz/jovi-drevene-pastelky-sestihranne-12-ks-p417/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/91250fbb217918ac1ca0715952977327": {
+  "file": "assets/produkty/deti-skola/02-jovi-vodove-barvy-prumer-22-mm-12-ks-se-stetcem.webp",
+  "sha256": "4cf7dd038f0511e87db4537eee22eab88b72706965029c1e40b71818b0c3d204",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "02-jovi-vodove-barvy-prumer-22-mm-12-ks-se-stetcem.jpg",
+  "product": "Jovi vodové barvy průměr 22 mm 12 ks se štětcem",
+  "url": "https://www.b2bdaver.cz/jovi-vodove-barvy-prumer-22-mm-12-ks-se-stetcem-p457/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/c422bca9c6417ae0a6a1f70b3ff27f42": {
+  "file": "assets/produkty/deti-skola/03-das-samotvrdnouci-modelovaci-hmota-bila.webp",
+  "sha256": "a2e4cd258dbaf1167c9042d91f564a80a24d777c1d0f65cac13bba05657bb63e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "03-das-samotvrdnouci-modelovaci-hmota-bila.jpg",
+  "product": "Das samotvrdnoucí modelovací hmota bílá",
+  "url": "https://www.b2bdaver.cz/das-samotvrdnouci-modelovaci-hmota-bila-p49033/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/be9a82f85fbea6600f7baae637b17d3a": {
+  "file": "assets/produkty/deti-skola/04-doms-sada-4-ks-grafitova-tuzka-guma-orezavatko-a-pravitko.webp",
+  "sha256": "f4945a4595e821e57219c949a53a72012d01528ed0724fb2b541944c096368e0",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "04-doms-sada-4-ks-grafitova-tuzka-guma-orezavatko-a-pravitko.jpg",
+  "product": "Doms sada 4 ks grafitová tužka guma ořezávátko a pravítko",
+  "url": "https://www.b2bdaver.cz/doms-sada-4-ks-grafitova-tuzka-guma-orezavatko-a-pravitko-p41199/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/4c6f3d53f364da514d62e96955d5fdc3": {
+  "file": "assets/produkty/deti-skola/05-collall-lepidlo-na-sablony-100-ml.webp",
+  "sha256": "2f193974b0c4bc61b038498315aec3cef6aeb699c57a9d8162b33d626c52d897",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "05-collall-lepidlo-na-sablony-100-ml.webp",
+  "product": "Collall lepidlo na šablony 100 ml",
+  "url": "https://www.b2bdaver.cz/collall-lepidlo-na-sablony-100-ml-p49006/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/c934442ea1007416aae843444bcd7715": {
+  "file": "assets/produkty/deti-skola/06-jovi-sada-barev-na-oblicej-6-x-8-ml.webp",
+  "sha256": "8d0a5a72a67d05c0023557fa6ddd8518d119bc228c2b91afb41048784761220c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "06-jovi-sada-barev-na-oblicej-6-x-8-ml.jpg",
+  "product": "Jovi sada barev na obličej 6 x 8 ml",
+  "url": "https://www.b2bdaver.cz/jovi-sada-barev-na-oblicej-6-x-8-ml-p2145/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5c3d274ce0033e292a3d49dba43b3a6a": {
+  "file": "assets/produkty/deti-skola/07-jovi-fixy-oboustranne-vypratelne-12-ks.webp",
+  "sha256": "0b5e2de5dd9ab722f34b45b681a46c96157672764f41918a9b53eff7fdf2162b",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "07-jovi-fixy-oboustranne-vypratelne-12-ks.jpg",
+  "product": "Jovi fixy oboustranné vypratelné 12 ks",
+  "url": "https://www.b2bdaver.cz/jovi-fixy-oboustranne-vypratelne-12-ks-p2064/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/414b7eca50d9c3d2d51d953f8f95b78c": {
+  "file": "assets/produkty/deti-skola/08-jovi-skolni-stetec-detsky-tenky.webp",
+  "sha256": "f3f025aa5a0102be5e6a905fe78b87ed52d0fbdb5f00f72deed0daba4ce60c9a",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "08-jovi-skolni-stetec-detsky-tenky.jpg",
+  "product": "Jovi školní štětec dětský tenký",
+  "url": "https://www.b2bdaver.cz/jovi-skolni-stetec-detsky-tenky-p470/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/dd91cbce4082adf1992fbda4388e53b9": {
+  "file": "assets/produkty/deti-skola/09-jovi-tech-crazy-cars-sada-14-ks-fantazie.webp",
+  "sha256": "887efb2bcdadad74b0f25e452176e433c4ee76132c4a4313f93b5ad03b9a3763",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "09-jovi-tech-crazy-cars-sada-14-ks-fantazie.jpg",
+  "product": "Jovi Tech Crazy Cars sada 14 ks Fantazie",
+  "url": "https://www.b2bdaver.cz/jovi-tech-crazy-cars-sada-14-ks-fantazie-p21693/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/0bc5e85a333960870bc1d93a73732c8d": {
+  "file": "assets/produkty/deti-skola/10-doms-sada-na-kresleni-a-malovani-63-ks-v-zavesnem-pouzdru.webp",
+  "sha256": "c0839e33dec9e9bc9466059d0e08730c949d5007bc88243af6f77ee57c27f414",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "10-doms-sada-na-kresleni-a-malovani-63-ks-v-zavesnem-pouzdru.jpg",
+  "product": "Doms sada na kreslení a malování 63 ks v závěsném pouzdru",
+  "url": "https://www.b2bdaver.cz/doms-sada-na-kresleni-a-malovani-63-ks-v-zavesnem-pouzdru-p41200/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/8d2a67fab1e71eb4689c3b4357146b07": {
+  "file": "assets/produkty/deti-skola/11-collall-praskove-lepidlo-250-g-s-odmerkou.webp",
+  "sha256": "9102592ef8de89bf099dbc2ab7d9e79e69a445ef615cd51e4e5a6eadfbed1e52",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "11-collall-praskove-lepidlo-250-g-s-odmerkou.webp",
+  "product": "Collall práškové lepidlo 250 g s odměrkou",
+  "url": "https://www.b2bdaver.cz/collall-praskove-lepidlo-250-g-s-odmerkou-p49016/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/20c84dc79eb0d84568169fb37a139605": {
+  "file": "assets/produkty/deti-skola/12-jovi-detske-tetovacky-display-24-ks.webp",
+  "sha256": "f7a1b6b7447905cc6143dba6ddbdb400503f25cd639e048e0a070c124628d69d",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "12-jovi-detske-tetovacky-display-24-ks.jpg",
+  "product": "Jovi dětské tetovačky display 24 ks",
+  "url": "https://www.b2bdaver.cz/jovi-detske-tetovacky-display-24-ks-p22274/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/f32acd54b41719bb422172bb8d125199": {
+  "file": "assets/produkty/deti-skola/13-jovi-jovidecor-textil-fixy-na-textil-stetcovy-hrot-12-ks.webp",
+  "sha256": "84de60ac4fe9d227b9cf2bed8a206a14ac168500054b13627761eb698a96ae74",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "13-jovi-jovidecor-textil-fixy-na-textil-stetcovy-hrot-12-ks.jpg",
+  "product": "Jovi Jovidecor Textil fixy na textil štětcový hrot 12 ks",
+  "url": "https://www.b2bdaver.cz/jovi-jovidecor-textil-fixy-na-textil-stetcovy-hrot-12-ks-p1954/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/689e72b2fc9626547fa55f2d4e835fd9": {
+  "file": "assets/produkty/deti-skola/14-jovi-jovidecor-sada-akrylovych-barev-6-x-55-ml-se-stetcem.webp",
+  "sha256": "6e68452c821fbb5c6bd58b10e02d3c43344aee465422b7d39d39d4bf54e237fa",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "14-jovi-jovidecor-sada-akrylovych-barev-6-x-55-ml-se-stetcem.jpg",
+  "product": "Jovi Jovidecor sada akrylových barev 6 x 55 ml se štětcem",
+  "url": "https://www.b2bdaver.cz/jovi-jovidecor-sada-akrylovych-barev-6-x-55-ml-se-stetcem-p219/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/353bce6eaccdbf1470c44d2082945390": {
+  "file": "assets/produkty/deti-skola/15-jovi-vykrajovatka-24-ks-v-kbeliku.webp",
+  "sha256": "b850d089076f6d8ba6e6ac8c42656abdb56b599528adf6b5a3043fc9a7f2feec",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-deti-skola.zip",
+  "source_entry": "15-jovi-vykrajovatka-24-ks-v-kbeliku.jpg",
+  "product": "Jovi vykrajovátka 24 ks v kbelíku",
+  "url": "https://www.b2bdaver.cz/jovi-vykrajovatka-24-ks-v-kbeliku-p288/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/93957e687169da0b84b3ae97ad615a36": {
+  "file": "assets/produkty/grafika-tisk/01-brause-barva-na-linoryt-20-ml-black.webp",
+  "sha256": "8f8811e5052601925cfcdb998457f9f466d31fb9ebfa74811e3874b2f0480e6a",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "01-brause-barva-na-linoryt-20-ml-black.jpg",
+  "product": "Brause barva na linoryt 20 ml Black",
+  "url": "https://www.b2bdaver.cz/brause-barva-na-linoryt-20-ml-black-p30477/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/a98fc647c166bcd79b1e3a89dec41c3c": {
+  "file": "assets/produkty/grafika-tisk/02-pebeo-transferove-medium-na-linoryt-80-ml.webp",
+  "sha256": "59ab4855f78c1176b202308476c3ad4fa89c056519e74fb4d2e70b2c2d5f1f5f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "02-pebeo-transferove-medium-na-linoryt-80-ml.jpg",
+  "product": "Pebeo transferové médium na linoryt 80 ml",
+  "url": "https://www.b2bdaver.cz/pebeo-transferove-medium-na-linoryt-80-ml-p35598/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/89db03cbd117e03cb388f0d1367be9cd": {
+  "file": "assets/produkty/grafika-tisk/03-ami-lino-plat-na-linoryt-tloustka-3-2-mm-a2.webp",
+  "sha256": "a66fca2e6a70aaeeb43b4da17255c4b58b8262784d443c84c15e7ec4fc5bb939",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "03-ami-lino-plat-na-linoryt-tloustka-3-2-mm-a2.png",
+  "product": "Ami Lino plát na linoryt tloušťka 3,2 mm A2",
+  "url": "https://www.b2bdaver.cz/ami-lino-plat-na-linoryt-tloustka-3-2-mm-a2-p3821/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7af7f3eb5a814111157f22a489f24bf8": {
+  "file": "assets/produkty/grafika-tisk/04-abig-rydlo-na-linoryt-c-1.webp",
+  "sha256": "48315a3a2b1a9c0edc918705df2d091be88034df6761d0c0a540320f9d96d4f1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "04-abig-rydlo-na-linoryt-c-1.jpg",
+  "product": "Abig rydlo na linoryt č. 1",
+  "url": "https://www.b2bdaver.cz/abig-rydlo-na-linoryt-c-1-p1664/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/ef92e64bec67238bd681d06ce0375ad4": {
+  "file": "assets/produkty/grafika-tisk/05-abig-valecek-na-linoryt-60-mm.webp",
+  "sha256": "9e5ca37abf21fc4025ffc5d2a7f8060f5b4b8d3ebc25ac5c60483e90ef00e552",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "05-abig-valecek-na-linoryt-60-mm.jpg",
+  "product": "Abig váleček na linoryt 60 mm",
+  "url": "https://www.b2bdaver.cz/abig-valecek-na-linoryt-60-mm-p4557/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/9f69e6dc9c62c4968bd301328b6e6b16": {
+  "file": "assets/produkty/grafika-tisk/06-fome-graficky-lis-skolni-prumer-valcu-35-mm-deska-18-6-x-32-cm.webp",
+  "sha256": "3039e652b7c187ac3ddfa8e9caa58a43fe620b135f8aa7b62239d6c5099e73aa",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "06-fome-graficky-lis-skolni-prumer-valcu-35-mm-deska-18-6-x-32-cm.jpg",
+  "product": "Fome grafický lis školní průměr válců 35 mm deska 18,6 x 32 cm",
+  "url": "https://www.b2bdaver.cz/fome-graficky-lis-skolni-prumer-valcu-35-mm-deska-18-6-x-32-cm-p2963/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/1549fcbcf1595c4084e2b1827984c37d": {
+  "file": "assets/produkty/grafika-tisk/07-essdee-bezpecnostni-kryt-ruky-na-linoryt.webp",
+  "sha256": "cdeb1e533af4643cf1df6c4c9186d9371a675c72ecf79b3c5c4e0d14db2955fe",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "07-essdee-bezpecnostni-kryt-ruky-na-linoryt.jpg",
+  "product": "Essdee bezpečnostní kryt ruky na linoryt",
+  "url": "https://www.b2bdaver.cz/essdee-bezpecnostni-kryt-ruky-na-linoryt-p5917/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b853e209ad11a0b9bb486029392d03d1": {
+  "file": "assets/produkty/grafika-tisk/08-essdee-block-printing-essentials-kit-sada-na-linoryt.webp",
+  "sha256": "5cf14ef0dbb791c1e08afb0e3e3d6be4194b040b6d4675fc83d1f942073734f4",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "08-essdee-block-printing-essentials-kit-sada-na-linoryt.jpg",
+  "product": "Essdee Block Printing Essentials Kit sada na linoryt",
+  "url": "https://www.b2bdaver.cz/essdee-block-printing-essentials-kit-sada-na-linoryt-p5789/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/005792d93e2636c4f038e4ecf7d39dff": {
+  "file": "assets/produkty/grafika-tisk/09-meyco-razitkovy-blok-na-vyrezavani-150-x-210-mm-tloustka-5-mm.webp",
+  "sha256": "1fb5d7c6b880008093a70f22a2e1dc49cdf3213fdd2b06f75f9b2d5f39ca1179",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "09-meyco-razitkovy-blok-na-vyrezavani-150-x-210-mm-tloustka-5-mm.jpg",
+  "product": "Meyco razítkový blok na vyřezávání 150 x 210 mm tloušťka 5 mm",
+  "url": "https://www.b2bdaver.cz/meyco-razitkovy-blok-na-vyrezavani-150-x-210-mm-tloustka-5-mm-p37/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/a3833d5a3da86a6e25aa3898f72f9c9c": {
+  "file": "assets/produkty/grafika-tisk/10-essdee-tiskova-pena-printfoam-a4-tloustka-10-mm-baleni-10-ks.webp",
+  "sha256": "ce2dde0e635072865dc4b29b8c03c2279212b7f3c93a167648a5810efe2729b1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "10-essdee-tiskova-pena-printfoam-a4-tloustka-10-mm-baleni-10-ks.jpg",
+  "product": "Essdee tisková pěna PrintFoam A4 tloušťka 10 mm balení 10 ks",
+  "url": "https://www.b2bdaver.cz/essdee-tiskova-pena-printfoam-a4-tloustka-10-mm-baleni-10-ks-p5109/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/95b29607d5f39e509a885c686a45760a": {
+  "file": "assets/produkty/grafika-tisk/11-essdee-textilni-barva-na-linoryt-100-ml.webp",
+  "sha256": "4e46d7a86a3cb8994453cf218e19d57163a2fa9ae2d50a27a6ee55194d5af27e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "11-essdee-textilni-barva-na-linoryt-100-ml.jpg",
+  "product": "Essdee textilní barva na linoryt 100 ml",
+  "url": "https://www.b2bdaver.cz/essdee-textilni-barva-na-linoryt-100-ml-p48130/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/38f26f9c3f67d965bdbd2c1d3c60e2c1": {
+  "file": "assets/produkty/grafika-tisk/12-pebeo-zesvetlujici-medium-na-linoryt-80-ml.webp",
+  "sha256": "ca87054cc71aca61aff715c218df28cea5d6ed4705b44e35125f9327137d92ff",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "12-pebeo-zesvetlujici-medium-na-linoryt-80-ml.jpg",
+  "product": "Pebeo zesvětlující médium na linoryt 80 ml",
+  "url": "https://www.b2bdaver.cz/pebeo-zesvetlujici-medium-na-linoryt-80-ml-p35600/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/57fe9ba5769330c307dd81b3cfb2f69f": {
+  "file": "assets/produkty/grafika-tisk/13-essdee-lino-plat-softcut-105-x-150-mm-tloustka-3-mm-baleni-10-ks.webp",
+  "sha256": "e819b45aed64f665fb640fd948d467182901717a43aaeb3612660a3ae16e16c2",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "13-essdee-lino-plat-softcut-105-x-150-mm-tloustka-3-mm-baleni-10-ks.jpg",
+  "product": "Essdee Lino plát SoftCut 105 x 150 mm tloušťka 3 mm balení 10 ks",
+  "url": "https://www.b2bdaver.cz/essdee-lino-plat-softcut-105-x-150-mm-tloustka-3-mm-baleni-10-ks-p5488/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/4fa2757820abae41ca78f8018f874b53": {
+  "file": "assets/produkty/grafika-tisk/14-abig-drevena-rukojet-k-rydlum-na-linoryt.webp",
+  "sha256": "ffb0da277c405930bccb36765d8cf189eac5393544abe054d2d4a2d321a6641d",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "14-abig-drevena-rukojet-k-rydlum-na-linoryt.jpg",
+  "product": "Abig dřevěná rukojeť k rydlům na linoryt",
+  "url": "https://www.b2bdaver.cz/abig-drevena-rukojet-k-rydlum-na-linoryt-p1669/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/bffbeee82af77bd499d670a01a72e9ff": {
+  "file": "assets/produkty/grafika-tisk/15-essdee-penovy-valecek-nahradni-95-mm-baleni-5-ks.webp",
+  "sha256": "4c6c2753a5ff90a140dd73c8c71ba946c94f0115acecaf546b6f60744e97b4e2",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-grafika-tisk.zip",
+  "source_entry": "15-essdee-penovy-valecek-nahradni-95-mm-baleni-5-ks.jpg",
+  "product": "Essdee pěnový váleček náhradní 95 mm balení 5 ks",
+  "url": "https://www.b2bdaver.cz/essdee-penovy-valecek-nahradni-95-mm-baleni-5-ks-p27841/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b46863a517ae2c464194a1fe19807e79": {
+  "file": "assets/produkty/kreativni-techniky/01-meyco-pericka-marabu-100-az-120-mm-17-ks-bila.webp",
+  "sha256": "1bcdf00a47f87d183f98068bcf3212152b7af2148b1ad8ff96d5571b7cfc0871",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "01-meyco-pericka-marabu-100-az-120-mm-17-ks-bila.jpg",
+  "product": "Meyco peříčka marabu 100 až 120 mm 17 ks bílá",
+  "url": "https://www.b2bdaver.cz/meyco-pericka-marabu-100-az-120-mm-17-ks-bila-p2653/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/19532efd21c62d3e2078fd41e0b1653c": {
+  "file": "assets/produkty/kreativni-techniky/02-knorr-kostice-na-skladani-papiru-160-mm-kremova.webp",
+  "sha256": "9d0d9d506a4ddbfde06c559d4f39086d511441d55008b8f44d6d47952eddd56c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "02-knorr-kostice-na-skladani-papiru-160-mm-kremova.webp",
+  "product": "Knorr kostice na skládání papíru 160 mm krémová",
+  "url": "https://www.b2bdaver.cz/knorr-kostice-na-skladani-papiru-160-mm-kremova-p47235/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/93efae31e8c714bf3cb5b8b0977b749c": {
+  "file": "assets/produkty/kreativni-techniky/03-creative-vyrezavaci-a-embosovaci-kovove-sablony-sedmikrasky-obrysy-8-k.webp",
+  "sha256": "2fc6372426eb1a113a8cdca1f69d3577889fcd135e44932acf75800f5b158dd5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "03-creative-vyrezavaci-a-embosovaci-kovove-sablony-sedmikrasky-obrysy-8-k.jpg",
+  "product": "Creative vyřezávací a embosovací kovové šablony Sedmikrásky obrysy 8 ks",
+  "url": "https://www.b2bdaver.cz/creative-vyrezavaci-a-embosovaci-kovove-sablony-sedmikrasky-obrysy-8-ks-p898/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/4248ed58d6126101ded9ee87cf6b1ce0": {
+  "file": "assets/produkty/kreativni-techniky/04-meyco-bambusove-kolicky-65-x-10-mm-24-ks.webp",
+  "sha256": "42067e990c14956e6f6c75f9f117cedd23ebd38186b688babe666b9f678390a1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "04-meyco-bambusove-kolicky-65-x-10-mm-24-ks.jpg",
+  "product": "Meyco bambusové kolíčky 65 x 10 mm 24 ks",
+  "url": "https://www.b2bdaver.cz/meyco-bambusove-kolicky-65-x-10-mm-24-ks-p69/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/f92c87f848be996d9403251c334b3cf1": {
+  "file": "assets/produkty/kreativni-techniky/05-knorr-drevene-koralky-prumer-6-mm-118-ks.webp",
+  "sha256": "5aac49a1ab0d45cfb1ad036cf9652472dccdba53f8a332587e62e198d1f8fa7e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "05-knorr-drevene-koralky-prumer-6-mm-118-ks.jpg",
+  "product": "Knorr dřevěné korálky průměr 6 mm 118 ks",
+  "url": "https://www.b2bdaver.cz/knorr-drevene-koralky-prumer-6-mm-118-ks-p14696/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5bbed7778385d7b32b1741e5709760c1": {
+  "file": "assets/produkty/kreativni-techniky/06-knorr-magic-wool-cesana-vlna-10-g-svetle-zelena.webp",
+  "sha256": "772758b99320be9ad2cc226bca34d14db85513529bec545c17c71a6096e36492",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "06-knorr-magic-wool-cesana-vlna-10-g-svetle-zelena.webp",
+  "product": "Knorr Magic Wool česaná vlna 10 g světle zelená",
+  "url": "https://www.b2bdaver.cz/knorr-magic-wool-cesana-vlna-10-g-svetle-zelena-p47338/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/f9ea496a9c0f4ba07df033c76e1d9dba": {
+  "file": "assets/produkty/kreativni-techniky/07-knorr-baker-s-twine-provazek-bavlneny-1-mm-x-20-m-bily-a-cerveny.webp",
+  "sha256": "4a3cc72bf819b17d1db450845ddb19c2876910389599f96029c940a048fe24e4",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "07-knorr-baker-s-twine-provazek-bavlneny-1-mm-x-20-m-bily-a-cerveny.webp",
+  "product": "Knorr Baker's Twine provázek bavlněný 1 mm x 20 m bílý a červený",
+  "url": "https://www.b2bdaver.cz/knorr-baker-s-twine-provazek-bavlneny-1-mm-x-20-m-bily-a-cerveny-p47340/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/1afcf0d7b76d3d8873d3dc61fb7bb217": {
+  "file": "assets/produkty/kreativni-techniky/08-knorr-pearl-maker-perletova-3d-barva-30-ml-white.webp",
+  "sha256": "23780b27811ee68e6749cbd1935ed7754a65ed64079152a4fcadfc4dcb719b5e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "08-knorr-pearl-maker-perletova-3d-barva-30-ml-white.webp",
+  "product": "Knorr Pearl Maker perleťová 3D barva 30 ml White",
+  "url": "https://www.b2bdaver.cz/knorr-pearl-maker-perletova-3d-barva-30-ml-white-p47502/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/9d4fb8323e7f9984fc5a648ea98b70f0": {
+  "file": "assets/produkty/kreativni-techniky/09-decopatch-papiry-kolekce-c-6-30-x-40-cm-5-ks.webp",
+  "sha256": "de9a2db62b9a998857cc308a08bad5d0549fc2c601e1cf3d1a2c98f75577cb5f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "09-decopatch-papiry-kolekce-c-6-30-x-40-cm-5-ks.jpg",
+  "product": "Decopatch papíry kolekce č. 6 30 x 40 cm 5 ks",
+  "url": "https://www.b2bdaver.cz/decopatch-papiry-kolekce-c-6-30-x-40-cm-5-ks-p5746/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/54e45027ff38f01b1e75bd2ed9d9b3c0": {
+  "file": "assets/produkty/kreativni-techniky/10-knorr-kneading-erasing-sada-na-vyrobu-gum-funny-animals-100-g.webp",
+  "sha256": "dd5542cc62b2d9e2b5f478356233786547a3f798bef604a9336ad3b6c10e988e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "10-knorr-kneading-erasing-sada-na-vyrobu-gum-funny-animals-100-g.webp",
+  "product": "Knorr Kneading & Erasing sada na výrobu gum Funny Animals 100 g",
+  "url": "https://www.b2bdaver.cz/knorr-kneading-erasing-sada-na-vyrobu-gum-funny-animals-100-g-p47371/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/2ae5c94306cbbcc922f5f2c12703f751": {
+  "file": "assets/produkty/kreativni-techniky/11-docrafts-kreativni-sada-na-siti-polstar-love.webp",
+  "sha256": "bd314647d2f150d446e11b24f1d234b02b6dc5c9cf62c289c6d68f502b6aa1d6",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "11-docrafts-kreativni-sada-na-siti-polstar-love.jpg",
+  "product": "Docrafts kreativní sada na šití polštář Love",
+  "url": "https://www.b2bdaver.cz/docrafts-kreativni-sada-na-siti-polstar-love-p19342/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/338dc930e56d5bd2327354d330675dc3": {
+  "file": "assets/produkty/kreativni-techniky/12-royal-langnickel-skicovani-predkresleny-obrazek-venkov.webp",
+  "sha256": "e0fa35e2cf0a27c5b5c50e133212c8b6cf1eff8562c9d5c5bb9e5fe7ffa280c3",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "12-royal-langnickel-skicovani-predkresleny-obrazek-venkov.jpg",
+  "product": "Royal & Langnickel skicování předkreslený obrázek Venkov",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-skicovani-predkresleny-obrazek-venkov-p1224/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/02da796a33e71e6ee8f144cce6ff717e": {
+  "file": "assets/produkty/kreativni-techniky/13-royal-langnickel-malovani-podle-cisel-29-x-39-cm-francouzska-vesnice.webp",
+  "sha256": "873d0733da8fe727de4ba5110a822a795ed507b9dc82a403615aa9cf252f54c4",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "13-royal-langnickel-malovani-podle-cisel-29-x-39-cm-francouzska-vesnice.jpg",
+  "product": "Royal & Langnickel malování podle čísel 29 x 39 cm Francouzská vesnice",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-malovani-podle-cisel-29-x-39-cm-francouzska-vesnice-p23479/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/ddcf15f7936a033665b276eca3d34361": {
+  "file": "assets/produkty/kreativni-techniky/14-efcolor-smaltovaci-pudr-10-ml-oranzovy.webp",
+  "sha256": "45a35ab5c9cfcdfaf7eaf4027a2bb2069be2b16f3bf6d1d94c923e97be9628f5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "14-efcolor-smaltovaci-pudr-10-ml-oranzovy.jpg",
+  "product": "Efcolor smaltovací pudr 10 ml oranžový",
+  "url": "https://www.b2bdaver.cz/efcolor-smaltovaci-pudr-10-ml-oranzovy-p789/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/d2d147b8e7322da44379367d8cfca693": {
+  "file": "assets/produkty/kreativni-techniky/15-meyco-svickovy-gel-400-g-transparentni.webp",
+  "sha256": "6927a15d5d0a0534d6470ec96ea84dfbcd23c3036582b964b1191df8e94e9132",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kreativni-techniky.zip",
+  "source_entry": "15-meyco-svickovy-gel-400-g-transparentni.jpg",
+  "product": "Meyco svíčkový gel 400 g transparentní",
+  "url": "https://www.b2bdaver.cz/meyco-svickovy-gel-400-g-transparentni-p2070/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/565fe6c4daca82c005e6e807099543db": {
+  "file": "assets/produkty/kresleni-ilustrace/01-bruynzeel-designova-tuzka-aqua-sketch-s.webp",
+  "sha256": "220bbc55a0cf677d3a7583f4bef63da77601944ba6771ffc9e962c474d8feb2f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "01-bruynzeel-designova-tuzka-aqua-sketch-s.jpg",
+  "product": "Bruynzeel designová tužka Aqua Sketch S",
+  "url": "https://www.b2bdaver.cz/bruynzeel-designova-tuzka-aqua-sketch-s-p29426/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/53f92bab789de80d54637dc16e2fc620": {
+  "file": "assets/produkty/kresleni-ilustrace/02-van-gogh-sada-barevnych-akvarelovych-tuzek-24-ks.webp",
+  "sha256": "fd918e447b4860f43ec81483223ecfdc35fbbf285db5a0ae6e63ac489374d57b",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "02-van-gogh-sada-barevnych-akvarelovych-tuzek-24-ks.png",
+  "product": "Van Gogh sada barevných akvarelových tužek 24 ks",
+  "url": "https://www.b2bdaver.cz/van-gogh-sada-barevnych-akvarelovych-tuzek-24-ks-p28913/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/e7db2839db14b30fbd0e4a61114387b4": {
+  "file": "assets/produkty/kresleni-ilustrace/03-darwi-acryl-sada-akrylovych-fix-12-x-6-ml.webp",
+  "sha256": "0da90decf8f403216dfb5fe7469571b97b4b4318b1b4c4ffe171376a95041841",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "03-darwi-acryl-sada-akrylovych-fix-12-x-6-ml.jpg",
+  "product": "Darwi Acryl sada akrylových fix 12 x 6 ml",
+  "url": "https://www.b2bdaver.cz/darwi-acryl-sada-akrylovych-fix-12-x-6-ml-p2479/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/9d036df7125982175507dd605a2dedad": {
+  "file": "assets/produkty/kresleni-ilustrace/04-meyco-guma-na-pastel-2-x-28-g.webp",
+  "sha256": "c9669127f5773a934aa0b6da28ed2745aee49ae217a02b173680163c25ae6837",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "04-meyco-guma-na-pastel-2-x-28-g.jpg",
+  "product": "Meyco guma na pastel 2 x 28 g",
+  "url": "https://www.b2bdaver.cz/meyco-guma-na-pastel-2-x-28-g-p2012/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/877236a3e9c52905ecb4eb2df458b02e": {
+  "file": "assets/produkty/kresleni-ilustrace/05-brause-plastovy-drzak-hrotov-c-511-13-7-cm.webp",
+  "sha256": "b057647c46f990ca050c5c49c77c92d0b277e2580fd805b69d39af809504d344",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "05-brause-plastovy-drzak-hrotov-c-511-13-7-cm.jpg",
+  "product": "Brause plastový držák hrotov č. 511 13,7 cm",
+  "url": "https://www.b2bdaver.cz/brause-plastovy-drzak-hrotov-c-511-13-7-cm-p30412/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/f6fef20839ce2597c20e8bacdb9cc8e8": {
+  "file": "assets/produkty/kresleni-ilustrace/06-panpastel-sofft-sponge-bar-round-baleni-3-ks.webp",
+  "sha256": "a06416aac2314e243a22a2bf18bc65c0b9c304de49a728726c291b0876fabfa2",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "06-panpastel-sofft-sponge-bar-round-baleni-3-ks.jpg",
+  "product": "PanPastel Sofft Sponge Bar Round balení 3 ks",
+  "url": "https://www.b2bdaver.cz/panpastel-sofft-sponge-bar-round-baleni-3-ks-p28310/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/515e7a71bf94c0716e4d3d5c8f0aa015": {
+  "file": "assets/produkty/kresleni-ilustrace/07-rosa-papirove-rozterky-6-ks.webp",
+  "sha256": "a2302c132e37f0dc9ecba753e40ec4e11623f2e4516c2b2f9bc90ba9041245a9",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "07-rosa-papirove-rozterky-6-ks.webp",
+  "product": "Rosa papírové roztěrky 6 ks",
+  "url": "https://www.b2bdaver.cz/rosa-papirove-rozterky-6-ks-p26560/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/26715be5a499fe4c2bf2c5783a69d161": {
+  "file": "assets/produkty/kresleni-ilustrace/08-royal-langnickel-prirodni-z-vinne-revy-uhel-na-kresleni-12-ks.webp",
+  "sha256": "06e3dbfba0b21cd9d085baf6cf8e0de7901c7ec8c1a8721e6b1bbd5439099b36",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "08-royal-langnickel-prirodni-z-vinne-revy-uhel-na-kresleni-12-ks.jpg",
+  "product": "Royal & Langnickel přírodní z vinné révy uhel na kreslení 12 ks",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-prirodni-z-vinne-revy-uhel-na-kresleni-12-ks-p21285/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/4d743f718675785b52c873109195cf16": {
+  "file": "assets/produkty/kresleni-ilustrace/09-bruynzeel-grafitova-tuzka-hb.webp",
+  "sha256": "bf7f28e0e02719ef9292db01ed144a3e0893c5cb7e7625eb12aee987cc15e5ce",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "09-bruynzeel-grafitova-tuzka-hb.jpg",
+  "product": "Bruynzeel grafitová tužka HB",
+  "url": "https://www.b2bdaver.cz/bruynzeel-grafitova-tuzka-hb-p29314/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/30a39107cd0f8babc40a0c0d8b67d909": {
+  "file": "assets/produkty/kresleni-ilustrace/10-bruynzeel-barevne-tuzky-v-plechovce-rijksmuseum-50-ks.webp",
+  "sha256": "caa2901a6cc544a3de92de4bb25c5e08d628f6350305b38d13a38c9c05bdf9e8",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "10-bruynzeel-barevne-tuzky-v-plechovce-rijksmuseum-50-ks.png",
+  "product": "Bruynzeel barevné tužky v plechovce Rijksmuseum 50 ks",
+  "url": "https://www.b2bdaver.cz/bruynzeel-barevne-tuzky-v-plechovce-rijksmuseum-50-ks-p29313/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/d929e74057755ae9e3a6f3cdce1697d2": {
+  "file": "assets/produkty/kresleni-ilustrace/11-ecoline-akvarelova-stetcova-fixa-6-ml.webp",
+  "sha256": "90da72cc74648efd664d0b2d32e9d6d94d267fc9f4afb1d2eb79d1df404400b3",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "11-ecoline-akvarelova-stetcova-fixa-6-ml.jpg",
+  "product": "Ecoline akvarelová štětcová fixa 6 ml",
+  "url": "https://www.b2bdaver.cz/ecoline-akvarelova-stetcova-fixa-6-ml-p48303/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b88a1d0c6bf4a6b4ba4a2fdb0ce4dedb": {
+  "file": "assets/produkty/kresleni-ilustrace/12-brause-arabske-kaligraficke-pero.webp",
+  "sha256": "45860fb8cd88d2f0d267f6525d0f7d1092805d3619ce53082fa783d5ab59402d",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "12-brause-arabske-kaligraficke-pero.jpg",
+  "product": "Brause arabské kaligrafické pero",
+  "url": "https://www.b2bdaver.cz/brause-arabske-kaligraficke-pero-p30458/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/2a9168c281703caefabbb02915653277": {
+  "file": "assets/produkty/kresleni-ilustrace/13-royal-langnickel-olejovy-pastel-24-ks-v-papirove-krabici.webp",
+  "sha256": "787f2a3ec13fdf1b6c14ef1ed90ec9b08d1d142fc9eb54365d79a0350d7c7fe5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "13-royal-langnickel-olejovy-pastel-24-ks-v-papirove-krabici.jpg",
+  "product": "Royal & Langnickel olejový pastel 24 ks v papírové krabici",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-olejovy-pastel-24-ks-v-papirove-krabici-p1044/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/a04f05e652db76acb1cae3e53a4a889b": {
+  "file": "assets/produkty/kresleni-ilustrace/14-rosa-papirove-rozterky-8-ks.webp",
+  "sha256": "bd44ecc8d091ad3a727959108eebe99d6df424677090f5387f19e75963510339",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "14-rosa-papirove-rozterky-8-ks.webp",
+  "product": "Rosa papírové roztěrky 8 ks",
+  "url": "https://www.b2bdaver.cz/rosa-papirove-rozterky-8-ks-p26561/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/728a19a37109453161bd7f91fec06203": {
+  "file": "assets/produkty/kresleni-ilustrace/15-bruynzeel-olejova-tuzka-white-soft.webp",
+  "sha256": "1d740a540805bfeb3b3b5b4bc9478ddbdde5fe7f78389d8f5950bccdbe7ba2f5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-kresleni-ilustrace.zip",
+  "source_entry": "15-bruynzeel-olejova-tuzka-white-soft.jpg",
+  "product": "Bruynzeel olejová tužka White Soft",
+  "url": "https://www.b2bdaver.cz/bruynzeel-olejova-tuzka-white-soft-p29307/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/6d3a6732d70830ac8ce7c4878e66930b": {
+  "file": "assets/produkty/modelovani-keramika/01-cernit-number-one-56-g.webp",
+  "sha256": "06d290b7ba0ace862a935591aad4deb519e8ed0327b5ebb683e54c555087f24c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "01-cernit-number-one-56-g.jpg",
+  "product": "Cernit Number One 56 g",
+  "url": "https://www.b2bdaver.cz/cernit-number-one-56-g-p48147/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/e12e4594137d92c1738748fd7e13206e": {
+  "file": "assets/produkty/modelovani-keramika/02-cernit-sada-oboustrannych-nastroju-8-ks.webp",
+  "sha256": "4193894bc4c27ee796e03ea476fc6f4c47578019c2b16d7c1a5579a5e9c71f3c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "02-cernit-sada-oboustrannych-nastroju-8-ks.jpg",
+  "product": "Cernit sada oboustranných nástrojů 8 ks",
+  "url": "https://www.b2bdaver.cz/cernit-sada-oboustrannych-nastroju-8-ks-p685/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/8b864c9ca14b1363f6b06c055b6c8366": {
+  "file": "assets/produkty/modelovani-keramika/03-cernit-texturova-podlozka-freestyle-9-x-9-cm.webp",
+  "sha256": "ace9f3baf7d224e646c145c62b3fd3c7c1bab8ed37a8052ce02d33f949f71eec",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "03-cernit-texturova-podlozka-freestyle-9-x-9-cm.jpeg",
+  "product": "Cernit texturová podložka freestyle 9 x 9 cm",
+  "url": "https://www.b2bdaver.cz/cernit-texturova-podlozka-freestyle-9-x-9-cm-p803/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/05bedfb117720440a027a7bb034b8d75": {
+  "file": "assets/produkty/modelovani-keramika/04-jovi-samotvrdnouci-modelovaci-hmota-7-x-500-g-v-boxu-s-prislusenstvim.webp",
+  "sha256": "afe665ca4bc222d9b6907a01f8151db38655cd31190635258cd3edfe712e39da",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "04-jovi-samotvrdnouci-modelovaci-hmota-7-x-500-g-v-boxu-s-prislusenstvim.jpg",
+  "product": "Jovi samotvrdnoucí modelovací hmota 7 x 500 g v boxu s příslušenstvím",
+  "url": "https://www.b2bdaver.cz/jovi-samotvrdnouci-modelovaci-hmota-7-x-500-g-v-boxu-s-prislusenstvim-p455/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/825ea3c1e73e1f3ffe34830296cded05": {
+  "file": "assets/produkty/modelovani-keramika/05-darwi-umelecka-sadra-3-kg.webp",
+  "sha256": "00dde52e025f2c3a4d17baacda5ef16e1df52477cdbe82174af0bc6e15a35f02",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "05-darwi-umelecka-sadra-3-kg.jpg",
+  "product": "Darwi umělecká sádra 3 kg",
+  "url": "https://www.b2bdaver.cz/darwi-umelecka-sadra-3-kg-p705/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/78dbe99c5c5cc2a7a5cf5ffb65d67c21": {
+  "file": "assets/produkty/modelovani-keramika/06-pebeo-hrncirska-hlina-5-kg-bila.webp",
+  "sha256": "386bc1b118b21a6c839976a97cc5395927c212c9ba9faea48557eda7e4db3cb9",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "06-pebeo-hrncirska-hlina-5-kg-bila.jpg",
+  "product": "Pebeo hrnčířská hlína 5 kg bílá",
+  "url": "https://www.b2bdaver.cz/pebeo-hrncirska-hlina-5-kg-bila-p30632/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5d49c39a8714cb68002afdb413d1c2ae": {
+  "file": "assets/produkty/modelovani-keramika/07-plastiline-socharska-plastelina-tvrdost-30-1-kg-bezova.webp",
+  "sha256": "c5f6db9bcf20845c1e93d41cacad90a6249a872ee021af716971544c0533f2fd",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "07-plastiline-socharska-plastelina-tvrdost-30-1-kg-bezova.jpg",
+  "product": "Plastiline sochařská plastelína tvrdost 30 1 kg béžová",
+  "url": "https://www.b2bdaver.cz/plastiline-socharska-plastelina-tvrdost-30-1-kg-bezova-p22933/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/94fe6643b0cbe460be30ae49df8a345a": {
+  "file": "assets/produkty/modelovani-keramika/08-cernit-translucent-250-g-translucent.webp",
+  "sha256": "c50d754527da6233fe876d6a15568e62d69e5fc91ed350ab4429b73ae8e9e7db",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "08-cernit-translucent-250-g-translucent.jpg",
+  "product": "Cernit Translucent 250 g Translucent",
+  "url": "https://www.b2bdaver.cz/cernit-translucent-250-g-translucent-p746/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b8a71a731642306771bab3d5d27d9fac": {
+  "file": "assets/produkty/modelovani-keramika/09-meyco-sada-nastroju-na-keramiku-8-ks.webp",
+  "sha256": "d2b47815fabf945d97581ce1de9620da136843a82d1b908ed7df3a833e1eca5f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "09-meyco-sada-nastroju-na-keramiku-8-ks.jpg",
+  "product": "Meyco sada nástrojů na keramiku 8 ks",
+  "url": "https://www.b2bdaver.cz/meyco-sada-nastroju-na-keramiku-8-ks-p1988/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/48d3d7db37b013fea6a611d4ec04f90e": {
+  "file": "assets/produkty/modelovani-keramika/10-cernit-silikonova-forma-susenky-a-vafle.webp",
+  "sha256": "9f3793e579fce7281137fdc6f8e0964de18e9dbb97ce1160e85f43cbe6e04ff8",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "10-cernit-silikonova-forma-susenky-a-vafle.jpg",
+  "product": "Cernit silikonová forma sušenky a vafle",
+  "url": "https://www.b2bdaver.cz/cernit-silikonova-forma-susenky-a-vafle-p19300/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b68a9ae43406f210097d69c4f396a0ca": {
+  "file": "assets/produkty/modelovani-keramika/11-darwi-roc-umelecka-modelovaci-hmota-1000-g.webp",
+  "sha256": "544f1e93d6c6cf8754531e4a097fac2ff6db3db2c2da8eaeedd7ed1e6654f1f5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "11-darwi-roc-umelecka-modelovaci-hmota-1000-g.jpg",
+  "product": "Darwi ROC umělecká modelovací hmota 1000 g",
+  "url": "https://www.b2bdaver.cz/darwi-roc-umelecka-modelovaci-hmota-1000-g-p522/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7e3c657aa2c9b066723b0e9e0ba95e74": {
+  "file": "assets/produkty/modelovani-keramika/12-darwi-umelecka-sadra-10-kg.webp",
+  "sha256": "5d17d71b1603b5c4547ee18321df6b1041feb315e579f7d5e5f4aa52f0e9df9c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "12-darwi-umelecka-sadra-10-kg.jpg",
+  "product": "Darwi umělecká sádra 10 kg",
+  "url": "https://www.b2bdaver.cz/darwi-umelecka-sadra-10-kg-p711/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/ecdc90da85784fe238f072026ec5c23a": {
+  "file": "assets/produkty/modelovani-keramika/13-pebeo-hrncirska-hlina-10-kg-bila.webp",
+  "sha256": "99895de5eb7cde93b0718553f820b5be86d85703b54967386e2efb1290cda652",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "13-pebeo-hrncirska-hlina-10-kg-bila.jpg",
+  "product": "Pebeo hrnčířská hlína 10 kg bílá",
+  "url": "https://www.b2bdaver.cz/pebeo-hrncirska-hlina-10-kg-bila-p30633/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b8080728868053b0fe390c04dad4c80e": {
+  "file": "assets/produkty/modelovani-keramika/14-plastiline-socharska-plastelina-tvrdost-40-1-kg-bezova.webp",
+  "sha256": "293b056bbea86becbb6237327f00d4027eda74001150df73f770893ddbf33438",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "14-plastiline-socharska-plastelina-tvrdost-40-1-kg-bezova.jpg",
+  "product": "Plastiline sochařská plastelína tvrdost 40 1 kg béžová",
+  "url": "https://www.b2bdaver.cz/plastiline-socharska-plastelina-tvrdost-40-1-kg-bezova-p22934/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/de08a0ec9f98b9a7eb88f5de5bc8aa77": {
+  "file": "assets/produkty/modelovani-keramika/15-cernit-metallic-56-g.webp",
+  "sha256": "7a5d4870b24bb6c9e100e95ceba26efb75543effa432c2b01966f5287041f198",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-modelovani-keramika.zip",
+  "source_entry": "15-cernit-metallic-56-g.jpg",
+  "product": "Cernit Metallic 56 g",
+  "url": "https://www.b2bdaver.cz/cernit-metallic-56-g-p48144/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/e7b734b70aaea0ebe0136b988f2703ca": {
+  "file": "assets/produkty/papiry-skicaky/01-royal-langnickel-skicak-na-akvarel-190-g-25l-a4.webp",
+  "sha256": "350b421d975a56a96d6907b67a02e920cfe1f2952021a4ca3ccecfc1dc80aa21",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "01-royal-langnickel-skicak-na-akvarel-190-g-25l-a4.jpg",
+  "product": "Royal & Langnickel skicák na akvarel 190 g 25L A4",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-skicak-na-akvarel-190-g-25l-a4-p18288/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/1715c2e61bad30e83a92e772672a0aa7": {
+  "file": "assets/produkty/papiry-skicaky/02-royal-langnickel-blok-na-pastel-5-barev-180-g-12l-a4.webp",
+  "sha256": "362baeddcb2ebaaca2835633bbc2dcedfad37a041f20670efa9b67ae54c5fa0c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "02-royal-langnickel-blok-na-pastel-5-barev-180-g-12l-a4.jpg",
+  "product": "Royal & Langnickel blok na pastel 5 barev 180 g 12L A4",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-blok-na-pastel-5-barev-180-g-12l-a4-p18291/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/4823affb28487b9b355ef985d1724a47": {
+  "file": "assets/produkty/papiry-skicaky/03-clairefontaine-kraftovy-papir-a4-90-g-100h.webp",
+  "sha256": "c9c7cb5da3dfb5c6469c1561fbf18a36299642ecc8753d4472031133d4aaeec8",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "03-clairefontaine-kraftovy-papir-a4-90-g-100h.jpg",
+  "product": "Clairefontaine kraftový papír A4 90 g 100H",
+  "url": "https://www.b2bdaver.cz/clairefontaine-kraftovy-papir-a4-90-g-100h-p22889/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b6e66e7b46fb7134eea23a82530e29fb": {
+  "file": "assets/produkty/papiry-skicaky/04-brause-kaligraficky-blok-160-g-30l-a4.webp",
+  "sha256": "24dc135127d88295fd4a63decef3bed3f280cf2efe489ed42839511880a5e58b",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "04-brause-kaligraficky-blok-160-g-30l-a4.jpg",
+  "product": "Brause kaligrafický blok 160 g 30L A4",
+  "url": "https://www.b2bdaver.cz/brause-kaligraficky-blok-160-g-30l-a4-p30490/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b4e6150001e3b829225edfa85e466696": {
+  "file": "assets/produkty/papiry-skicaky/05-clairefontaine-komiksovy-blok-220-g-32l-a6-lepeny.webp",
+  "sha256": "a45e817776ed4950b5fc93552f381fa0b728f10cad362bbcfa580a1f306bf2bb",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "05-clairefontaine-komiksovy-blok-220-g-32l-a6-lepeny.jpg",
+  "product": "Clairefontaine komiksový blok 220 g 32L A6 lepený",
+  "url": "https://www.b2bdaver.cz/clairefontaine-komiksovy-blok-220-g-32l-a6-lepeny-p22906/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/c6cbb0d48bb47c7103fffde1a5232360": {
+  "file": "assets/produkty/papiry-skicaky/06-clairefontaine-paint-on-mix-media-blok-250-g-40l-a3-lepeny-extra-white.webp",
+  "sha256": "176ac2349dcf9918958af473c80a1327bc039ae92fd2da79720ef4f1fef04d19",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "06-clairefontaine-paint-on-mix-media-blok-250-g-40l-a3-lepeny-extra-white.jpg",
+  "product": "Clairefontaine Paint'On Mix Media blok 250 g 40L A3 lepený Extra White",
+  "url": "https://www.b2bdaver.cz/clairefontaine-paint-on-mix-media-blok-250-g-40l-a3-lepeny-extra-white-p22883/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/357ec3e53a83f71cb29e14e47fef2ffb": {
+  "file": "assets/produkty/papiry-skicaky/07-royal-langnickel-skicak-na-akryl-200-g-22l-a4-lepeny.webp",
+  "sha256": "e2086e724d731069afad2968eeb05a861de4a8c64c4aa0f2bb1782ff0a89b9a7",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "07-royal-langnickel-skicak-na-akryl-200-g-22l-a4-lepeny.jpg",
+  "product": "Royal & Langnickel skicák na akryl 200 g 22L A4 lepený",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-skicak-na-akryl-200-g-22l-a4-lepeny-p18289/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/04f1515824ef50d8d94e9eec7e4d6d1e": {
+  "file": "assets/produkty/papiry-skicaky/08-royal-langnickel-skicak-110-g-80l-a3-spiralova-vazba.webp",
+  "sha256": "c97f397f3af6146045c6576f089ddad488b451ccbc99f6e6b5a166b9f2e4e9e0",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "08-royal-langnickel-skicak-110-g-80l-a3-spiralova-vazba.jpg",
+  "product": "Royal & Langnickel skicák 110 g 80L A3 spirálová vazba",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-skicak-110-g-80l-a3-spiralova-vazba-p1147/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/a9ef27f1eb6ff5b0df965773f4618352": {
+  "file": "assets/produkty/papiry-skicaky/09-clairefontaine-cardinal-akvarelovy-blok-cp-r-300-g-10l-a5-lepeny.webp",
+  "sha256": "b729f531d4ec5f2f7bfb6e6538901901cd0d48d2de60f4c448ce2f6f5a7f6594",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "09-clairefontaine-cardinal-akvarelovy-blok-cp-r-300-g-10l-a5-lepeny.jpg",
+  "product": "Clairefontaine Cardinal akvarelový blok CP / R 300 g 10L A5 lepený",
+  "url": "https://www.b2bdaver.cz/clairefontaine-cardinal-akvarelovy-blok-cp-r-300-g-10l-a5-lepeny-p22878/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/a2345ea0cf21a648746935ef08e34f1a": {
+  "file": "assets/produkty/papiry-skicaky/10-clairefontaine-pastelmat-pastelovy-blok-c-1-360-g-12l-24-x-30-cm-lepen.webp",
+  "sha256": "894cc48fb5377ac9e2f501d94bbe404afd3f44d5f70f69317d75da0c335491c1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "10-clairefontaine-pastelmat-pastelovy-blok-c-1-360-g-12l-24-x-30-cm-lepen.jpg",
+  "product": "Clairefontaine Pastelmat pastelový blok č. 1 360 g 12L 24 x 30 cm lepený",
+  "url": "https://www.b2bdaver.cz/clairefontaine-pastelmat-pastelovy-blok-c-1-360-g-12l-24-x-30-cm-lepeny-p22867/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/a1aa09d8540b71a39cc80ce25088140a": {
+  "file": "assets/produkty/papiry-skicaky/12-brause-kaligraficky-blok-125-g-30l-a5.webp",
+  "sha256": "4863b3b45c2f4e0c880765bb4ccf6b7b3ced69927c03bad6e213e9a413362ecb",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "12-brause-kaligraficky-blok-125-g-30l-a5.jpg",
+  "product": "Brause kaligrafický blok 125 g 30L A5",
+  "url": "https://www.b2bdaver.cz/brause-kaligraficky-blok-125-g-30l-a5-p30491/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/0f2417370f1b8216215c246c18409dd0": {
+  "file": "assets/produkty/papiry-skicaky/13-clairefontaine-komiksovy-blok-220-g-32l-13-x-18-cm-lepeny.webp",
+  "sha256": "5efd4b29701de97223e921478b9f658002e49fcbebf81df3294d47a32ba06d18",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "13-clairefontaine-komiksovy-blok-220-g-32l-13-x-18-cm-lepeny.jpg",
+  "product": "Clairefontaine komiksový blok 220 g 32L 13 x 18 cm lepený",
+  "url": "https://www.b2bdaver.cz/clairefontaine-komiksovy-blok-220-g-32l-13-x-18-cm-lepeny-p22907/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/9aa46c2e047d902ea71ca694b6906fbc": {
+  "file": "assets/produkty/papiry-skicaky/14-clairefontaine-paint-on-mix-media-blok-250-g-40l-a4-lepeny-extra-white.webp",
+  "sha256": "6b7b51f31b9e9d7dff5f767be55126ac242a3cda145f7b02313d923eb59cb325",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "14-clairefontaine-paint-on-mix-media-blok-250-g-40l-a4-lepeny-extra-white.jpg",
+  "product": "Clairefontaine Paint'On Mix Media blok 250 g 40L A4 lepený Extra White",
+  "url": "https://www.b2bdaver.cz/clairefontaine-paint-on-mix-media-blok-250-g-40l-a4-lepeny-extra-white-p22884/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/65357a9579c8e3f76b318a9c7a850531": {
+  "file": "assets/produkty/papiry-skicaky/15-clairefontaine-akrylovy-blok-360-g-10l-a4-lepeny.webp",
+  "sha256": "bdf828e13232d5dc6f9d4883cd8c39c18839ec3a8cd0cd1c7463456dffbfbff8",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-papiry-skicaky.zip",
+  "source_entry": "15-clairefontaine-akrylovy-blok-360-g-10l-a4-lepeny.jpg",
+  "product": "Clairefontaine akrylový blok 360 g 10L A4 lepený",
+  "url": "https://www.b2bdaver.cz/clairefontaine-akrylovy-blok-360-g-10l-a4-lepeny-p22881/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/727cc3c0e2413fbd8cd2f051f6e758a8": {
+  "file": "assets/produkty/platna-podklady/01-dielo-premium-malirske-platno-380-g-m2.webp",
+  "sha256": "1be4b0b7215546fccf8a4a6fed5c394900dd50fe3de84cfdd0d624b9ee656d17",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "01-dielo-premium-malirske-platno-380-g-m2.jpg",
+  "product": "Dielo Premium malířské plátno 380 g/m2",
+  "url": "https://www.b2bdaver.cz/dielo-premium-malirske-platno-380-g-m2-p48126/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/e1824e3b58a8cd1ba54bb833b26ce49e": {
+  "file": "assets/produkty/platna-podklady/02-ami-malirsky-karton-330-g-m2.webp",
+  "sha256": "ee746cb63f89c7470f1ca79461b610975384ad7501e73d5f76af53a847b1b6ec",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "02-ami-malirsky-karton-330-g-m2.jpg",
+  "product": "Ami malířský karton 330 g/m2",
+  "url": "https://www.b2bdaver.cz/ami-malirsky-karton-330-g-m2-p48124/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/b3937f0846de6e6aead5511af4923bba": {
+  "file": "assets/produkty/platna-podklady/03-royal-langnickel-akrylovy-seps-500-ml.webp",
+  "sha256": "3eb2a4fdd81d078f6514633d41c79f3fcb7da7f0f7d3162d2529637945417e0a",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "03-royal-langnickel-akrylovy-seps-500-ml.jpg",
+  "product": "Royal & Langnickel akrylový šeps 500 ml",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-akrylovy-seps-500-ml-p23410/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/454e4a561b9b908999ad510067c9e915": {
+  "file": "assets/produkty/platna-podklady/04-dielo-platno-na-desce-320-g-m2.webp",
+  "sha256": "c3cbcc756103986de04898911fde67aad9296ba01bdbedf321d0ec009209d45c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "04-dielo-platno-na-desce-320-g-m2.webp",
+  "product": "Dielo plátno na desce 320 g/m2",
+  "url": "https://www.b2bdaver.cz/dielo-platno-na-desce-320-g-m2-p48119/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7d131c4c8cce97dbe621cb672101f0a7": {
+  "file": "assets/produkty/platna-podklady/05-dielo-premium-malirske-platno-cerne-380-g-m2.webp",
+  "sha256": "f81f7cbcb50f8fc8c50acf9d3e578437a3a90963ecb181cb6e54d8b3a0b56eee",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "05-dielo-premium-malirske-platno-cerne-380-g-m2.jpg",
+  "product": "Dielo Premium malířské plátno černé 380 g/m2",
+  "url": "https://www.b2bdaver.cz/dielo-premium-malirske-platno-cerne-380-g-m2-p48127/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5ca9028f6c94a15bcfd8bb676ca158f1": {
+  "file": "assets/produkty/platna-podklady/06-golden-gesso-akrylovy-seps-237-ml.webp",
+  "sha256": "65f87517d043777c8355e1be4b76dfba41ba5039761e92a6a665be30f2af53d3",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "06-golden-gesso-akrylovy-seps-237-ml.jpg",
+  "product": "Golden Gesso akrylový šeps 237 ml",
+  "url": "https://www.b2bdaver.cz/golden-gesso-akrylovy-seps-237-ml-p27937/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/3ac5ad156cf14ecbd9115cbb67772886": {
+  "file": "assets/produkty/platna-podklady/07-dielo-platno-na-desce-kulate-320-g-m2.webp",
+  "sha256": "90363d627f324f7e462934de0b6cf60051597e1ef80f2436a3adf4116096cc7c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "07-dielo-platno-na-desce-kulate-320-g-m2.jpg",
+  "product": "Dielo plátno na desce kulaté 320 g/m2",
+  "url": "https://www.b2bdaver.cz/dielo-platno-na-desce-kulate-320-g-m2-p48120/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/1268338087889d17b1235a0e32ea3e55": {
+  "file": "assets/produkty/platna-podklady/09-golden-gesso-akrylovy-seps-473-ml.webp",
+  "sha256": "4eae7806d1155a43bade91845a27d8122e842323570f84bcf972e326052097f2",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "09-golden-gesso-akrylovy-seps-473-ml.jpg",
+  "product": "Golden Gesso akrylový šeps 473 ml",
+  "url": "https://www.b2bdaver.cz/golden-gesso-akrylovy-seps-473-ml-p27938/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5b63252ad2f2082099a66ae184dc1079": {
+  "file": "assets/produkty/platna-podklady/10-dielo-platno-na-desce-ovalne-320-g-m2.webp",
+  "sha256": "d5c7dd8b96e55a3b60513922bc39ef05b1583ea85a2c1dfe9494ce555188bfc1",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "10-dielo-platno-na-desce-ovalne-320-g-m2.png",
+  "product": "Dielo plátno na desce oválné 320 g/m2",
+  "url": "https://www.b2bdaver.cz/dielo-platno-na-desce-ovalne-320-g-m2-p48121/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/97cc8704cc59d60e382d4fe33a8a308a": {
+  "file": "assets/produkty/platna-podklady/11-golden-sandable-hard-gesso-tvrdy-brousitelny-seps-237-ml.webp",
+  "sha256": "000002f13d99ad99bbf50ec7068249f519e537121c07e5040919bf4254aad9ee",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "11-golden-sandable-hard-gesso-tvrdy-brousitelny-seps-237-ml.jpg",
+  "product": "Golden Sandable Hard Gesso tvrdý brousitelný šeps 237 ml",
+  "url": "https://www.b2bdaver.cz/golden-sandable-hard-gesso-tvrdy-brousitelny-seps-237-ml-p27939/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/efc080cebe032910b7db4f43b69824a0": {
+  "file": "assets/produkty/platna-podklady/12-golden-sandable-hard-gesso-tvrdy-brousitelny-seps-473-ml.webp",
+  "sha256": "aac1bf830c1e7060e8e4a86bb3ee156176bcebac289083af3a18a98369b1f526",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "12-golden-sandable-hard-gesso-tvrdy-brousitelny-seps-473-ml.jpg",
+  "product": "Golden Sandable Hard Gesso tvrdý brousitelný šeps 473 ml",
+  "url": "https://www.b2bdaver.cz/golden-sandable-hard-gesso-tvrdy-brousitelny-seps-473-ml-p27940/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5da80712a1ed55271450ba095f427c4d": {
+  "file": "assets/produkty/platna-podklady/13-golden-absorbent-ground-savy-podklad-237-ml.webp",
+  "sha256": "b747a0be88162e9a8b070737e5ea1397bb0b5e24a3d4192024d51089032e06ee",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "13-golden-absorbent-ground-savy-podklad-237-ml.jpg",
+  "product": "Golden Absorbent Ground savý podklad 237 ml",
+  "url": "https://www.b2bdaver.cz/golden-absorbent-ground-savy-podklad-237-ml-p27941/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/59a4964bed5a87e2254cc2543e6c1bac": {
+  "file": "assets/produkty/platna-podklady/14-golden-black-gesso-cerny-seps-237-ml.webp",
+  "sha256": "c281ddbdecc18f561fef59769f1a5862f03173af4d874cbc4c5303809f8381a6",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "14-golden-black-gesso-cerny-seps-237-ml.jpg",
+  "product": "Golden Black Gesso černý šeps 237 ml",
+  "url": "https://www.b2bdaver.cz/golden-black-gesso-cerny-seps-237-ml-p27944/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/080a2459bcc3887d39a0a3f7daf170bf": {
+  "file": "assets/produkty/platna-podklady/15-golden-black-gesso-cerny-seps-473-ml.webp",
+  "sha256": "7d026897e57080359322425e19b7114f3ccd177177b8a2b240275c3811d06c9b",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-platna-podklady.zip",
+  "source_entry": "15-golden-black-gesso-cerny-seps-473-ml.jpg",
+  "product": "Golden Black Gesso černý šeps 473 ml",
+  "url": "https://www.b2bdaver.cz/golden-black-gesso-cerny-seps-473-ml-p27945/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/e77362db98714d1d54992657d334b8f5": {
+  "file": "assets/produkty/stetce-pomucky/01-talens-serie-150-stetec-na-akvarel-synteticke-round-velikost-3.webp",
+  "sha256": "4aad44ff999dca2fcc1ebb12d5a9ef7339bfa486f9d02d86f719e1831926f58c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "01-talens-serie-150-stetec-na-akvarel-synteticke-round-velikost-3.png",
+  "product": "Talens série 150 štětec na akvarel syntetické Round velikost 3",
+  "url": "https://www.b2bdaver.cz/talens-serie-150-stetec-na-akvarel-synteticke-round-velikost-3-p31478/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/9d98dd876105b9f296ae3190b3bd7f4a": {
+  "file": "assets/produkty/stetce-pomucky/02-darwi-stetec-plochy-na-akryl-c-04-sirka-5-mm.webp",
+  "sha256": "92a1de09e6802bd28a22794befd3beab6024aa785e7fa62afb9aa8b1dd764bee",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "02-darwi-stetec-plochy-na-akryl-c-04-sirka-5-mm.jpg",
+  "product": "Darwi štětec plochý na akryl č. 04 šířka 5 mm",
+  "url": "https://www.b2bdaver.cz/darwi-stetec-plochy-na-akryl-c-04-sirka-5-mm-p35969/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/0ae6f04cf7351bcced21eea9abdab79c": {
+  "file": "assets/produkty/stetce-pomucky/03-royal-langnickel-sada-vodnich-stetcu-3-ks.webp",
+  "sha256": "18068af208446a2a68b84e4081a014ca43e9f3fa0ef7c0d0fcfdb538f8b07c5b",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "03-royal-langnickel-sada-vodnich-stetcu-3-ks.jpg",
+  "product": "Royal & Langnickel sada vodních štětců 3 ks",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-sada-vodnich-stetcu-3-ks-p19539/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/84cdcee5fbc5048402bdbf1542f4ecb7": {
+  "file": "assets/produkty/stetce-pomucky/04-royal-langnickel-miniaturni-stetec-majestic-round-velikost-0.webp",
+  "sha256": "daaaae5a579d5d16c3982f3f64e5a19745e5806ac8ab6a274614244ea02baf3f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "04-royal-langnickel-miniaturni-stetec-majestic-round-velikost-0.jpg",
+  "product": "Royal & Langnickel miniaturní štětec Majestic Round velikost 0",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-miniaturni-stetec-majestic-round-velikost-0-p23388/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/724bc3619b88778cd7d54ea70542393f": {
+  "file": "assets/produkty/stetce-pomucky/05-darwi-cistic-stetcu-100-ml.webp",
+  "sha256": "4879ecb54ade7c21dc64ff362d73928bc1f805796fb4051d4ba6d463ee68e189",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "05-darwi-cistic-stetcu-100-ml.jpg",
+  "product": "Darwi čistič štětců 100 ml",
+  "url": "https://www.b2bdaver.cz/darwi-cistic-stetcu-100-ml-p319/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/92f9d8ce242c5fd828c3882dfa81e35e": {
+  "file": "assets/produkty/stetce-pomucky/06-sizzix-aplikator-s-penovou-houbickou.webp",
+  "sha256": "614cb86d529a247eae81559cee786133ab8f4b50a2992f67222f610eff6a974f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "06-sizzix-aplikator-s-penovou-houbickou.jpg",
+  "product": "Sizzix aplikátor s pěnovou houbičkou",
+  "url": "https://www.b2bdaver.cz/sizzix-aplikator-s-penovou-houbickou-p15404/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/3575eef9c581ece9e3ef98c351d2d964": {
+  "file": "assets/produkty/stetce-pomucky/07-royal-langnickel-malirska-spachtle-lp-1.webp",
+  "sha256": "553d0174ae1e12eb2414076dd413e92fd7010254a2ae03d5f62e72f7344bc569",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "07-royal-langnickel-malirska-spachtle-lp-1.jpg",
+  "product": "Royal & Langnickel malířská špachtle LP-1",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-malirska-spachtle-lp-1-p18236/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/fa84f645a8d826456a67d695d8ca936a": {
+  "file": "assets/produkty/stetce-pomucky/08-royal-langnickel-vodni-stetec-velky-1-ks.webp",
+  "sha256": "978b02ef27eddb4daecb295a1d766fb33eb7ec2bbdc4773ba2aec02960e5906c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "08-royal-langnickel-vodni-stetec-velky-1-ks.jpg",
+  "product": "Royal & Langnickel vodní štětec velký 1 ks",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-vodni-stetec-velky-1-ks-p15479/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/1c9d69eee4050bb04dc90f1fe1539ef6": {
+  "file": "assets/produkty/stetce-pomucky/09-darwi-stetec-ovalny-na-akryl-c-02-sirka-4-mm.webp",
+  "sha256": "ee61529de3caf4c9e682b16d9970cc252179bef373f7b13e31aa18186b86f21c",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "09-darwi-stetec-ovalny-na-akryl-c-02-sirka-4-mm.jpg",
+  "product": "Darwi štětec oválný na akryl č. 02 šířka 4 mm",
+  "url": "https://www.b2bdaver.cz/darwi-stetec-ovalny-na-akryl-c-02-sirka-4-mm-p35964/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/241d7a5e109cccbfbac2a9ff27a2141b": {
+  "file": "assets/produkty/stetce-pomucky/10-meyco-sada-penovych-tupovacich-stetcu-c-15-25-35-mm.webp",
+  "sha256": "6c3e2f1e292eb729b40b8e4a79a6a823f637f879d80b03ca76f1f65af0e46a76",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "10-meyco-sada-penovych-tupovacich-stetcu-c-15-25-35-mm.jpg",
+  "product": "Meyco sada pěnových tupovacích štětců č. 15 25 35 mm",
+  "url": "https://www.b2bdaver.cz/meyco-sada-penovych-tupovacich-stetcu-c-15-25-35-mm-p1962/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/da935e5abd6305915f82f11a6bbee664": {
+  "file": "assets/produkty/stetce-pomucky/11-royal-langnickel-miniaturni-stetec-majestic-flat-wisp-velikost-10-0.webp",
+  "sha256": "c7205b792b35251ce5ccdb03ae3de8fd93e576c8608baad5069aeb90a9af0040",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "11-royal-langnickel-miniaturni-stetec-majestic-flat-wisp-velikost-10-0.jpg",
+  "product": "Royal & Langnickel miniaturní štětec Majestic Flat Wisp velikost 10/0",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-miniaturni-stetec-majestic-flat-wisp-velikost-10-0-p23381/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/fd4d10e495a2bd7bf7733fc00806e623": {
+  "file": "assets/produkty/stetce-pomucky/12-pebeo-cistic-stetcu-75-ml.webp",
+  "sha256": "a792eddc8fd64db3eb45552360180b5841f0a8d8495e3e780cc818504bf3c482",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "12-pebeo-cistic-stetcu-75-ml.jpg",
+  "product": "Pebeo čistič štětců 75 ml",
+  "url": "https://www.b2bdaver.cz/pebeo-cistic-stetcu-75-ml-p31277/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/d42920cb05d2c03581b5c1c6c75b9cc6": {
+  "file": "assets/produkty/stetce-pomucky/13-sizzix-nahradni-penove-houbicky-do-aplikatoru-4-ks.webp",
+  "sha256": "f356b558dd805882756f6d35b85ac2f086ff12d2488f548c1e5bc3de363e3d28",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "13-sizzix-nahradni-penove-houbicky-do-aplikatoru-4-ks.jpg",
+  "product": "Sizzix náhradní pěnové houbičky do aplikátoru 4 ks",
+  "url": "https://www.b2bdaver.cz/sizzix-nahradni-penove-houbicky-do-aplikatoru-4-ks-p15405/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/37b7010ca0eff83aeb6562d9ffeedf32": {
+  "file": "assets/produkty/stetce-pomucky/14-royal-langnickel-malirska-spachtle-lp-10.webp",
+  "sha256": "410062956b9d9829d0131e8d84073cd730d7b0746f185338e2ae186855a13c70",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "14-royal-langnickel-malirska-spachtle-lp-10.jpg",
+  "product": "Royal & Langnickel malířská špachtle LP-10",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-malirska-spachtle-lp-10-p18237/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7001919ba0f9b3d78cf9009bda6e9362": {
+  "file": "assets/produkty/stetce-pomucky/15-talens-serie-150-stetec-na-akvarel-synteticke-round-velikost-4.webp",
+  "sha256": "d953543189b8af5ce0f3102dcf9d65e159db32dcd2c132c5c85473926e1de412",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-stetce-pomucky.zip",
+  "source_entry": "15-talens-serie-150-stetec-na-akvarel-synteticke-round-velikost-4.png",
+  "product": "Talens série 150 štětec na akvarel syntetické Round velikost 4",
+  "url": "https://www.b2bdaver.cz/talens-serie-150-stetec-na-akvarel-synteticke-round-velikost-4-p31479/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/545864d7b4883552a87039cb9b538e29": {
+  "file": "assets/produkty/studio-vybaveni/01-ami-prenosny-hlinikovy-malirsky-stojan.webp",
+  "sha256": "92c0a1c7f47fcef019874832c651350ca7c9ad0d4b13be456c02882eb4b21e85",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "01-ami-prenosny-hlinikovy-malirsky-stojan.jpg",
+  "product": "Ami přenosný hliníkový malířský stojan",
+  "url": "https://www.b2bdaver.cz/ami-prenosny-hlinikovy-malirsky-stojan-p4402/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/cc4e291b430810388ca952b53785f5e7": {
+  "file": "assets/produkty/studio-vybaveni/02-clairefontaine-nylonova-portfoliova-taska-59-x-75-cm-cerna.webp",
+  "sha256": "148b6d26a251f990f03ec6bf222abe7a8c2203d3069c49040dee48424750745d",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "02-clairefontaine-nylonova-portfoliova-taska-59-x-75-cm-cerna.jpg",
+  "product": "Clairefontaine nylonová portfoliová taška 59 x 75 cm černá",
+  "url": "https://www.b2bdaver.cz/clairefontaine-nylonova-portfoliova-taska-59-x-75-cm-cerna-p30480/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/5efd9af96df87cc432fc8a1d186544e4": {
+  "file": "assets/produkty/studio-vybaveni/03-clairefontaine-trhaci-paleta-na-olej-a-akryl-90-g-m2-40-listu-24-x-32-.webp",
+  "sha256": "c0149943c698fd872e868aeb5f1d6c7286d69f070d545fb42aa955e07cd735a6",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "03-clairefontaine-trhaci-paleta-na-olej-a-akryl-90-g-m2-40-listu-24-x-32-.jpg",
+  "product": "Clairefontaine trhací paleta na olej a akryl 90 g/m2 40 listů 24 x 32 cm",
+  "url": "https://www.b2bdaver.cz/clairefontaine-trhaci-paleta-na-olej-a-akryl-90-g-m2-40-listu-24-x-32-cm-p30496/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/9b7b65f2c04fdf2defcff28e7dca8fd6": {
+  "file": "assets/produkty/studio-vybaveni/04-mabef-skladaci-kozena-zidle.webp",
+  "sha256": "d00a8d94a2046c67ff14da3a42ad5532bebf27ad632fcb3c29951ec816e86a5f",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "04-mabef-skladaci-kozena-zidle.jpg",
+  "product": "Mabef skládací kožená židle",
+  "url": "https://www.b2bdaver.cz/mabef-skladaci-kozena-zidle-p25270/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/35b9f756efaf653a08f930b3b871ede0": {
+  "file": "assets/produkty/studio-vybaveni/05-jovi-plastovy-ulozny-box.webp",
+  "sha256": "4012fd07f7cfd5968ab971cfc516a48e391ca28fbe4df43d4d34c14d2c3ba5fc",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "05-jovi-plastovy-ulozny-box.jpg",
+  "product": "Jovi plastový úložný box",
+  "url": "https://www.b2bdaver.cz/jovi-plastovy-ulozny-box-p20186/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/8c1eb95385ff7620cf51cbfd82978241": {
+  "file": "assets/produkty/studio-vybaveni/06-knorr-zastera-60-x-90-cm-prirodni.webp",
+  "sha256": "8899faad0460fd1aff9f399005ec3a608d1aa711b4449b5e71d3476d058d571e",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "06-knorr-zastera-60-x-90-cm-prirodni.jpg",
+  "product": "Knorr zástěra 60 x 90 cm přírodní",
+  "url": "https://www.b2bdaver.cz/knorr-zastera-60-x-90-cm-prirodni-p21491/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/38522b94e0009facbff695b0fa4e7c71": {
+  "file": "assets/produkty/studio-vybaveni/07-mabef-kreslici-deska-s-klipem-24-x-37-cm.webp",
+  "sha256": "77ece404efafe4a2870ae42d3c6cb79d5c97ecb78edb61803032a8d6a55150fa",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "07-mabef-kreslici-deska-s-klipem-24-x-37-cm.jpg",
+  "product": "Mabef kreslicí deska s klipem 24 x 37 cm",
+  "url": "https://www.b2bdaver.cz/mabef-kreslici-deska-s-klipem-24-x-37-cm-p25241/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/e32aedc3ae4b718956ad2e75bb4f448a": {
+  "file": "assets/produkty/studio-vybaveni/08-mabef-dreveny-kufrik-na-vytvarne-potreby-30-x-40-cm.webp",
+  "sha256": "bda3c6918775620830ee3e195d67a74fa26220dcf48aedfd3e67a6120d311e05",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "08-mabef-dreveny-kufrik-na-vytvarne-potreby-30-x-40-cm.jpg",
+  "product": "Mabef dřevěný kufřík na výtvarné potřeby 30 x 40 cm",
+  "url": "https://www.b2bdaver.cz/mabef-dreveny-kufrik-na-vytvarne-potreby-30-x-40-cm-p25273/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/66e6920b4f8abac8575ae5b6177c451d": {
+  "file": "assets/produkty/studio-vybaveni/09-mabef-socharsky-stojan.webp",
+  "sha256": "f524482c43f37f2ce3e8fc070650f8e8f52ef7e32caeb0477f80b7477d2ef8ef",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "09-mabef-socharsky-stojan.jpg",
+  "product": "Mabef sochařský stojan",
+  "url": "https://www.b2bdaver.cz/mabef-socharsky-stojan-p25268/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/398ccbe0677f221fccf9a26edfb87eac": {
+  "file": "assets/produkty/studio-vybaveni/10-mini-stolni-malirsky-stojan.webp",
+  "sha256": "c72bcafdbff79883d8b2d139ea0145cf7744a579b44e75941318f7957a36b0f5",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "10-mini-stolni-malirsky-stojan.png",
+  "product": "Mini stolní malířský stojan",
+  "url": "https://www.b2bdaver.cz/mini-stolni-malirsky-stojan-p22709/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/fcfdd1bfb6b072f9da1e29fd6f49ed02": {
+  "file": "assets/produkty/studio-vybaveni/12-meyco-malirska-paleta-drevena-ovalna-20-x-30-cm.webp",
+  "sha256": "14c0689bb18a7f8ef3351f1cb60179aef69c4157f4ff641ed82a8457919ff038",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "12-meyco-malirska-paleta-drevena-ovalna-20-x-30-cm.jpg",
+  "product": "Meyco malířská paleta dřevěná oválná 20 x 30 cm",
+  "url": "https://www.b2bdaver.cz/meyco-malirska-paleta-drevena-ovalna-20-x-30-cm-p1993/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/988885216bf26e0a61b5a5df17ded741": {
+  "file": "assets/produkty/studio-vybaveni/13-royal-langnickel-drevena-kreslirska-figurina-na-podstavci-20-3-cm.webp",
+  "sha256": "c4ffea1878f20db266722bbb3217260d28101fa7d8e23a62b5845f259c30f321",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "13-royal-langnickel-drevena-kreslirska-figurina-na-podstavci-20-3-cm.jpg",
+  "product": "Royal & Langnickel dřevěná kreslířská figurína na podstavci 20,3 cm",
+  "url": "https://www.b2bdaver.cz/royal-langnickel-drevena-kreslirska-figurina-na-podstavci-20-3-cm-p21284/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/3e37585a5b64fa3b7392e047512d56df": {
+  "file": "assets/produkty/studio-vybaveni/14-mabef-kreslici-deska-s-klipem-48-x-48-cm.webp",
+  "sha256": "bc09e2552bff2c3ab6f93360b4094c1398a35d4be839b113fc1c40f4289a6f74",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "14-mabef-kreslici-deska-s-klipem-48-x-48-cm.jpg",
+  "product": "Mabef kreslicí deska s klipem 48 x 48 cm",
+  "url": "https://www.b2bdaver.cz/mabef-kreslici-deska-s-klipem-48-x-48-cm-p25242/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/558da9d4e9d6b0478b7e1b4bb9518048": {
+  "file": "assets/produkty/studio-vybaveni/15-mabef-dreveny-kufrik-na-vytvarne-potreby-27-x-41-cm.webp",
+  "sha256": "6daf9b2e6cfe96d623bf98c7eba4a70ce1e9c8684e64acac23bfbff921578237",
+  "type": "image/webp",
+  "source": "assets/product pictures/daver-produkty-studio-vybaveni (1).zip",
+  "source_entry": "15-mabef-dreveny-kufrik-na-vytvarne-potreby-27-x-41-cm.jpg",
+  "product": "Mabef dřevěný kufřík na výtvarné potřeby 27 x 41 cm",
+  "url": "https://www.b2bdaver.cz/mabef-dreveny-kufrik-na-vytvarne-potreby-27-x-41-cm-p25274/",
+  "used_in": [
+   "všechny obchodní stránky (data produktů)"
+  ]
+ },
+ "/_blob/7964e46b49bbe85310209b3fb6f2513e": {
+  "file": "assets/loga/knorr-prandell.png",
+  "sha256": "a2ffeec6e6d6ee1a7532f1beff632cde3c1c1d30883767e69e4015118e3894e0",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "5048d4346792ffbb68903246f303adf23c2b336a26bafba110f1ecb2ebe9f05e"
+ },
+ "/_blob/4564541216b3ed637265a552e481d40e": {
+  "file": "assets/loga/pebeo.png",
+  "sha256": "2c5ba619656d807c331acbc7e2effc840b11d06ba0bd303d18345fa9e140eb48",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "0bb859fcf3e72a1bd526f3ccf4a5426b3e4cb64de1e81b1873f8009b840dbfcc"
+ },
+ "/_blob/bfc375c97a273c5cd56246133ff4265d": {
+  "file": "assets/loga/sizzix.png",
+  "sha256": "69fa1abcaf0fbc3f173b39cac5af1cb19bd9d38215614261c25a490feee41162",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "7bc778118f17ec197df64ec49351aacc1145681f14ac520e0409e2e74ea9c99b"
+ },
+ "/_blob/176e0540b5a76461c64685b57d248184": {
+  "file": "assets/loga/sakura.png",
+  "sha256": "f8c77a5a4d646aa0dfda472583145414b3b433f52a9edd2432019e2cea8eba81",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "fb559d4bfbb12f22581a8a3f43444084a143f5da76b71a93c70457b040fcd807"
+ },
+ "/_blob/35823966a4225b2c1a54ebf7cd4bc2a1": {
+  "file": "assets/loga/talens.png",
+  "sha256": "214961eed7e0647016527031ecc91db861fa5c4424a667610d8573024112952d",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "14d2abdaa63463c56da94ad780a74cd4752ecdf476bf8544004bfe6f170044f4"
+ },
+ "/_blob/fbf4acd183155c752611ed204980f731": {
+  "file": "assets/loga/golden.png",
+  "sha256": "c0748023433783cc7bdd2a28c9c818f8f1cf06e06016d096cd22759240e3d1e7",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "29e9f94000701099f35ead83287e10f56a1a55b90b0cb0f31f4ad39a09be965c"
+ },
+ "/_blob/58683c1b00625d986f7d587a0b2be9c3": {
+  "file": "assets/loga/amsterdam.png",
+  "sha256": "a2e91758dd2b3d61c57223dc108c4533ca1cc7a752a4e191d6239c6e1aa70e39",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "34b5293ca0cd521ac4e9acb0bef2bbbeb8da8dc90d20b4332979a88eb0d02d05"
+ },
+ "/_blob/a495b657fd3ddbf49c0732e7e7fd2d85": {
+  "file": "assets/loga/bruynzeel.png",
+  "sha256": "185684f08158e802bc1c040579eed1ba862133d209f6c5ffdb74457860df496c",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "bb4bbf5fa7d7c8b9a82a1012f16a8d8740c5b69e531bf55924e53e81ba5e13f4"
+ },
+ "/_blob/29d6a75d9d3c15b4af2df847b53673fb": {
+  "file": "assets/loga/cobra.png",
+  "sha256": "a7b9a053cb08e7a0fdd41250ddf869f1941578efda665ad6d08868f70c1ee1c0",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "477784c5556ed6abe7ba858b693dfe3fd000a525d8b75a461021f5c3cb33626a"
+ },
+ "/_blob/fefbb421e9f34b50bc836e15d1c45214": {
+  "file": "assets/loga/ecoline.png",
+  "sha256": "b7694245dccc5cd4f1946c3fa5e9ca59c6393fd7746a6dee68240ee632b92d9f",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "a286be91de58341d2044cd81807d2173887661094ab35ce77db3600396cfa22e"
+ },
+ "/_blob/a2896ae5939161b84d53b7272a85f44d": {
+  "file": "assets/loga/rembrandt.png",
+  "sha256": "99f73a29bf613b55dd74e22812ea714512ecac0bfe2db5a5e459cc37d71aeed3",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "c720830b94f4bf2fcd54a38a23ffe19e06b828b42c59f377b560b8fbf0a67cc0"
+ },
+ "/_blob/5699b57ecb87decc4bd919a81ac77301": {
+  "file": "assets/loga/van-gogh.png",
+  "sha256": "a130876d848f21f197730cc3a325c8e6b8e38b5ff8314c42a1e3cc4215ebd6c6",
+  "type": "image/png",
+  "source": "daver-loga-vyrobcu.zip (od klienta), vyříznuto z dlaždice na průhledné pozadí",
+  "used_in": [
+   "BrandStrip"
+  ],
+  "pixel_sha256": "776aee5e3bad7a4f6ac7e4f6a63b24d3604b76fdd1c18f2ba23be656be7de88d"
+ },
+ "/_blob/31e51e752116e4c4eaf02fb3d12e760d": {
+  "file": "assets/logo-daver.png",
+  "sha256": "14840f90749b3a512dc41ad9843408f6a3e04eab09a92d94f647dfcb1d19a642",
+  "type": "image/png",
+  "source": "logo_daver.png od klienta (167×70, bílé pozadí převedeno na průhledné)",
+  "used_in": [
+   "hlavička všech stránek",
+   "hlavička objednávky"
+  ],
+  "pixel_sha256": "f3e0adabc1ae4d5c14600f12a56f18a57ca2f897c96c9f261d2cc519a4151289"
+ },
+ "/_blob/d464c423c82fd3de6b03e826671d4ea3": {
+  "file": "assets/hero/hero-1-pouring.webp",
+  "sha256": "b69bfc8d164988c01ab6785d190e632ced727392963ad6ac80c5aaf5af9a059d",
+  "type": "image/webp",
+  "source": "hero.jpg od klienta (2560×1931) → WebP 2000 px, q80",
+  "used_in": [
+   "Homepage – hero slide 1"
+  ]
+ },
+ "/_blob/f187ca0fbacbaa21776fddc3873cc212": {
+  "file": "assets/hero/hero-2-akvarel.webp",
+  "sha256": "ace6f14daa1c1933589f95a979990f5920a996bc98d5dc89729017917d960f81",
+  "type": "image/webp",
+  "source": "onas.jpg od klienta (930×1080) → WebP, q80 – chtít širší verzi",
+  "used_in": [
+   "Homepage – hero slide 2",
+   "Homepage – blok o firmě"
+  ]
+ },
+ "/_blob/9f0dfe88d68275ca1989f08b60667217": {
+  "file": "assets/dopravy-platby/doprava-osobni-odber.svg",
+  "sha256": "519b0bb193ae05c354a4a4b7d0dd84aeead2065629e0376077cfb623d530fca2",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-doprava-osobni-odber.svg",
+  "used_in": [
+   "Košík – doprava",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/1b4f870fd70b411736eda2d97a1335db": {
+  "file": "assets/dopravy-platby/doprava-ppl.svg",
+  "sha256": "172e20f0fe9aab7876827b453f874f9bcd81be4b9f051cf1eba04a34149fa088",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-doprava-ppl.svg",
+  "used_in": [
+   "Košík – doprava",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/ad2c535255d293641003571bc3932ee7": {
+  "file": "assets/dopravy-platby/doprava-zasilkovna.svg",
+  "sha256": "ead32741bbdb6900d7fc4621bd1cd7a897c1acd5cdd902baf07fd5169791a57e",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-doprava-zasilkovna.svg",
+  "used_in": [
+   "Košík – doprava",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/b48d303a0967485e535453f5a8b35e22": {
+  "file": "assets/dopravy-platby/doprava-geis.svg",
+  "sha256": "ee785e1680c2c568bb7322bb6a1c37716fe47ec6935b978427eafcbeebbd1467",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-doprava-geis.svg",
+  "used_in": [
+   "Košík – doprava",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/7a951d27a6fcdeb98922c31f79e0cf9b": {
+  "file": "assets/dopravy-platby/platba-faktura.svg",
+  "sha256": "b9dbed6fd499abbfa5018972333153f740e53520c8b38755b462e22196c7cd82",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-platby-faktura.svg",
+  "used_in": [
+   "Košík – platba",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/511d0873a39d525058f9e8a1a5f6e50b": {
+  "file": "assets/dopravy-platby/platba-dobirka.svg",
+  "sha256": "8eee41da8088b70bfa56ca8c2ddadf6907ed1e47964a8175ed79bae742065df4",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-platby-dobirka.svg",
+  "used_in": [
+   "Košík – platba",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/d4ed56e71eec07769fd6dc5346182116": {
+  "file": "assets/dopravy-platby/platba-na-prodejne.svg",
+  "sha256": "99da682431455f49d1b7349d1ebb27c5064da1a0519d2503adc953324976b7ea",
+  "type": "image/svg+xml",
+  "source": "BSSHOP repo 01 Ikony/Dopravy a platby/Size=40-platby-na-prodejne.svg",
+  "used_in": [
+   "Košík – platba",
+   "Kontrola"
+  ],
+  "note": "blob na serveru je sanitizovaná kopie (jiný sha256), zdrojový soubor odpovídá sha256"
+ },
+ "/_blob/b8c6cd9f7f21a2baa8d162c2ecf87999": {
+  "file": "assets/kategorie/deti-skola.webp",
+  "sha256": "0ad2884550096f92c6d599dbaa6e890771cd58e243f3fda04ef3db33a36bcc2f",
+  "type": "image/webp",
+  "source": "Cheerful_Child_With_Colorful_Paint_Smudges.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Děti škola",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/61f27ce5b44c07e80e9a4cf565fc76bf": {
+  "file": "assets/kategorie/barvy-media.webp",
+  "sha256": "4cf34c0e51352641aa9fb778f814717f02c849db8b5adb66e813a029f01012e6",
+  "type": "image/webp",
+  "source": "Vivid_Acrylic_Swirls_on_a_Palette.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Barvy média",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/602d6faceef527407c7c4d774c215019": {
+  "file": "assets/kategorie/papiry-skicaky.webp",
+  "sha256": "0639d0abc5855a8945c70e865b1737453b9136080f73ef7e00e14e28826aa189",
+  "type": "image/webp",
+  "source": "Ivory_spiral_sketchpad_with_terracotta_and_teal.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Papíry skicáky",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/4bbc7fec64b2c2087536c680c8250683": {
+  "file": "assets/kategorie/stetce-pomucky.webp",
+  "sha256": "8bf4756b3d6383a4b12595c83046fbf0865f780a80bfa82db13ac82373baf2f3",
+  "type": "image/webp",
+  "source": "Ultramarine-Tipped_Sable_Watercolor_Brush.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Štětce pomůcky",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/881b281f7c4e6a4cdc30592814c821a9": {
+  "file": "assets/kategorie/platna-podklady.webp",
+  "sha256": "d04419c32941aa4aa703bcb652e88fa2ffac193fd806df3ba20f783f6a12d816",
+  "type": "image/webp",
+  "source": "Ivory_Stretched_Canvas_Corner.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Plátna podklady",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/f91fa3b20f3e3f34b56d6b17c1ec2ebb": {
+  "file": "assets/kategorie/kresleni-ilustrace.webp",
+  "sha256": "9c6aaf3409fec112557c7866d0dac9ff66758f9ff84810ab99c3367a60ac8ced",
+  "type": "image/webp",
+  "source": "Sharpened_petrol_green_pencil.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Kreslení ilustrace",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/0d99131af690ae2293a907b6b98eac54": {
+  "file": "assets/kategorie/grafika-tisk.webp",
+  "sha256": "39fdb949c6604e1f7f7d9ed25f2672469d76505633c3c7cdc4d1753e1e6ab34e",
+  "type": "image/webp",
+  "source": "Manual_brayer_inking_a_leaf_linocut.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Grafika tisk",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/26650308d3bfbc9862c3af17d2513ae6": {
+  "file": "assets/kategorie/modelovani-keramika.webp",
+  "sha256": "715b6cc4249537db4bc947b590bc6b26b2ad88d4e9b95fe83879d20e5c7c53a3",
+  "type": "image/webp",
+  "source": "Freshly_thrown_terracotta_clay_bowl.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Modelování keramika",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/3a8d3c29faec8a6070940ae161c7d822": {
+  "file": "assets/kategorie/kreativni-techniky.webp",
+  "sha256": "19979539ad83188933e68201ae17b55030c23eab03a2c17458eb07b644e76faa",
+  "type": "image/webp",
+  "source": "Precision_craft_scalpel_macro_1.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Kreativní techniky",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/5aa5c8856c47639a503f1d3dde47cded": {
+  "file": "assets/kategorie/studio-vybaveni.webp",
+  "sha256": "6ef7d50bb9529913708d46420ef16533a18861e42521ef35f536cc1ddbe93e7c",
+  "type": "image/webp",
+  "source": "Honey_Beechwood_A-Frame_Easel.png od klienta (1254×1254) → čtvercový výřez, 240 px, WEBP q84",
+  "category": "Studio vybavení",
+  "used_in": [
+   "menu kategorií (náhled chipu)"
+  ]
+ },
+ "/_blob/4b3e506c96fdac53c7b3749847e33b77": {
+  "file": "assets/galerie/amsterdam-akryl-02-sestava.webp",
+  "sha256": "2279e9632f907e2870eba4417137616816941cbd8e13eb63ebaff12a2223020a",
+  "type": "image/webp",
+  "source": "odvozeno z assets/produkty/barvy-media/01-amsterdam-akrylova-barva-120-ml.webp (PIL kompozice 900×900)",
+  "product": "Amsterdam akrylová barva 120 ml",
+  "note": "DEMO fotka galerie (sestava tří tub) – nahradit skutečnou fotografií",
+  "used_in": [
+   "DetailVariant.dc.html (galerie)"
+  ]
+ },
+ "/_blob/76b5d08f4c869ef688374e069d43c347": {
+  "file": "assets/galerie/amsterdam-akryl-03-tuba-pruhy.webp",
+  "sha256": "f09972086cfed4bb8cdf6be2713eb8f10add8f3b0f8e09d0c4091fc5c3b82750",
+  "type": "image/webp",
+  "source": "odvozeno z assets/produkty/barvy-media/01-amsterdam-akrylova-barva-120-ml.webp (PIL kompozice 900×900)",
+  "product": "Amsterdam akrylová barva 120 ml",
+  "note": "DEMO fotka galerie (tuba s pruhy barev) – nahradit skutečnou fotografií",
+  "used_in": [
+   "DetailVariant.dc.html (galerie)"
+  ]
+ },
+ "/_blob/abc506dceb49e9689404cf98092e48f2": {
+  "file": "assets/galerie/amsterdam-akryl-04-vzornik.webp",
+  "sha256": "d2db62a1cdc4b2ad60d52a3e1fed1224de021fbaba7fb3a43a365b2d27a4f53e",
+  "type": "image/webp",
+  "source": "odvozeno z assets/produkty/barvy-media/01-amsterdam-akrylova-barva-120-ml.webp (PIL kompozice 900×900)",
+  "product": "Amsterdam akrylová barva 120 ml",
+  "note": "DEMO fotka galerie (vzorník všech 91 odstínů) – nahradit skutečnou fotografií",
+  "used_in": [
+   "DetailVariant.dc.html (galerie)"
+  ]
+ }
+}

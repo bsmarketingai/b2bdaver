@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Aktivní filtr</title>
+<script src="./support.js"></script>
+<style>
+:root{
+  color-scheme: light;
+  /* značka – zatím neutrální šedá škála */
+  --primary:#9b414b; --primary-d:#7f343d; --primary-10:#f8eeef; /* značka Daver – vínová; konverzní (--main) zůstává černá */
+  --main:#27272a; --main-d:#09090b;
+  --nav-bg:#9b414b; --nav-fg:#fff; --nav-hover:#7f343d;
+  --footer-bg:#27272a;
+  --text:rgba(24,24,27,.92); --text-weaker:rgba(24,24,27,.68); --text-muted:#71717a;
+  --bg:#fff; --bg-soft:#f8f8f8; --line:#e4e4e7;
+  --input-border:#d4d4d8; --input-bg-soft:#f4f4f5;
+  --success:#15803d; --success-text:#15803d; --primary-text:#27272a; --info:#1f6fa8; --danger:#b91c1c;
+  --flag-discount:#ffc107; --flag-discount-fg:#1e1e1e;
+  --flag-akce:#c2410c; --flag-novinka:#0277bd; --flag-doporucujeme:#1f6fa8; --flag-vyprodej:#3867d6;
+  --radius-xs:2px; --radius-sm:4px; --radius-md:6px; --radius-lg:8px;
+  --corner-shape:squircle; /* squircle rohy: karty a tlačítka */
+  --btn-radius:6px; --card-radius:8px; /* fallback bez podpory corner-shape */
+  --btn-h-sm:32px; --btn-h-md:44px; --btn-h-lg:56px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+  --gutter-xxs:12px; --gutter-xs:16px; --gutter-s:16px; --gutter-m:24px; --gutter-l:24px; --gutter-xl:32px; --gutter-xxl:32px;
+  --gutter:var(--gutter-xxs);
+  --content-max:1560px;
+  --section-gap:var(--space-6); --card-pad:var(--space-4); --grid-gap:var(--space-3);
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs-h1:29px; --fs-h2:23px; --fs-h3:19px; --fs-h4:17px; --fs-body:16px; --fs-body-sm:14px; --fs-caption:13px;
+  --fs-price-md:21px; --fs-price-sm:16px; --lh-body:1.5;
+  --header-h:0px;
+}
+@supports (corner-shape:squircle){:root{--btn-radius:16px;--card-radius:24px;--radius-xs:4px;--radius-sm:12px;--radius-md:16px;--radius-lg:24px}}
+@media (min-width:420px){:root{--gutter:var(--gutter-xs)}}
+@media (min-width:550px){:root{--gutter:var(--gutter-s)}}
+@media (min-width:820px){:root{--gutter:var(--gutter-m);--section-gap:var(--space-7);--card-pad:var(--space-5);--grid-gap:var(--space-4);--fs-h1:34px;--fs-h2:26px;--fs-h3:21px}}
+@media (min-width:1000px){:root{--gutter:var(--gutter-l)}}
+@media (min-width:1150px){:root{--gutter:var(--gutter-xl);--section-gap:var(--space-8);--fs-h1:42px;--fs-h2:30px;--fs-h3:23px;--fs-h4:19px;--fs-body:17px;--fs-body-sm:15px;--fs-caption:13px;--fs-price-md:23px;--fs-price-sm:17px}}
+@media (min-width:1440px){:root{--gutter:var(--gutter-xxl)}}
+
+*,*::before,*::after{box-sizing:border-box}
+@supports (corner-shape:squircle){.qty,.miniQty,.rowQty,.searchBox,.ddBtn,.coupon input,.field input,.field select,.field textarea,.pickTools input,.perPage select,input[type=text],input[type=search],input[type=email],input[type=tel],input[type=password],input[type=number],select,textarea{corner-shape:squircle}}
+@supports (corner-shape:squircle){*,*::before,*::after{corner-shape:squircle}}
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}
+.fc{display:inline-flex;align-items:center;gap:2px;height:32px;padding:0 2px 0 12px;border:1px solid var(--input-border,#d4d4d8);border-radius:999px;background:var(--primary-10,#f4f4f5);font-size:13px;font-family:var(--font,system-ui,sans-serif);color:var(--text,#18181b);font-size:var(--fs-body,15px);line-height:1.5}
+.fc button{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:0;border-radius:50%;background:none;cursor:pointer;color:inherit}
+.fc button:hover{background:#fff}.fc .ic{width:14px;height:14px}
+.fc button::after{content:"";position:absolute;width:44px;height:44px}
+</style>
+</helmet>
+<span class="fc">{{ label }}<button type="button" aria-label="{{ aria }}" onClick="{{ remove }}"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></button></span>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 120, "height": 40}, "label": {"editor": "text", "default": "Meyco"}, "onRemove": {"editor": null}}'>
+
+class Component extends DCLogic {
+ renderVals(){const l=this.props.label||'Meyco';
+  return {label:l,aria:'Odebrat filtr '+l,remove:()=>{if(this.props.onRemove)this.props.onRemove();}};}
+}
+</script>
+</body>
+</html>
