@@ -114,6 +114,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* ---------- skelet BSSHOP: hlavička ---------- */
 .stickyTop{position:sticky;top:0;z-index:1000;background:#fff}
+@media (min-width:1000px){.stickyTop{transition:transform .3s cubic-bezier(.4,0,.2,1);will-change:transform}
+.stickyTop.navHidden{transform:translateY(calc(-1 * var(--hdr-top-h,85px)))}
+.stickyTop .HeaderView{transition:opacity .2s}.stickyTop.navHidden .HeaderView{opacity:0;pointer-events:none}}
+@media (prefers-reduced-motion:reduce){.stickyTop,.stickyTop .HeaderView{transition:none}}
 .HeaderView{border-bottom:1px solid var(--line);background:#fff}
 .hdrRow{display:flex;align-items:center;gap:20px;min-height:84px}
 .LogoView{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);flex:none}
@@ -659,6 +663,18 @@ class Component extends DCLogic {
   if(h&&window.ResizeObserver){this.ro=new ResizeObserver(()=>{document.documentElement.style.setProperty('--header-h',h.offsetHeight+'px');this.navUpd();});this.ro.observe(h);}
   this.navUpd();
   this.phStart();
+  this.lastY=window.scrollY||0; this.dirAcc=0;
+  const hv=document.querySelector('.stickyTop .HeaderView');
+  if(hv&&window.ResizeObserver){this.ro2=new ResizeObserver(()=>document.documentElement.style.setProperty('--hdr-top-h',hv.offsetHeight+'px'));this.ro2.observe(hv);}
+  this.onScrollNav=()=>{const y=Math.max(0,window.scrollY||0),d=y-this.lastY;this.lastY=y;if(!d)return;
+   const h=document.querySelector('.stickyTop');if(!h)return;
+   /* hystereze: směr musí trvat aspoň 24 px, jinak se při zastavení scrollu stav nepřepíná */
+   this.dirAcc=(Math.sign(d)===Math.sign(this.dirAcc))?this.dirAcc+d:d;
+   const hidden=h.classList.contains('navHidden');
+   if(y<=120){if(hidden)h.classList.remove('navHidden');return;}
+   if(!hidden&&this.dirAcc>24&&window.innerWidth>=1000&&!this.state.sugOpen&&!this.state.pop)h.classList.add('navHidden');
+   else if(hidden&&this.dirAcc<-24)h.classList.remove('navHidden');};
+  window.addEventListener('scroll',this.onScrollNav,{passive:true});
   if(this.pageMount)this.pageMount();
  }
  phStart(){
@@ -676,7 +692,7 @@ class Component extends DCLogic {
  }
  componentWillUnmount(){
   window.removeEventListener('daver-auth',this.onAuth); window.removeEventListener('storage',this.onAuth);
-  document.removeEventListener('mousedown',this.onDoc); if(this.ro)this.ro.disconnect(); clearTimeout(this.tt); clearInterval(this.phT);
+  document.removeEventListener('mousedown',this.onDoc); if(this.ro)this.ro.disconnect(); clearTimeout(this.tt); clearInterval(this.phT); window.removeEventListener('scroll',this.onScrollNav); if(this.ro2)this.ro2.disconnect();
   if(this.pageUnmount)this.pageUnmount();
  }
  navUpd(){const t=document.querySelector('.catTrack');if(!t)return;const l=t.scrollLeft>4,r=t.scrollLeft+t.clientWidth<t.scrollWidth-4;if(l!==this.state.navL||r!==this.state.navR)this.setState({navL:l,navR:r});}
