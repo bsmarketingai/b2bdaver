@@ -5,7 +5,8 @@ CAROUSEL_CSS = """
 .carTrack{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*var(--grid-gap))/4);gap:var(--grid-gap);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 14px;scrollbar-width:thin;scrollbar-color:var(--primary) transparent}
 .carTrack>*{scroll-snap-align:start;min-width:0}
 .carNav{display:flex;gap:8px}
-@media (max-width:1149px){.carTrack{grid-auto-columns:calc((100% - var(--grid-gap))/2)}}
+@media (max-width:1149px){.carTrack{grid-auto-columns:calc((100% - 2*var(--grid-gap))/3)}}
+@media (max-width:819px){.carTrack{grid-auto-columns:calc((100% - var(--grid-gap))/2)}}
 @media (max-width:549px){.carTrack{grid-auto-columns:80%}}
 """
 
@@ -337,10 +338,10 @@ det_html = f'''<div class="container">
 <div class="priceSub">83,95&nbsp;Kč s DPH · cena pro skupinu <strong>{{{{ priceGroup }}}}</strong></div>
 <ul class="avPanel"><li class="avOk">{I('check-circle')}Skladem &gt; 30 ks</li><li>{I('storefront')}Osobní odběr: zítra od 9:00</li><li>{I('truck')}Doručení: pozítří</li></ul>
 <div class="buyRow"><div class="qty"><button type="button" aria-label="Snížit množství" disabled="{{{{ minDis }}}}" onClick="{{{{ dec }}}}">−</button><label><input inputmode="numeric" aria-label="Množství" size="{{{{ qtyLen }}}}" value="{{{{ qty }}}}" onChange="{{{{ setQty }}}}">ks</label><button type="button" aria-label="Zvýšit množství" onClick="{{{{ inc }}}}">+</button></div><button class="btn btn-main btn-lg" type="button" onClick="{{{{ buy }}}}">{I('shopping-cart')}Koupit</button></div>
-<div class="buyLinks"><button class="btn btn-ghost" type="button" aria-pressed="{{{{ fav }}}}" onClick="{{{{ toggleFav }}}}">{I('heart')}{{{{ favTxt }}}}</button><button class="btn btn-ghost" type="button" onClick="{{{{ compare }}}}">{I('scales')}{{{{ cmpTxt }}}}</button><a class="btn btn-ghost" href="Porovnani.dc.html">Porovnání</a></div>
+<div class="buyLinks"><button class="btn btn-ghost" type="button" aria-pressed="{{{{ fav }}}}" onClick="{{{{ toggleFav }}}}">{I('heart')}{{{{ favTxt }}}}</button><button class="btn btn-ghost" type="button" onClick="{{{{ compare }}}}">{I('scales')}{{{{ cmpTxt }}}}</button></div>
 <dl class="short"><div><dt>Výrobce</dt><dd>Meyco</dd></div><div><dt>Tvar</dt><dd>plochý</dd></div><div><dt>Velikosti</dt><dd>č. 12, 16, 20</dd></div></dl>
 <button class="btn btn-ghost" type="button" onClick="{{{{ toTabs }}}}">Detailní popis {I('caret-down')}</button>
-<ul class="benefits"><li>{I('storefront')}Velkoobchodní ceny pro registrované</li><li>{I('package')}Doprava zdarma od 1 000 Kč bez DPH</li></ul>
+<ul class="benefits"><li>{I('storefront')}Velkoobchodní ceny pro registrované</li><li>{I('truck')}Doprava zdarma od 1 000 Kč bez DPH</li></ul>
 </div>
 </aside>
 </div>
@@ -422,8 +423,8 @@ det_css = """
 .lbClose{position:absolute;top:16px;right:16px}.lbArr{position:absolute;top:50%}.lbArr.l{left:16px}.lbArr.r{right:16px}
 .lbCount{position:absolute;bottom:20px;color:#fff;font-size:var(--fs-body-sm)}
 @media (max-width:1279px){.detGrid{grid-template-columns:minmax(0,1fr) 380px}}
-@media (max-width:1149px){.detGrid{grid-template-columns:minmax(0,1fr)}.buyCol{position:static;grid-row:3}
- .detMain{display:contents}.detHead{grid-row:1}.detMain>.gallery{grid-row:2}
+@media (max-width:1149px){.detGrid{grid-template-columns:minmax(0,1fr)}.detGrid{row-gap:20px}.detHead{margin-bottom:0}.buyCol{position:static;grid-row:3}
+ .detMain{display:contents}.detHead{grid-row:1}.detMain>.gallery,.detMain>.gv,.detMain>dc-import{grid-row:2}
  .gallery{grid-template-columns:1fr}.gMain{grid-column:1}.thumbs{grid-column:1;grid-row:2;flex-direction:row;overflow-x:auto}.thumb{width:72px;height:72px;flex:none}
  .accRow{grid-template-columns:56px minmax(0,1fr) auto;}.accRow .miniQty{grid-column:2}.accRow .btn{grid-column:3}}
 """

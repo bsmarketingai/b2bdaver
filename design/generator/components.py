@@ -36,8 +36,8 @@ comps['ProductCard'] = doc('Karta produktu', CHEAD, """
 .pcImg .ph,.pcImg img{width:100%;height:100%;transition:transform .3s}
 .pcImg img{object-fit:contain}
 .pc:hover .pcImg .ph,.pc:hover .pcImg img{transform:scale(1.03)}
-.pcZoom{position:absolute;top:0;right:0;z-index:3;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line,#e4e4e7);border-radius:var(--btn-radius,6px);background:rgba(255,255,255,.95);color:var(--text,#18181b);cursor:pointer;transition:background .15s,transform .15s}
-.pcZoom:hover{background:var(--primary-10,#f4f4f5);transform:scale(1.06)}
+.pcZoom{position:absolute;top:0;right:0;z-index:3;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line,#e4e4e7);border-radius:var(--btn-radius,6px);background:rgba(255,255,255,.95);color:var(--text,#18181b);cursor:pointer;transition:border-color .15s,color .15s,box-shadow .15s,transform .15s}
+.pcZoom:hover{background:#fff;border-color:var(--primary-d,#7f343d);color:var(--primary-d,#7f343d);box-shadow:0 2px 8px rgba(0,0,0,.08)}.pcZoom:active{transform:scale(.96)}
 .pcZoom .ic{width:22px;height:22px}
 .pcCode{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.95);border:1px solid var(--line,#e4e4e7);border-radius:999px;padding:1px 10px;font-size:12px;opacity:0;transition:opacity .2s}
 .pc:hover .pcCode,.pc:focus-within .pcCode{opacity:1}
@@ -115,11 +115,11 @@ class Component extends DCLogic {
 comps['LoginPopup'] = doc('Přihlášení', CHEAD, """
 .lp{width:320px;max-width:100%;background:#fff;border:1px solid var(--line,#e4e4e7);border-radius:var(--radius-md,6px);padding:20px;""" + ROOTC + """}
 .lp h2{margin:0 0 4px;font-size:18px}.lp .lead{margin:0 0 14px;font-size:13px;color:var(--text-weaker,rgba(24,24,27,.68))}
-.lpHead{display:flex;justify-content:space-between;align-items:flex-start}
+.lpHead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:-6px -10px 4px 0}.lpHead h2{margin:0;line-height:1.25}.lpHead .iconBtn{flex:none}
 .lpField{margin-bottom:12px}
 .lpField label{display:block;font-size:13px;font-weight:600;margin-bottom:4px}
 .lpIn{display:flex;align-items:center;gap:8px;border:1px solid var(--input-border,#d4d4d8);border-radius:var(--radius-sm,4px);height:44px;padding:0 4px 0 10px}
-.lpIn:focus-within{border-color:var(--primary-d,#27272a)}
+.lpIn{transition:border-color .15s,box-shadow .15s}.lpIn:focus-within{border-color:var(--primary-d,#7f343d);box-shadow:0 0 0 1px var(--primary-d,#7f343d),0 0 0 5px rgba(155,65,75,.2)}.lpIn input:focus,.lpIn input:focus-visible{outline:none!important;box-shadow:none}.lpIn .iconBtn:focus-visible{outline-offset:-2px}
 .lpIn.bad{border-color:var(--danger,#b91c1c)}
 .lpIn input{flex:1;min-width:0;border:0;outline:0;font:inherit;height:100%}
 .lpIn .ic{color:var(--text-muted,#71717a)}
@@ -171,8 +171,8 @@ class Component extends DCLogic {
 }""", 320, 420, {"onClose": {"editor": None}, "onLogin": {"editor": None}})
 
 # ---------------- UserMenu ----------------
-items = [('package', 'Přehled objednávek'), ('receipt', 'Přehled faktur'), ('export', 'Export / import produktů'), ('heart', 'Oblíbené produkty'), ('user-gear', 'Správa účtu')]
-li = ''.join(f'<li><a href="#ucet">{I(i)}<span>{t}</span>{I("caret-right","ic chev")}</a></li>' for i, t in items)
+items = [('package', 'Přehled objednávek', '#ucet'), ('receipt', 'Přehled faktur', '#ucet'), ('export', 'Export / import produktů', '#ucet'), ('heart', 'Oblíbené produkty', '#ucet'), ('scales', 'Porovnání produktů', 'Porovnani.dc.html'), ('user-gear', 'Správa účtu', '#ucet')]
+li = ''.join(f'<li><a href="{h}">{I(i)}<span>{t}</span>{I("caret-right","ic chev")}</a></li>' for i, t, h in items)
 comps['UserMenu'] = doc('Menu přihlášeného', CHEAD, """
 .um{width:320px;max-width:100%;background:#fff;border:1px solid var(--line,#e4e4e7);border-radius:var(--radius-md,6px);padding:16px;""" + ROOTC + """}
 .umHead{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line,#e4e4e7)}
@@ -289,13 +289,11 @@ links = [('Onas', 'O nás', 'buildings'), ('Kontakt', 'Kontakt', 'phone'), ('Obc
 buy = ''.join(f'<li><a href="{f}.dc.html">{I(i)}{t}</a></li>' for f, t, i in links[2:7])
 comps['Footer'] = doc('Patička', CHEAD, """
 .ft{--ft-accent:#e8a1a9;background:var(--footer-bg,#27272a);color:rgba(255,255,255,.88);""" + ROOTC.replace('color:var(--text,#18181b);', '') + """;font-size:var(--fs-body-sm,14px)}
-.ft{border-radius:40px 40px 0 0;corner-shape:squircle;overflow:hidden}
-@media (max-width:819px){.ft{border-radius:28px 28px 0 0}}
 .ftBs{display:inline-flex;align-items:center;gap:8px}.bsLogo{flex:none;width:20px;height:20px;display:block}
 .ft a{color:#fff;text-decoration:none}.ft a:hover{color:#fff;text-decoration:underline}
 .ftIn{width:min(var(--content-max,1560px),100% - 2*var(--gutter,24px));margin-inline:auto;padding:48px 0 24px}
-.ftGrid{display:grid;grid-template-columns:minmax(0,480px) minmax(48px,1fr) minmax(0,260px) minmax(0,340px);column-gap:40px;row-gap:32px}
-.ftGrid>:nth-child(2){grid-column:3}.ftGrid>:nth-child(3){grid-column:4}
+.ftGrid{display:grid;grid-template-columns:minmax(0,440px) minmax(24px,1fr) minmax(0,240px) minmax(0,240px) minmax(0,300px);column-gap:40px;row-gap:32px}
+.ftGrid>:nth-child(2){grid-column:3}.ftGrid>:nth-child(3){grid-column:4}.ftGrid>:nth-child(4){grid-column:5}
 .ftCard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--card-radius,8px);padding:20px;display:flex;flex-direction:column;gap:10px}
 @supports (corner-shape:squircle){.ftCard{corner-shape:var(--corner-shape,squircle)}}
 .ftAv{position:relative;width:64px;height:64px;border-radius:50%;background:rgba(155,65,75,.45);color:#fff;display:flex;align-items:center;justify-content:center}
@@ -341,7 +339,9 @@ comps['Footer'] = doc('Patička', CHEAD, """
 .ftBottom nav{display:flex;gap:16px}
 .ftBs{display:flex;align-items:center;gap:6px}
 .todo{background:rgba(255,247,214,.15);color:#ffe9a8;padding:0 4px;border-radius:2px}
-@media (max-width:1149px){.ftGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ftGrid>:nth-child(n){grid-column:auto}}
+@media (max-width:1349px){.ftGrid{grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));column-gap:32px}.ftGrid>:nth-child(n){grid-column:auto}}
+@media (max-width:1149px){.ftGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.ftGrid>.ftCard{grid-column:1/-1}}
+@media (max-width:999px){.ftGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ftGrid>:nth-child(n){grid-column:auto}}
 @media (max-width:819px){.ftGrid{grid-template-columns:1fr;gap:0}.ftCard{margin-bottom:16px}
  .ftCol{border-bottom:1px solid rgba(255,255,255,.14)}.ftCol h3{margin:0}
  .ftAcc{min-height:52px;cursor:pointer}.ftAcc .ic{display:block}
@@ -361,7 +361,9 @@ comps['Footer'] = doc('Patička', CHEAD, """
 <div class="{{{{ c2 }}}}"><h3><button class="ftAcc" type="button" aria-expanded="{{{{ e2 }}}}" onClick="{{{{ t2 }}}}">Vše o nákupu{I('caret-down')}</button></h3>
 <div class="ftBody"><ul class="ftList">{buy}</ul></div></div>
 <div class="{{{{ c3 }}}}"><h3><button class="ftAcc" type="button" aria-expanded="{{{{ e3 }}}}" onClick="{{{{ t3 }}}}">Firma{I('caret-down')}</button></h3>
-<div class="ftBody"><div class="ftRow ftAddr">{I('map-pin')}<div><strong>DAVER, spol. s r.o.</strong><span>Piešťanská 2293/68<br>915 01 Nové Mesto nad Váhom</span><span class="ftIds">IČO 34149431 · IČ DPH SK2020381935</span><a class="ftMore" href="https://www.google.com/maps/search/?api=1&amp;query=Pie%C5%A1%C5%A5ansk%C3%A1+2293%2F68+Nov%C3%A9+Mesto+nad+V%C3%A1hom">Navigovat{I('arrow-right')}</a></div></div><ul class="ftList"><li><a href="Onas.dc.html">{I('buildings')}Informace o firmě</a></li><li><a href="Kariera.dc.html">{I('user')}Volné pracovní pozice</a></li><li><a href="Kontakt.dc.html">{I('phone')}Všechny kontakty</a></li><li><a href="#facebook">{I('facebook-logo')}Sledujte nás</a></li></ul></div></div>
+<div class="ftBody"><ul class="ftList"><li><a href="Onas.dc.html">{I('buildings')}Informace o firmě</a></li><li><a href="Kariera.dc.html">{I('user')}Volné pracovní pozice</a></li><li><a href="Kontakt.dc.html">{I('phone')}Všechny kontakty</a></li><li><a href="#facebook">{I('facebook-logo')}Sledujte nás</a></li></ul></div></div>
+<div class="{{{{ c4 }}}}"><h3><button class="ftAcc" type="button" aria-expanded="{{{{ e4 }}}}" onClick="{{{{ t4 }}}}">Sídlo{I('caret-down')}</button></h3>
+<div class="ftBody"><div class="ftRow ftAddr">{I('map-pin')}<div><strong>DAVER, spol. s r.o.</strong><span>Piešťanská 2293/68<br>915 01 Nové Mesto nad Váhom</span><span class="ftIds">IČO 34149431 · IČ DPH SK2020381935</span><a class="ftMore" href="https://www.google.com/maps/search/?api=1&amp;query=Pie%C5%A1%C5%A5ansk%C3%A1+2293%2F68+Nov%C3%A9+Mesto+nad+V%C3%A1hom">Navigovat{I('arrow-right')}</a></div></div></div></div>
 </div>
 <div class="ftBottom"><span>© {{{{ year }}}} DAVER, spol. s r.o.</span><nav aria-label="Právní"><a href="Gdpr.dc.html">Cookies</a><a href="ObchodniPodminky.dc.html">Obchodní podmínky</a></nav><span class="ftBs"><svg class="bsLogo" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1228 5H2.00244V17.7249H20.1228V5Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.7119 6.28384C5.47559 6.28384 6.09741 6.92694 6.09741 7.719C6.09741 8.51105 5.47795 9.15415 4.7119 9.15415C3.94586 9.15415 3.3264 8.51105 3.3264 7.719C3.3264 6.92694 3.94586 6.28384 4.7119 6.28384ZM2.00236 13.1357V5H12.5142C11.1713 6.5912 9.97021 8.20132 8.65327 10.0597C7.93214 11.0764 8.16858 10.8707 6.96749 11.3246C6.52536 11.4925 3.50136 12.5399 2 13.1333L2.00236 13.1357ZM19.9856 5C21.0945 5 22 5.90554 22 7.01442V17.985C22 19.0939 21.0945 19.9994 19.9856 19.9994H4.01679C2.90791 19.9994 2.00236 19.0939 2.00236 17.985V13.9065C3.17272 13.5566 6.06667 12.6605 6.94621 12.4666C7.02896 12.4477 7.02896 12.5068 7.01241 12.5375C6.65067 13.1759 5.62218 14.8026 5.51105 15.8831C5.44012 16.5546 5.77586 17.3111 6.48753 17.4554C7.16137 17.5901 7.96052 17.1622 8.53505 16.8454C9.71486 16.1952 13.9778 13.358 14.5405 12.2396C14.5807 12.4501 14.8455 12.6605 15.3751 12.7976C15.6754 12.8756 16.2097 12.9111 16.484 12.9868C16.666 13.0364 16.7866 13.1546 16.8008 13.3249C16.8339 13.7221 15.8172 14.0673 15.4768 14.1926C14.7793 14.4527 13.9849 14.7175 13.3441 15.0958C13.0202 15.2873 12.9067 15.7341 13.1952 16.0131C13.4647 16.2732 14.0369 16.1266 14.3561 16.051C15.4839 15.7767 17.5716 14.9444 18.3376 14.0578C18.8223 13.4951 19.0067 12.6368 18.392 12.0883C17.6993 11.4712 16.7039 11.5682 16.4958 11.3175C15.978 10.6933 17.7513 10.1661 18.4795 10.0479C19.0398 9.95803 19.8224 10.01 19.969 9.44733C20.0943 8.96264 19.5624 8.82788 19.1557 8.78295C17.8175 8.634 16.1341 9.05012 14.9944 10.2063C14.8006 10.4025 14.6942 10.5822 14.5972 10.7974C14.0771 9.3504 10.6724 10.3647 10.5542 10.1235C10.4194 9.80435 12.266 7.18229 13.8619 5.00236H19.9927L19.9856 5ZM10.5093 11.762C10.9325 11.6604 11.961 11.4712 12.3416 11.7076C13.382 12.3508 9.91819 14.3297 9.42641 14.6323C7.96761 15.5237 7.43799 15.4882 8.37428 13.8166C8.90625 12.8993 9.41695 11.9583 10.5116 11.7644L10.5093 11.762Z" fill="#E30613"/></svg>BSSHOP: e-shop napojený na Pohodu</span></div>
 </div></footer>''', r"""
@@ -380,8 +382,8 @@ class Component extends DCLogic {
   const tg=(i)=>()=>this.setState({open:o===i?0:i});
   return {status:status, dotCls:'ftDot'+(on?' on':''), year:n.getFullYear(),
    days:DAYS.map((d,i)=>({n:d,h:HOURS?(HOURS[i]?HOURS[i][0]+':00–'+HOURS[i][1]+':00':'zavřeno'):'[DOPLNIT]',cls:i===di?'today':''})),
-   c1:'ftCol'+(o===1?' open':''),c2:'ftCol'+(o===2?' open':''),c3:'ftCol'+(o===3?' open':''),
-   e1:o===1?'true':'false',e2:o===2?'true':'false',e3:o===3?'true':'false',t1:tg(1),t2:tg(2),t3:tg(3)};
+   c1:'ftCol'+(o===1?' open':''),c2:'ftCol'+(o===2?' open':''),c3:'ftCol'+(o===3?' open':''),c4:'ftCol'+(o===4?' open':''),
+   e1:o===1?'true':'false',e2:o===2?'true':'false',e3:o===3?'true':'false',e4:o===4?'true':'false',t1:tg(1),t2:tg(2),t3:tg(3),t4:tg(4)};
  }
 }""", 1440, 600)
 
@@ -626,7 +628,7 @@ comps['QuickView'] = doc('Rychlý náhled produktu', CHEAD, """
 .qvMeta div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line,#e4e4e7);padding-bottom:6px}
 .qvMeta dt{color:var(--text-weaker,rgba(24,24,27,.68))}.qvMeta dd{margin:0;font-weight:600}
 .qvDesc{margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line,#e4e4e7);color:var(--text-weaker,rgba(24,24,27,.68));font-size:var(--fs-body-sm,14px);line-height:1.6}
-.qvMore{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:var(--primary-d,#27272a);font-weight:600;font-size:var(--fs-body-sm,14px)}
+.qvMore{display:inline-flex;align-items:center;gap:6px;margin-top:14px;align-self:flex-start;padding-right:14px;text-decoration:none}.qvMore .ic{width:18px;height:18px}
 @supports (corner-shape:squircle){.qvImg,.qvAv{corner-shape:var(--corner-shape,squircle)}}
 @media (max-width:719px){.qv{padding:20px}.qvGrid{grid-template-columns:1fr;gap:20px}.qvImg{aspect-ratio:4/3}}
 """ + btn('.qv'), f'''<div class="qv ProductQuickView" role="dialog" aria-modal="true" aria-labelledby="qvT" onKeyDown="{{{{ onKey }}}}">
@@ -649,7 +651,7 @@ comps['QuickView'] = doc('Rychlý náhled produktu', CHEAD, """
 <dl class="qvMeta"><div><dt>Kód produktu</dt><dd>{{{{ code }}}}</dd></div><div><dt>Výrobce</dt><dd>{{{{ brand }}}}</dd></div></dl>
 </div></div>
 <p class="qvDesc">{{{{ desc }}}}</p>
-<a class="qvMore" href="{{{{ href }}}}">Zobrazit detail produktu{I('arrow-right')}</a>
+<a class="btn btn-out qvMore" href="{{{{ href }}}}">Zobrazit detail produktu{I('caret-right')}</a>
 </div>''', CZK_JS + r"""
 const DEMO=__DEMO__;
 class Component extends DCLogic {
@@ -671,3 +673,83 @@ class Component extends DCLogic {
  }
 }""".replace('__DEMO__', json.dumps(dict(id=79,name=DQ['name'],code=DQ['code'],brand=DQ['brand'],price=DQ['price'],stock=DQ['stock'],av='Skladem > 30 ks',img=DQ['img'],flags=DQ['flags'],desc=DQ.get('desc','')),ensure_ascii=False)), 960, 640,
  {"p": {"editor": None}, "pickup": {"editor": None}, "delivery": {"editor": None}, "onAdd": {"editor": None}, "onClose": {"editor": None}})
+
+# ---------------- Gallery (sdílená galerie detailu) ----------------
+comps['Gallery'] = doc('Galerie produktu', CHEAD, """
+.gv{position:relative;display:grid;grid-template-columns:minmax(0,1fr);min-width:0;max-width:100%;""" + ROOTC + """}
+.gv .gMain{position:relative;min-width:0}
+.gv .gTrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border:1px solid var(--line,#e4e4e7);border-radius:var(--card-radius,8px);background:#fff;aspect-ratio:4/3;overscroll-behavior-x:contain}
+.gv .gTrack::-webkit-scrollbar{display:none}
+.gv .gSlide{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;border:0;background:#fff;padding:0;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+.gv .gSlide img{width:100%;height:100%;object-fit:contain;padding:24px}
+.gv .gArr{position:absolute;top:50%;transform:translateY(-50%);z-index:3;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line,#e4e4e7);border-radius:var(--btn-radius,6px);background:rgba(255,255,255,.92);color:var(--text,#18181b);box-shadow:0 2px 10px rgba(0,0,0,.12);cursor:pointer;transition:border-color .15s,color .15s}
+.gv .gArr:hover{background:#fff;border-color:var(--primary-d,#7f343d);color:var(--primary-d,#7f343d)}
+.gv .gArr .ic{width:22px;height:22px}.gv .gArr.l{left:12px}.gv .gArr.r{right:12px}
+.gv .thumbs{position:absolute;top:12px;left:12px;z-index:2;display:flex;flex-direction:column;gap:8px;max-height:calc(100% - 24px)}
+.gv .thumb{display:block;width:56px;height:56px;padding:4px;border:1px solid var(--line,#e4e4e7);border-radius:var(--radius-sm,4px);background:#fff;cursor:pointer;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:transform .15s}
+.gv .thumb:hover{transform:translateY(-2px)}.gv .thumb.on{outline:2px solid var(--primary-d,#7f343d);outline-offset:-2px}
+.gv .thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.gv .chip{position:absolute;left:12px;bottom:12px;z-index:2;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);border:1px solid var(--line,#e4e4e7);border-radius:12px;padding:4px 12px 4px 4px;font-size:var(--fs-body-sm,14px);font-weight:600}
+.gv .chipDot{width:28px;height:28px;border-radius:8px;border:1px solid rgba(0,0,0,.15)}
+.gv .gDots{display:none;justify-content:center;align-items:center;gap:6px;padding-top:14px}
+.gv .gDot{width:8px;height:8px;border-radius:999px;border:0;padding:0;background:var(--input-border,#d4d4d8);transition:width .3s cubic-bezier(.4,0,.2,1),background .3s;cursor:pointer}
+.gv .gDot.on{width:24px;background:var(--primary,#9b414b)}
+.gv .lb{position:fixed;inset:0;z-index:3500;background:rgba(9,9,11,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:64px 16px 20px}
+.gv .lbClose{position:absolute;top:16px;right:16px;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:var(--btn-radius,6px);background:transparent;color:#fff;cursor:pointer}
+.gv .lbClose:hover{background:rgba(255,255,255,.12)}.gv .lbClose .ic{width:24px;height:24px}
+.gv .lbStage{position:relative;display:flex;align-items:center;justify-content:center;gap:16px;flex:1;min-height:0;width:100%}
+.gv .lbImg{width:min(80vw,1000px);height:100%;max-height:calc(100dvh - 220px);background:#fff;border-radius:var(--card-radius,8px);display:flex;align-items:center;justify-content:center;padding:24px}
+.gv .lbImg img{max-width:100%;max-height:100%;object-fit:contain}
+.gv .lbNav{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);border-radius:var(--btn-radius,6px);background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.gv .lbNav:hover{background:rgba(255,255,255,.24)}.gv .lbNav .ic{width:22px;height:22px}
+.gv .lbFoot{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:100%}
+.gv .lbNum{color:#fff;font-size:var(--fs-body-sm,14px)}
+.gv .lbThumbs{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;max-width:100%;padding:2px}
+.gv .lbThumbs::-webkit-scrollbar{display:none}
+.gv .lbTh{flex:none;width:72px;height:72px;padding:4px;background:#fff;border:2px solid transparent;border-radius:var(--radius-sm,4px);cursor:pointer;opacity:.55;transition:opacity .2s,border-color .2s,transform .15s}
+.gv .lbTh:hover{opacity:.85;transform:translateY(-2px)}.gv .lbTh.on{opacity:1;border-color:var(--primary,#9b414b)}
+.gv .lbTh img{width:100%;height:100%;object-fit:contain}
+@supports (corner-shape:squircle){.gv .chip{border-radius:18px}.gv .chipDot{border-radius:14px}}
+@media (max-width:819px){.gv .thumbs{display:none}.gv .gArr{width:40px;height:40px}.gv .gArr.l{left:8px}.gv .gArr.r{right:8px}.gv .gDots{display:flex}
+ .gv .lbStage{gap:0}.gv .lbNav{position:absolute;z-index:1}.gv .lbNav.l{left:4px}.gv .lbNav.r{right:4px}.gv .lbImg{width:100%}.gv .lbTh{width:56px;height:56px}}
+@media (prefers-reduced-motion:reduce){.gv .gTrack{scroll-behavior:auto}.gv .gDot{transition:none}}
+""", f'''<div class="gv GalleryView">
+<div class="gMain"><div class="gTrack" onScroll="{{{{ gScroll }}}}" aria-label="Fotografie produktu"><sc-for list="{{{{ imgs }}}}" as="g" hint-placeholder-count="3"><button class="gSlide" type="button" aria-label="{{{{ g.label }}}}" onClick="{{{{ openLb }}}}"><img src="{{{{ g.img }}}}" alt="{{{{ g.alt }}}}" loading="lazy"></button></sc-for></div>
+<sc-if value="{{{{ multi }}}}" hint-placeholder-val="{{{{ true }}}}"><button class="gArr l" type="button" aria-label="Předchozí fotografie" onClick="{{{{ prev }}}}">{I('caret-left')}</button><button class="gArr r" type="button" aria-label="Další fotografie" onClick="{{{{ next }}}}">{I('caret-right')}</button>
+<div class="thumbs"><sc-for list="{{{{ imgs }}}}" as="g" hint-placeholder-count="3"><button class="{{{{ g.th }}}}" type="button" aria-label="{{{{ g.label }}}}" aria-current="{{{{ g.cur }}}}" onClick="{{{{ g.go }}}}"><img src="{{{{ g.img }}}}" alt=""></button></sc-for></div></sc-if>
+<sc-if value="{{{{ hasChip }}}}" hint-placeholder-val="{{{{ false }}}}"><div class="chip" aria-live="polite"><span class="chipDot" style="background:{{{{ chipHex }}}}"></span><span>{{{{ chipText }}}}</span></div></sc-if>
+</div>
+<sc-if value="{{{{ multi }}}}" hint-placeholder-val="{{{{ true }}}}"><div class="gDots" aria-hidden="true"><sc-for list="{{{{ imgs }}}}" as="g" hint-placeholder-count="3"><button class="{{{{ g.dot }}}}" type="button" tabindex="-1" onClick="{{{{ g.go }}}}"></button></sc-for></div></sc-if>
+<sc-if value="{{{{ lb }}}}" hint-placeholder-val="{{{{ false }}}}">
+<div class="lb" role="dialog" aria-modal="true" aria-label="Galerie" onKeyDown="{{{{ lbKey }}}}">
+<button class="lbClose" type="button" aria-label="Zavřít galerii" autoFocus="{{{{ true }}}}" onClick="{{{{ closeLb }}}}">{I('x')}</button>
+<div class="lbStage"><sc-if value="{{{{ multi }}}}" hint-placeholder-val="{{{{ true }}}}"><button class="lbNav l" type="button" aria-label="Předchozí fotografie" onClick="{{{{ lbPrev }}}}">{I('caret-left')}</button></sc-if>
+<div class="lbImg"><img src="{{{{ lbImg }}}}" alt="{{{{ lbAlt }}}}"></div>
+<sc-if value="{{{{ multi }}}}" hint-placeholder-val="{{{{ true }}}}"><button class="lbNav r" type="button" aria-label="Další fotografie" onClick="{{{{ lbNext }}}}">{I('caret-right')}</button></sc-if></div>
+<sc-if value="{{{{ multi }}}}" hint-placeholder-val="{{{{ true }}}}"><div class="lbFoot"><div class="lbNum" aria-live="polite">{{{{ lbNum }}}}</div>
+<div class="lbThumbs"><sc-for list="{{{{ imgs }}}}" as="g" hint-placeholder-count="3"><button class="{{{{ g.lbTh }}}}" type="button" aria-label="{{{{ g.label }}}}" onClick="{{{{ g.lbGo }}}}"><img src="{{{{ g.img }}}}" alt=""></button></sc-for></div></div></sc-if>
+</div>
+</sc-if>
+</div>''', r"""
+const DEF=['/_blob/aee33865f02f71b834821c165a17deb0','/_blob/4b3e506c96fdac53c7b3749847e33b77','/_blob/76b5d08f4c869ef688374e069d43c347','/_blob/abc506dceb49e9689404cf98092e48f2'];
+class Component extends DCLogic {
+ constructor(p){super(p);this.state={gi:0,lb:false};}
+ componentWillUnmount(){clearTimeout(this.st);}
+ renderVals(){
+  const s=this.state,p=this.props; const L=(p.imgs&&p.imgs.length)?p.imgs:DEF; const n=L.length; const alt=p.alt||'Fotografie produktu';
+  const track=()=>{const r=this.base||document;return r.querySelector?r.querySelector('.gTrack'):null;};
+  const go=(i,smooth)=>{i=(i+n)%n;const t=track();if(t)t.scrollTo({left:i*t.clientWidth,behavior:smooth===false?'auto':'smooth'});this.setState({gi:i});};
+  const goFrom=(e,i)=>{const g=e&&e.currentTarget&&e.currentTarget.closest?e.currentTarget.closest('.gv'):null;const t=g&&g.querySelector('.gTrack');i=(i+n)%n;if(t)t.scrollTo({left:i*t.clientWidth,behavior:'smooth'});this.setState({gi:i});};
+  const sync=()=>{clearTimeout(this.st);this.st=setTimeout(()=>{const t=document.querySelectorAll('.gv .gTrack');t.forEach((x)=>x.scrollTo({left:this.state.gi*x.clientWidth,behavior:'auto'}));},30);};
+  return {
+   multi:n>1, hasChip:!!p.chipText, chipHex:p.chipHex||'#fff', chipText:p.chipText||'',
+   imgs:L.map((u,i)=>({img:u,alt:alt+' – foto '+(i+1),label:'Fotografie '+(i+1)+' z '+n,th:'thumb'+(i===s.gi?' on':''),cur:i===s.gi?'true':'false',dot:'gDot'+(i===s.gi?' on':''),lbTh:'lbTh'+(i===s.gi?' on':''),go:(e)=>goFrom(e,i),lbGo:()=>this.setState({gi:i})})),
+   gScroll:(e)=>{const t=e.currentTarget;const i=Math.round(t.scrollLeft/Math.max(1,t.clientWidth));if(i!==this.state.gi)this.setState({gi:i});},
+   prev:(e)=>goFrom(e,s.gi-1), next:(e)=>goFrom(e,s.gi+1),
+   lb:s.lb, openLb:()=>this.setState({lb:true}), closeLb:()=>{this.setState({lb:false});sync();},
+   lbImg:L[s.gi]||L[0]||'', lbAlt:alt+' – foto '+(s.gi+1), lbNum:(s.gi+1)+' / '+n,
+   lbPrev:()=>this.setState({gi:(s.gi-1+n)%n}), lbNext:()=>this.setState({gi:(s.gi+1)%n}),
+   lbKey:(e)=>{if(e.key==='Escape'){e.stopPropagation();this.setState({lb:false});sync();}else if(e.key==='ArrowLeft'&&n>1){this.setState({gi:(s.gi-1+n)%n});}else if(e.key==='ArrowRight'&&n>1){this.setState({gi:(s.gi+1)%n});}}
+  };
+ }
+}""", 720, 560, {"imgs": {"editor": None}, "alt": {"editor": "text", "default": "Fotografie produktu"}, "chipHex": {"editor": None}, "chipText": {"editor": None}})

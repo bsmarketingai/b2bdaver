@@ -27,7 +27,7 @@ info_css = """
 .isArr{display:none}
 @media (max-width:819px){
  .infoSide{position:static;max-width:none;flex-basis:100%;min-width:0}
- .infoSide ul{display:flex;overflow-x:auto;gap:8px;padding:2px 0;border:0;border-radius:0;background:none;scrollbar-width:none;scroll-behavior:smooth;overscroll-behavior-x:contain}
+ .infoSide ul{display:flex;flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:2px 0;border:0;border-radius:0;background:none;scrollbar-width:none;scroll-behavior:smooth;overscroll-behavior-x:contain}
  .infoSide ul::-webkit-scrollbar{display:none}
  .infoSide li{flex:none}
  .infoSide a{min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:var(--chip-radius,8px);white-space:nowrap;font-size:var(--fs-body);background:#fff}
@@ -66,6 +66,7 @@ for f, t, secs in INFO:
 CO_CSS = TOKENS + BASE_CSS + """
 .co{min-height:100vh;display:flex;flex-direction:column;background:var(--bg-soft);padding-bottom:96px}
 .coHead{background:#fff;border-bottom:1px solid var(--line)}
+.coHead.bleed,.bar.bleed,.coFoot.bleed{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
 .coHeadIn{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
 .coHead .logoImg{height:48px;width:auto;display:block}
 .coHeadR{display:flex;align-items:center;gap:20px;font-size:var(--fs-body-sm)}
@@ -80,9 +81,9 @@ CO_CSS = TOKENS + BASE_CSS + """
 .steps a{color:inherit}
 .steps .no{display:inline-flex;width:40px;height:40px;border-radius:50%;align-items:center;justify-content:center;border:1px solid var(--input-border);background:#fff;font-weight:700;font-size:var(--fs-body);flex:none}
 .steps li.on{color:var(--text);font-weight:600}.steps li.on .no{background:var(--primary);color:#fff;border-color:var(--primary)}
-.steps li.done .no{background:var(--primary);color:#fff;border-color:var(--primary)}.steps li.done .no .ic{width:20px;height:20px}.steps li.done a{color:var(--primary-d)}
+.steps li.done .no{background:var(--success);color:#fff;border-color:var(--success)}.steps li.done .no .ic{width:20px;height:20px}.steps li.done{color:var(--text);font-weight:600}.steps li.done a{color:var(--text);text-decoration:none;font-weight:600}.steps li.done a:hover{color:var(--success)}
 .steps .sep{flex:1 1 auto;min-width:24px;height:2px;border-radius:1px;background:var(--input-border)}
-.steps .sep.done{background:var(--primary)}
+.steps .sep.done{background:var(--success)}
 .stepTxt{font-size:var(--fs-caption);color:var(--text-weaker);margin-top:8px}
 @media (max-width:819px){.steps{gap:8px}.steps li{font-size:var(--fs-body-sm);gap:8px}.steps .no{width:32px;height:32px}.steps li:not(.on) .lbl{display:none}}
 .coGrid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:var(--space-5);align-items:start;margin-top:var(--space-5)}
@@ -104,7 +105,7 @@ CO_CSS = TOKENS + BASE_CSS + """
 .field label{font-size:var(--fs-body-sm);font-weight:600}
 .field input,.field select,.field textarea{height:44px;border:1px solid var(--input-border);border-radius:var(--btn-radius);padding:0 12px;background:#fff;width:100%}
 .field textarea{height:88px;padding:10px 12px}
-.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--primary-d)}
+.field input,.field select,.field textarea{transition:border-color .15s,box-shadow .15s}.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--primary-d);box-shadow:0 0 0 1px var(--primary-d),0 0 0 5px rgba(155,65,75,.2)}
 .field .bad{border-color:var(--danger)}
 .err{font-size:var(--fs-caption);color:var(--danger)}
 .check{display:flex;gap:10px;align-items:flex-start;cursor:pointer;min-height:32px;font-size:var(--fs-body-sm)}
@@ -186,7 +187,7 @@ def co_page(title, step, main, bar_back, bar_btn, page_js, h, extra_css=''):
     return doc(title, CO_CSS + extra_css, '', body, DATA_CO + page_js + '\n}\n', 1440, h)
 
 co = {}
-BACK_SHOP = f'<a class="btn btn-out barBack" href="Main.dc.html">{I("arrow-left")}<span>Zpět do obchodu</span></a>'
+BACK_SHOP = f'<a class="btn btn-out barBack" href="Main.dc.html">{I("caret-left")}<span>Zpět do obchodu</span></a>'
 
 # ---------- P1 Košík ----------
 kosik_main = f'''<sc-if value="{{{{ hasItems }}}}" hint-placeholder-val="{{{{ true }}}}">
@@ -314,7 +315,7 @@ kosik_js = r"""
   };
  }
 """
-co['Kosik'] = co_page('Nákupní košík', 1, kosik_main, BACK_SHOP, '<sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}"><a class="btn btn-main btn-lg" href="Udaje.dc.html" onClick="{{ goNext }}">Pokračovat ke kontaktním údajům</a></sc-if>', kosik_js, 2400, kosik_css)
+co['Kosik'] = co_page('Nákupní košík', 1, kosik_main, BACK_SHOP, '<sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}"><a class="btn btn-main btn-lg" href="Udaje.dc.html" onClick="{{ goNext }}">Pokračovat ke kontaktním údajům' + I('caret-right') + '</a></sc-if>', kosik_js, 2400, kosik_css)
 
 # ---------- P2 Údaje ----------
 F = [('email', 'E-mail', 'email', 'email'), ('tel', 'Telefon', 'tel', 'tel'), ('jmeno', 'Jméno', 'text', 'given-name'), ('prijmeni', 'Příjmení', 'text', 'family-name')]
@@ -411,7 +412,7 @@ udaje_js = r"""
   });
  }
 """
-co['Udaje'] = co_page('Kontaktní údaje', 2, udaje_main, f'<a class="btn btn-out barBack" href="Kosik.dc.html">{I("arrow-left")}<span>Zpět do košíku</span></a>', '<a class="btn btn-main btn-lg" href="Kontrola.dc.html" onClick="{{ goNext }}">Pokračovat ke kontrole</a>', udaje_js, 2600, udaje_css)
+co['Udaje'] = co_page('Kontaktní údaje', 2, udaje_main, f'<a class="btn btn-out barBack" href="Kosik.dc.html">{I("caret-left")}<span>Zpět do košíku</span></a>', '<a class="btn btn-main btn-lg" href="Kontrola.dc.html" onClick="{{ goNext }}">Pokračovat ke kontrole' + I('caret-right') + '</a>', udaje_js, 2600, udaje_css)
 
 # ---------- P3 Kontrola ----------
 kontrola_main = f'''<sc-if value="{{{{ demo }}}}" hint-placeholder-val="{{{{ false }}}}"><p class="demoNote">Zobrazena ukázková data – projděte košík a kontaktní údaje pro vlastní obsah.</p></sc-if>
@@ -463,7 +464,7 @@ kontrola_js = r"""
   };
  }
 """
-co['Kontrola'] = co_page('Kontrola údajů', 3, kontrola_main, f'<a class="btn btn-out barBack" href="Udaje.dc.html">{I("arrow-left")}<span>Zpět k údajům</span></a>', '<a class="{{ btnCls }}" href="Dekujeme.dc.html" onClick="{{ submit }}">Odeslat objednávku</a>', kontrola_js, 2000, kontrola_css)
+co['Kontrola'] = co_page('Kontrola údajů', 3, kontrola_main, f'<a class="btn btn-out barBack" href="Udaje.dc.html">{I("caret-left")}<span>Zpět k údajům</span></a>', '<a class="{{ btnCls }}" href="Dekujeme.dc.html" onClick="{{ submit }}">Odeslat objednávku' + I('caret-right') + '</a>', kontrola_js, 2000, kontrola_css)
 
 # ---------- P4 Děkujeme ----------
 dek_main = f'''<div class="thanksHead">{I('check-circle','ic big')}<h1>Děkujeme za objednávku</h1><p>Potvrzení jsme poslali na váš e-mail.</p>

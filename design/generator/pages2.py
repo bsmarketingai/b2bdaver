@@ -108,7 +108,7 @@ kat_html = f'''<div class="container">
 </sc-if>
 <sc-if value="{{{{ isRow }}}}" hint-placeholder-val="{{{{ false }}}}">
 <div class="rowsBox"><table class="rows"><thead><tr><th scope="col">Název / kód</th><th scope="col">Dostupnost</th><th scope="col" class="r">Cena bez DPH</th><th scope="col" class="r">Množství</th></tr></thead>
-<tbody><sc-for list="{{{{ items }}}}" as="r" hint-placeholder-count="8"><tr><td><div class="rName"><sc-if value="{{{{ r.hasImg }}}}" hint-placeholder-val="{{{{ true }}}}"><img src="{{{{ r.img }}}}" alt=""></sc-if><sc-if value="{{{{ r.noImg }}}}" hint-placeholder-val="{{{{ false }}}}"><span class="ph">[FOTO]</span></sc-if><div><a href="Detail.dc.html">{{{{ r.name }}}}</a><small>Kód {{{{ r.code }}}} · {{{{ r.brand }}}}</small></div></div></td><td class="{{{{ r.avCls }}}}">{{{{ r.av }}}}</td><td class="r"><strong>{{{{ r.priceTxt }}}}</strong><small>{{{{ r.vatTxt }}}} s DPH</small></td><td class="r"><label class="sr" for="{{{{ r.qid }}}}">Množství {{{{ r.name }}}}</label><input class="rowQty" id="{{{{ r.qid }}}}" inputmode="numeric" value="{{{{ r.rq }}}}" onChange="{{{{ r.setRq }}}}"> ks</td></tr></sc-for></tbody></table>
+<tbody><sc-for list="{{{{ items }}}}" as="r" hint-placeholder-count="8"><tr><td><div class="rName"><sc-if value="{{{{ r.hasImg }}}}" hint-placeholder-val="{{{{ true }}}}"><img src="{{{{ r.img }}}}" alt=""></sc-if><sc-if value="{{{{ r.noImg }}}}" hint-placeholder-val="{{{{ false }}}}"><span class="ph">[FOTO]</span></sc-if><div><a href="{{{{ r.href }}}}">{{{{ r.name }}}}</a><small>Kód {{{{ r.code }}}} · {{{{ r.brand }}}}</small></div></div></td><td class="{{{{ r.avCls }}}}">{{{{ r.av }}}}</td><td class="r"><strong>{{{{ r.priceTxt }}}}</strong><small>{{{{ r.vatTxt }}}} s DPH</small></td><td class="r"><label class="sr" for="{{{{ r.qid }}}}">Množství {{{{ r.name }}}}</label><input class="rowQty" id="{{{{ r.qid }}}}" inputmode="numeric" value="{{{{ r.rq }}}}" onChange="{{{{ r.setRq }}}}"> ks</td></tr></sc-for></tbody></table>
 <div class="rowsFoot"><span>Vyplňte množství u více produktů a vložte je do košíku najednou.</span><button class="btn btn-main" type="button" onClick="{{{{ allToCart }}}}">{I('shopping-cart')}Vše do košíku</button></div></div>
 </sc-if>
 <sc-if value="{{{{ hasMore }}}}" hint-placeholder-val="{{{{ true }}}}"><div class="more"><button class="btn btn-out" type="button" onClick="{{{{ showMore }}}}">Zobrazit dalších {{{{ moreN }}}}</button></div></sc-if>
@@ -153,6 +153,16 @@ kat_css = P0.kat_css + """
 .perPage select{height:42px;border:1px solid var(--input-border);border-radius:var(--btn-radius);padding:0 40px 0 14px;-webkit-appearance:none;appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%2318181b'%3E%3Cpath d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'/%3E%3C/svg%3E") no-repeat right 14px center/16px 16px;cursor:pointer}
 .perPage select:focus{outline:0;border-color:var(--primary-d)}
 .tbLeft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+@media (max-width:819px){
+ .toolbar{display:grid!important;grid-template-columns:auto 1fr;grid-template-areas:"f v" "s s";gap:10px 12px;align-items:center}
+ .tbLeft,.tbRight{display:contents}
+ .tbLeft>.btn{grid-area:f;justify-self:start}
+ .tbRight .viewSw{grid-area:v;justify-self:end}
+ .viewSw .vBtn span{display:none}.viewSw .vBtn{min-width:44px;padding:0 10px}
+ .sortTabs{grid-area:s;flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--gutter));padding:0 var(--gutter) 2px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+ .sortTabs::-webkit-scrollbar{display:none}
+ .sortTabs>*{flex:none;white-space:nowrap;scroll-snap-align:start}
+}
 .fBadge{display:inline-flex;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#fff;color:var(--main);font-size:12px;font-weight:700;align-items:center;justify-content:center}
 .protoNote{margin-top:12px;font-size:var(--fs-body-sm);color:var(--text-weaker)}
 .rName img{width:48px;height:48px;object-fit:contain;flex:none}
@@ -230,7 +240,7 @@ kat_js = r"""
    groups:groups,activeChips:active,hasActive:active.length>0,activeCount:String(active.length),
    clearAll:()=>this.setState({sel:{},pMin:0,pMax:PTOP,page:1,shown:1}),
    countTxt:'Zobrazeno '+shownItems.length+' z '+list.length+' produktů.',
-   items:shownItems.map((p)=>Object.assign(card(p),{priceTxt:(p.from?'od ':'')+CZK(p.price),vatTxt:(p.from?'od ':'')+CZK(p.price*VAT),qid:'rq'+p.id,rq:s.rq[p.id]||0,hasImg:!!p.img,noImg:!p.img,img:p.img||'',avCls:p.stock>0?'avOk':'avBlue',
+   items:shownItems.map((p)=>Object.assign(card(p),{href:'DetailVariant.dc.html',priceTxt:(p.from?'od ':'')+CZK(p.price),vatTxt:(p.from?'od ':'')+CZK(p.price*VAT),qid:'rq'+p.id,rq:s.rq[p.id]||0,hasImg:!!p.img,noImg:!p.img,img:p.img||'',avCls:p.stock>0?'avOk':'avBlue',
      setRq:(e)=>this.setState({rq:Object.assign({},s.rq,{[p.id]:num(e.target.value)})})})),
    hasItems:list.length>0,noItems:list.length===0,count:String(list.length),
    hasMore:lastShownPage<pages,moreN:String(Math.min(ps,list.length-(start+shownItems.length))),showMore:()=>this.setState({shown:s.shown+1}),
@@ -286,7 +296,7 @@ kat_css += """
 .subTile img,.subTile .ph{width:56px;height:56px;flex:none;object-fit:contain;border-radius:var(--radius-sm);background:#fff}
 .subName{min-width:0}
 @media (max-width:819px){.subGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.subTile{flex:initial;min-height:64px;padding:8px 12px 8px 8px;gap:10px;font-size:var(--fs-body-sm)}.subTile img,.subTile .ph{width:44px;height:44px}}
-@media (max-width:379px){.subGrid{grid-template-columns:1fr}}
+@media (max-width:549px){.subGrid{grid-template-columns:1fr}}
 """
 pages['Kategorie'] = shop_page('Štětce pomůcky – výpis', kat_css, kat_html, kat_js, 4000, 'Štětce pomůcky').replace('class Component extends DCLogic {', pre + 'class Component extends DCLogic {', 1)
 
@@ -300,8 +310,8 @@ rep = [
  ('<div class="ph lbImg">[FOTO {{ imgNo }} / 4]</div>', '<div class="lbImg"><img src="' + dp['img'] + '" alt="' + dp['name'] + '"></div>'),
  ('<div class="lbCount">{{ imgNo }} / 4</div>', '<div class="lbCount">1 / 1 <span class="todo">[další fotografie doplnit]</span></div>'),
  ('<div class="flags"><span class="flagX">Doporučujeme</span></div>\n', ''),
- ('<div class="bigPrice">69,38&nbsp;Kč <small>bez DPH</small></div>', f'<div class="bigPrice">{czk(dp["price"])} <small>bez DPH</small></div>'),
- ('<div class="priceSub">83,95&nbsp;Kč s DPH', f'<div class="priceSub">{czk(dp["price"]*1.21)} s DPH'),
+ ('<div class="bigPrice">69,38&nbsp;Kč <small>bez DPH</small></div>', '<div class="bigPrice">{{ dPrice }} <small>bez DPH</small></div>'),
+ ('<div class="priceSub">83,95&nbsp;Kč s DPH', '<div class="priceSub">{{ dPriceVat }} s DPH'),
  ('<li class="avOk">' + I('check-circle') + 'Skladem &gt; 30 ks</li>', '<li class="avOk">' + I('check-circle') + 'Skladem &gt; 50 ks</li>'),
  ('<dl class="short"><div><dt>Výrobce</dt><dd>Meyco</dd></div><div><dt>Tvar</dt><dd>plochý</dd></div><div><dt>Velikosti</dt><dd>č. 12, 16, 20</dd></div></dl>',
   '<dl class="short"><div><dt>Výrobce</dt><dd>Meyco</dd></div><div><dt>Tvar</dt><dd>Stippler (tupovací)</dd></div><div><dt>Velikosti</dt><dd>15, 25, 35 mm</dd></div><div><dt>Počet v sadě</dt><dd>3 ks</dd></div></dl>'),
@@ -317,6 +327,29 @@ for a, b in rep:
 # galerie: jen 1 foto – šipky a náhledy schovat
 det_html = det_html.replace('<button class="arrowBtn gArr l"', '<sc-if value="{{ multi }}" hint-placeholder-val="{{ false }}"><button class="arrowBtn gArr l"').replace('onClick="{{ nextImg }}">' + I('caret-right') + '</button></div>\n<div class="thumbs">', 'onClick="{{ nextImg }}">' + I('caret-right') + '</button></sc-if></div>\n<div class="thumbs">')
 det_html = det_html.replace('<div class="thumbs"><sc-for list="{{ thumbs }}"', '<div class="thumbs"><sc-for list="{{ thumbs }}"')
+
+# --- Detail: galerie jako komponenta Gallery, příslušenství jako hromadná sekce pod popisem ---
+def _cut(s, a, b, repl=''):
+    i = s.find(a); assert i >= 0, a[:40]
+    j = s.find(b, i); assert j >= 0, b[:40]
+    return s[:i] + repl + s[j:]
+det_html = _cut(det_html, '<div class="gallery">', '<section class="section acc"', '<dc-import name="Gallery" imgs="{{ gList }}" alt="' + dp['name'] + '" hint-size="100%,560px"></dc-import>\n')
+det_html = _cut(det_html, '<section class="section acc"', '<section class="section" id="tabs"')
+_i = det_html.find('<sc-if value="{{ lb }}" hint-placeholder-val="{{ false }}">\n<div class="lb"')
+assert _i >= 0
+_j = det_html.find('</sc-if>', det_html.find('lbCount', _i)) + len('</sc-if>')
+det_html = det_html[:_i] + det_html[_j:]
+ACC_HTML = """
+<section class="section bulkSec" id="prislusenstvi" aria-labelledby="hAcc">
+<div class="bulkTop"><div><h2 id="hAcc">Přikupte rovnou k produktu</h2><p>Nastavte množství kvantifikátorem a vložte vše do košíku najednou. Jednotlivé produkty můžete přidat i samostatně ikonou košíku.</p></div>
+<button class="btn btn-main btn-lg" type="button" onClick="{{ accAdd }}">""" + I('shopping-cart') + """Vložit vše do košíku<span class="bulkN">{{ accCount }}</span></button></div>
+<div class="rowsBox"><table class="rows bulk"><thead><tr><th scope="col">Produkt</th><th scope="col">Dostupnost</th><th scope="col" class="r">Cena bez DPH</th><th scope="col" class="r">Množství a koupit</th></tr></thead>
+<tbody><sc-for list="{{ accs }}" as="r" hint-placeholder-count="3"><tr><td><a class="bulkName accName" href="{{ r.href }}"><sc-if value="{{ r.hasImg }}" hint-placeholder-val="{{ true }}"><img src="{{ r.img }}" alt=""></sc-if><sc-if value="{{ r.noImg }}" hint-placeholder-val="{{ false }}"><span class="accPh" aria-hidden="true"></span></sc-if><span>{{ r.name }}</span></a></td><td class="{{ r.avCls }}">{{ r.av }}</td><td class="r">{{ r.priceTxt }}</td><td class="r"><div class="bulkBuy"><div class="qty bq"><button type="button" aria-label="Snížit množství {{ r.name }}" disabled="{{ r.minDis }}" onClick="{{ r.dec }}">−</button><label><span class="sr">Množství {{ r.name }}</span><input id="{{ r.id }}" inputmode="numeric" size="{{ r.qLen }}" value="{{ r.q }}" onChange="{{ r.setQ }}">ks</label><button type="button" aria-label="Zvýšit množství {{ r.name }}" onClick="{{ r.inc }}">+</button></div><button class="btn btn-main bqBuy" type="button" aria-label="{{ r.buyLabel }}" title="Koupit" onClick="{{ r.buy }}">""" + I('shopping-cart') + """</button></div></td></tr></sc-for></tbody></table></div>
+</section>"""
+_k = det_html.find('</div></section>\n</div>\n<aside class="buyCol"')
+assert _k >= 0
+_k += len('</div></section>')
+det_html = det_html[:_k] + ACC_HTML + det_html[_k:]
 det_css = P0.det_css + """
 .gBig img{width:100%;height:100%;object-fit:contain;padding:24px}
 .longDesc p{margin:0 0 12px}.longDesc ul{margin:0 0 12px;padding-left:20px}.longDesc li{margin:3px 0}
@@ -328,11 +361,26 @@ det_css = P0.det_css + """
 det_html = det_html.replace('<span class="ph">{{ t.n }}</span>', '<img src="{{ t.img }}" alt="">')
 det_js = P0.det_js.replace("const s=this.state; const go=(i)=>this.setState({img:(i+4)%4}); const p=byId(14);",
                            "const s=this.state; const p=byId(IDS.detail); const IM=[p.img]; const go=(i)=>this.setState({img:(i+IM.length)%IM.length});") \
-    .replace("thumbs:[0,1,2,3].map((i)=>({n:i+1,", "multi:IM.length>1, thumbs:IM.map((u,i)=>({n:i+1,img:u,") \
+    .replace("thumbs:[0,1,2,3].map((i)=>({n:i+1,", "dPrice:CZK(p.price), dPriceVat:CZK(p.price*VAT), grpOn:isAuth(), multi:IM.length>1, thumbs:IM.map((u,i)=>({n:i+1,img:u,") \
     .replace("aq:{11:1,12:1,16:1}", "aq:{}") \
     .replace("accs:[11,12,16].map((id)=>{const a=byId(id);const q=s.aq[id]||1;\n     return {name:a.name,", "accs:[IDS.cistic,IDS.pebeoCistic,IDS.tupovaci].map((id)=>{const a=byId(id);const q=s.aq[id]||1;\n     return {name:a.name,img:a.img||'',hasImg:!!a.img,noImg:!a.img,")
 
 assert 'IDS.detail' in det_js and 'IDS.cistic' in det_js
+det_js = det_js.replace("multi:IM.length>1,", "gList:IM, multi:IM.length>1,", 1)
+det_js = det_js.replace("  };\n  T.forEach((n,i)=>{vals['tab'+i]=s.tab===i;});", r"""   ,accs:ACC.map((id,i)=>{const a=byId(id);const q=s.aq[id]||0;
+     return {name:a.name,href:a.href||'Detail.dc.html',img:a.img||'',hasImg:!!a.img,noImg:!a.img,av:avText(a.stock),avCls:a.stock>0?'avOk':'avBlue',priceTxt:CZK(a.price),id:'aq'+i,q:q,qLen:Math.max(1,String(q).length),minDis:!(q>0),buyLabel:'Koupit '+a.name,
+      setQ:(e)=>this.setState({aq:Object.assign({},s.aq,{[id]:Math.max(0,parseInt(String(e.target.value).replace(/\D/g,''),10)||0)})}),
+      dec:()=>this.setState({aq:Object.assign({},s.aq,{[id]:Math.max(0,q-1)})}),inc:()=>this.setState({aq:Object.assign({},s.aq,{[id]:q+1})}),
+      buy:()=>{const n=q>0?q:1;const aq=Object.assign({},s.aq);delete aq[id];this.setState({aq:aq});this.addToCart(a,n);}};}),
+   accCount:String(ACC.filter((id)=>s.aq[id]>0).length),
+   accAdd:()=>{const ids=ACC.filter((id)=>s.aq[id]>0);if(!ids.length){this.toastMsg('Vyplňte množství alespoň u jednoho produktu.',true);return;}
+     const cart=s.cart.slice();ids.forEach((id)=>{const j=cart.findIndex((l)=>l.id===id);if(j>=0)cart[j]={id:id,qty:cart[j].qty+s.aq[id]};else cart.push({id:id,qty:s.aq[id]});});
+     const items=ids.map((id)=>{const a=byId(id);return {no:'',n:a.name,img:a.img||'',hex:'',q:s.aq[id],price:a.price};});
+     this.setState({cart:cart,aq:{},pop:'',dlg:{id:ids[0],qty:ids.reduce((x,id)=>x+s.aq[id],0),shades:items,multi:true}});}
+  };
+  T.forEach((n,i)=>{vals['tab'+i]=s.tab===i;});""", 1)
+det_js = det_js.replace("const IM=[p.img];", "const IM=[p.img]; const ACC=[IDS.cistic,IDS.pebeoCistic,IDS.tupovaci];", 1)
+assert 'accAdd' in det_js and 'gList:IM' in det_js and 'const ACC=' in det_js
 pages['Detail'] = shop_page('Detail produktu', det_css, det_html, det_js, 2700, 'Štětce pomůcky')
 
 # ======================= POROVNANI =======================
@@ -391,13 +439,7 @@ dv_html = f'''<div class="container">
 <div class="detMain">
 <div class="detHead"><h1>{VP['name']}</h1>
 <div class="detMeta"><button class="{{{{ copyCls }}}}" type="button" aria-label="{{{{ copyLabel }}}}" onClick="{{{{ copyCode }}}}"><span class="ccLbl">Kód</span><strong class="ccCode">{{{{ vCode }}}}</strong><span class="ccIc" aria-hidden="true"><sc-if value="{{{{ notCopied }}}}" hint-placeholder-val="{{{{ true }}}}">{I('copy')}</sc-if><sc-if value="{{{{ copied }}}}" hint-placeholder-val="{{{{ false }}}}">{I('check')}</sc-if></span><span class="ccMsg" aria-live="polite">{{{{ copiedTxt }}}}</span></button><span class="varCount">{len(AV)} odstínů · Amsterdam Standard Series</span></div></div>
-<div class="gallery vg">
-<div class="gMain"><div class="gTrack" onScroll="{{{{ gScroll }}}}" aria-roledescription="galerie" aria-label="Fotografie produktu"><sc-for list="{{{{ gImgs }}}}" as="g" hint-placeholder-count="4"><button class="gSlide" type="button" aria-label="{{{{ g.label }}}}" onClick="{{{{ openLb }}}}"><img src="{{{{ g.img }}}}" alt="{{{{ g.alt }}}}" loading="lazy"></button></sc-for></div>
-<button class="arrowBtn gArr l" type="button" aria-label="Předchozí fotografie" onClick="{{{{ gPrev }}}}">{I('caret-left')}</button><button class="arrowBtn gArr r" type="button" aria-label="Další fotografie" onClick="{{{{ gNext }}}}">{I('caret-right')}</button>
-<div class="shadeChip" aria-live="polite"><span class="shadeDot" style="background:{{{{ vHex }}}}"></span><span>{{{{ vNo }}}} {{{{ vName }}}}</span></div>
-<div class="gDots" aria-hidden="true"><sc-for list="{{{{ gImgs }}}}" as="g" hint-placeholder-count="4"><button class="{{{{ g.dot }}}}" type="button" tabindex="-1" onClick="{{{{ g.go }}}}"></button></sc-for></div></div>
-<div class="thumbs"><sc-for list="{{{{ gImgs }}}}" as="g" hint-placeholder-count="4"><button class="{{{{ g.th }}}}" type="button" aria-label="{{{{ g.label }}}}" aria-current="{{{{ g.cur }}}}" onClick="{{{{ g.go }}}}"><img src="{{{{ g.img }}}}" alt=""></button></sc-for></div>
-</div>
+<dc-import name="Gallery" imgs="{{{{ gList }}}}" alt="{VP['name']}" chip-hex="{{{{ vHex }}}}" chip-text="{{{{ chipTxt }}}}" hint-size="100%,560px"></dc-import>
 <section class="section" id="tabs" aria-label="Informace o produktu">
 <div class="tabBar" role="tablist"><sc-for list="{{{{ tabs }}}}" as="t" hint-placeholder-count="4"><button class="{{{{ t.cls }}}}" type="button" role="tab" aria-selected="{{{{ t.sel }}}}" onClick="{{{{ t.pick }}}}">{{{{ t.n }}}}</button></sc-for></div>
 <div class="tabPanel" role="tabpanel">
@@ -440,16 +482,7 @@ dv_html = f'''<div class="container">
 </aside>
 </div>
 </div>
-<sc-if value="{{{{ lb }}}}" hint-placeholder-val="{{{{ false }}}}">
-<div class="lb" role="dialog" aria-modal="true" aria-label="Galerie" onKeyDown="{{{{ lbKey }}}}">
-<button class="iconBtn lbClose" type="button" aria-label="Zavřít galerii" autoFocus="{{{{ true }}}}" onClick="{{{{ closeLb }}}}">{I('x')}</button>
-<div class="lbStage"><button class="arrowBtn lbNav l" type="button" aria-label="Předchozí fotografie" onClick="{{{{ lbPrev }}}}">{I('caret-left')}</button>
-<div class="lbImg"><img src="{{{{ lbImg }}}}" alt="{{{{ lbAlt }}}}"></div>
-<button class="arrowBtn lbNav r" type="button" aria-label="Další fotografie" onClick="{{{{ lbNext }}}}">{I('caret-right')}</button></div>
-<div class="lbFoot"><div class="lbNum" aria-live="polite">{{{{ lbNum }}}}</div>
-<div class="lbThumbs"><sc-for list="{{{{ gImgs }}}}" as="g" hint-placeholder-count="4"><button class="{{{{ g.lbTh }}}}" type="button" aria-label="{{{{ g.label }}}}" aria-current="{{{{ g.cur }}}}" onClick="{{{{ g.lbGo }}}}"><img src="{{{{ g.img }}}}" alt=""></button></sc-for></div></div>
-</div>
-</sc-if>'''
+'''
 dv_css = P0.det_css + """
 .bulkSec{margin-top:var(--section-gap)}
 .bulkTop{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 24px;flex-wrap:wrap;margin-bottom:16px}
@@ -598,7 +631,7 @@ dv_js = r"""
   const T=['Popis','Parametry','Diskuze'];
   const bulkCount=Object.values(s.bq).filter((x)=>x>0).length;
   const vals={
-   vIdx:String(s.v),vNo:String(v.no),vName:v.n,vCode:v.code,vHex:v.hex,vPrice:CZK(v.price),vPriceVat:CZK(v.price*VAT),vAv:v.av,vOnStock:v.st>0,vAvCls:v.st>0?'avOk':'avBlue',
+   vIdx:String(s.v),vNo:String(v.no),vName:v.n,vCode:v.code,vHex:v.hex,vPrice:CZK(v.price),grpOn:isAuth(),vPriceVat:CZK(v.price*VAT),vAv:v.av,vOnStock:v.st>0,vAvCls:v.st>0?'avOk':'avBlue',
    isSelect:s.ui!=='swatch',isSwatch:s.ui==='swatch',groups:groups,swGroups:swGroups,swNone:(s.ui==='swatch'?swGroups:ddGroups).length===0,
    ddOpen:s.dd,ddOpenStr:s.dd?'true':'false',ddAria:'Odstín: '+v.no+' '+v.n+', '+v.av+'. Změnit odstín',ddToggle:()=>this.setState({dd:!s.dd,act:s.v,vq:''}),ddGroups:ddGroups,ddKey:ddKey,vq:s.vq,onVq:(e)=>this.setState({vq:e.target.value}),
    pickSel:(e)=>this.setState({v:num(e.target.value)}),
@@ -622,7 +655,7 @@ dv_js = r"""
      const total=ids.reduce((a,k)=>a+s.bq[k],0);const cart=s.cart.slice();const i=cart.findIndex((l)=>l.id===1);if(i>=0)cart[i]={id:1,qty:cart[i].qty+total};else cart.push({id:1,qty:total});
      const shades=ids.map((k)=>{const x=AV[k];return {no:x.no,n:x.n,hex:x.hex,q:s.bq[k],price:x.price};});
      this.setState({cart:cart,bq:{},pop:'',dlg:{id:1,qty:total,shades:shades}});},
-   lb:s.lb,lbImg:GIM[s.gi]||GIM[0],openLb:()=>this.setState({lb:true}),
+   gList:GIM,chipTxt:v.no+' '+v.n,lb:s.lb,lbImg:GIM[s.gi]||GIM[0],openLb:()=>this.setState({lb:true}),
    gImgs:GIM.map((u,i)=>({img:u,alt:p.name+' – foto '+(i+1),label:'Fotografie '+(i+1)+' z '+GIM.length,th:'thumb'+(i===s.gi?' on':''),cur:i===s.gi?'true':'false',dot:'gDot'+(i===s.gi?' on':''),lbTh:'lbTh'+(i===s.gi?' on':''),lbGo:()=>this.setState({gi:i}),go:(e)=>gGo(e,i)})),
    lbAlt:p.name+' – foto '+(s.gi+1),lbNum:(s.gi+1)+' / '+GIM.length,lbPrev:()=>this.setState({gi:(s.gi-1+GIM.length)%GIM.length}),lbNext:()=>this.setState({gi:(s.gi+1)%GIM.length}),
    gScroll:(e)=>{const t=e.currentTarget;const i=Math.round(t.scrollLeft/Math.max(1,t.clientWidth));if(i!==this.state.gi)this.setState({gi:i});},
@@ -632,8 +665,20 @@ dv_js = r"""
   return vals;
  }
 """
-pre_dv = 'const AV=' + json.dumps(AV, ensure_ascii=False) + ';\nconst GORD=' + json.dumps(GROUPS_ORDER, ensure_ascii=False) + ';\n' + 'const GIM=' + json.dumps([VP['img'],'/_blob/4b3e506c96fdac53c7b3749847e33b77','/_blob/76b5d08f4c869ef688374e069d43c347','/_blob/abc506dceb49e9689404cf98092e48f2']) + ';\n'
+pre_dv = 'const AV=' + json.dumps(AV, ensure_ascii=False) + ';window.__AV=AV;applyGroup();\nconst GORD=' + json.dumps(GROUPS_ORDER, ensure_ascii=False) + ';\n' + 'const GIM=' + json.dumps([VP['img'],'/_blob/4b3e506c96fdac53c7b3749847e33b77','/_blob/76b5d08f4c869ef688374e069d43c347','/_blob/abc506dceb49e9689404cf98092e48f2']) + ';\n'
 pages['DetailVariant'] = shop_page('Detail produktu s variantami', dv_css, dv_html, dv_js, 8800, 'Barvy média').replace('class Component extends DCLogic {', pre_dv + 'class Component extends DCLogic {', 1)
 
+# sdílené CSS hromadné tabulky (bulk) i pro běžný detail
+def _bulk_css(css):
+    out=[]; i=0
+    import re as _r
+    for m in _r.finditer(r'@media[^{]*\{(?:[^{}]*\{[^{}]*\})*[^{}]*\}|[^{}@]+\{[^{}]*\}', css):
+        blk=m.group(0)
+        if _r.search(r'bulk|\.bq|bqBuy|\.rows|rowsBox', blk) and 'animation' not in blk and '.vInd' not in blk: out.append(blk.strip())
+    return '\n'.join(out)
+BULK_CSS = _bulk_css(dv_css) + "\n.accName{color:var(--text);text-decoration:none}.accName:hover span{text-decoration:underline}.accName img{width:48px;height:48px;object-fit:contain;border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;flex:none}.accName span{min-width:0}.accPh{width:48px;height:48px;flex:none;border:1px dashed var(--input-border);border-radius:var(--radius-sm);background:var(--bg-soft)}"
+pages['Detail'] = shop_page('Detail produktu', det_css + BULK_CSS, det_html, det_js, 2700, 'Štětce pomůcky')
+
 if __name__ == '__main__':
+    write('Detail.dc.html', pages['Detail'].replace('></input>', '>'))
     write('DetailVariant.dc.html', pages['DetailVariant'].replace('></input>', '>'))

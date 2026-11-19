@@ -42,7 +42,7 @@ TOKENS = """
 @media (min-width:550px){:root{--gutter:var(--gutter-s)}}
 @media (min-width:820px){:root{--gutter:var(--gutter-m);--section-gap:var(--space-7);--card-pad:var(--space-5);--grid-gap:var(--space-4);--fs-h1:34px;--fs-h2:26px;--fs-h3:21px}}
 @media (min-width:1000px){:root{--gutter:var(--gutter-l)}}
-@media (min-width:1150px){:root{--gutter:var(--gutter-xl);--section-gap:var(--space-8);--fs-h1:42px;--fs-h2:30px;--fs-h3:23px;--fs-h4:19px;--fs-body:17px;--fs-body-sm:15px;--fs-caption:13px;--fs-price-md:23px;--fs-price-sm:17px}}
+@media (min-width:1150px){:root{--gutter:var(--gutter-xl);--section-gap:var(--space-8);--fs-h1:38px;--fs-h2:28px;--fs-h3:21px;--fs-h4:18px;--fs-body:16px;--fs-body-sm:14px;--fs-caption:13px;--fs-price-md:21px;--fs-price-sm:16px}}
 @media (min-width:1440px){:root{--gutter:var(--gutter-xxl)}}
 """
 
@@ -75,7 +75,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media (prefers-reduced-motion:reduce){.btn,.chip,.sortBtn{transition:none}.chip.on,.sortBtn.on,.vBtn.on{animation:none}.btn:active,.chip:active,.sortBtn:active,.iconBtn:active,.arrowBtn:active{transform:none}}
 .btn-main{background:var(--main);color:#fff}.btn-main:hover{background:var(--main-d);color:#fff}
 .btn-out{background:#fff;border-color:var(--input-border);color:var(--text)}.btn-out:hover{border-color:var(--primary-d);color:var(--text)}
-.btn-ghost{background:transparent;color:var(--primary-d);padding:0 8px}
+.btn-ghost{background:transparent;color:var(--primary-d);padding:0 12px;transition:background .15s,color .15s}
+.btn-ghost:hover{background:var(--primary-10);color:var(--primary-d)}
+.btn-ghost:active{background:#efdcdf}
 .btn-sm{min-height:var(--btn-h-sm);padding:0 12px;font-size:var(--fs-body-sm)}
 .iconBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent;border-radius:var(--btn-radius);cursor:pointer;color:var(--text)}
 .iconBtn:hover{background:var(--primary-10)}
@@ -83,7 +85,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .arrowBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border:1px solid var(--line);border-radius:var(--btn-radius);background:#fff;color:var(--text);cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:background .15s}
 .navArrowIc{display:inline-flex;align-items:center;justify-content:center;width:32px;height:44px;flex:none;border:0;background:none;color:var(--nav-fg);cursor:pointer;transition:transform .15s,opacity .15s}
 .navArrowIc .ic{width:24px;height:24px}
-.arrowBtn:hover{background:var(--primary-10);color:var(--text)}
+.arrowBtn:hover{background:#fff;border-color:var(--primary-d);color:var(--primary-d)}
 .navArrow:hover .navArrowIc{opacity:.8}.navArrow.r:hover .navArrowIc{transform:translateX(2px)}.navArrow.l:hover .navArrowIc{transform:translateX(-2px)}
 .navArrow:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 .arrowBtn:disabled{opacity:.4;cursor:not-allowed}
@@ -92,7 +94,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .box{border:1px solid var(--line);border-radius:var(--card-radius);background:#fff}
 #main{background:var(--bg-soft);padding-bottom:var(--section-gap)}
 .subTile,.buyBox,.accItem,.rowsBox,.cmpBox,.infoSide ul,.tabPanel,.params{background:#fff}
-.tabPanel{padding:24px!important;border:1px solid var(--line);border-radius:var(--card-radius)}
+.tabPanel{padding:24px!important;border:1px solid var(--line);border-radius:var(--card-radius);max-width:none!important}.tabPanel p,.longDesc p{max-width:none}
 .tabBar{border-bottom:0!important;gap:8px!important;padding:2px 0 12px;flex-wrap:wrap}
 .tabB{min-height:44px!important;padding:0 18px!important;border:1px solid var(--input-border)!important;border-radius:var(--btn-radius);background:#fff!important;color:var(--text)!important;font-weight:600;transition:background .2s,border-color .2s,color .2s,transform .15s}
 .tabB:hover{border-color:var(--primary-d)!important;background:var(--primary-10)!important}
@@ -123,7 +125,10 @@ SHOP_CSS = """
 @media (min-width:1000px){.stickyTop{transition:transform .3s cubic-bezier(.4,0,.2,1);will-change:transform}
 .stickyTop.navHidden{transform:translateY(calc(-1 * var(--hdr-top-h,85px)))}
 .stickyTop .HeaderView{transition:opacity .2s}.stickyTop.navHidden .HeaderView{opacity:0;pointer-events:none}}
-@media (prefers-reduced-motion:reduce){.stickyTop,.stickyTop .HeaderView{transition:none}}
+@media (max-width:819px){.stickyTop{transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.stickyTop.navHidden{transform:translateY(calc(-1 * var(--hdr-row-h,64px)))}
+.stickyTop .hdrRow{transition:opacity .2s}.stickyTop.navHidden .hdrRow{opacity:0;pointer-events:none}}
+@media (prefers-reduced-motion:reduce){.stickyTop,.stickyTop .HeaderView,.stickyTop .hdrRow{transition:none}}
 .HeaderView{border-bottom:1px solid var(--line);background:#fff}
 .hdrRow{display:flex;align-items:center;gap:20px;min-height:84px}
 .LogoView{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);flex:none}
@@ -132,14 +137,16 @@ SHOP_CSS = """
 .searchBox{flex:1;display:flex;align-items:center;gap:8px;border:1px solid var(--input-border);border-radius:var(--btn-radius);padding:0 4px 0 12px;height:48px;background:#fff}
 .searchBtn{flex:none;min-height:0;height:38px;padding:0 18px;border-radius:max(4px,calc(var(--btn-radius) - 4px))}
 @media (max-width:479px){.searchBtn{padding:0 12px}}
-.searchBox:focus-within{border-color:var(--primary-d)}
+.searchBox{transition:border-color .15s,box-shadow .15s}.searchBox:focus-within{border-color:var(--primary-d);box-shadow:0 0 0 1px var(--primary-d),0 0 0 5px rgba(155,65,75,.2)}
+input:not([type=checkbox]):not([type=radio]):not([type=range]):focus,select:focus,textarea:focus{outline:none;border-color:var(--primary-d);box-shadow:0 0 0 1px var(--primary-d),0 0 0 5px rgba(155,65,75,.2)}
+:where(.searchBox,.nlField,.fSearch,.swSearch,.lpIn,.qty,.dd,.coupon) input:focus{outline:none!important;box-shadow:none!important}
 .searchBox input{flex:1;border:0;outline:0;min-width:0;background:transparent;height:100%}
 /* našeptávač – širší než pole, pozicovaný k řádku hlavičky; na úzkém displeji na celou šířku */
 .hdrRow,.mobileSearch{position:relative}
 
 .sug{position:absolute;top:calc(100% + 8px);left:0;width:max(100%,min(1080px,calc(100vw - 280px)));z-index:1200;background:#fff;border:1px solid var(--line);border-radius:var(--card-radius);box-shadow:0 16px 40px rgba(0,0,0,.16);padding:20px;container-type:inline-size;max-height:calc(100vh - var(--header-h) - 16px);overflow:auto;overscroll-behavior:contain}
 .sugGrid{display:grid;grid-template-columns:minmax(0,2fr) minmax(220px,1fr);gap:28px}
-.sugH{font-size:var(--fs-caption);text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:8px}
+.sugH{font-size:20px;font-weight:600;line-height:1.3;text-transform:none;letter-spacing:0;color:var(--text-muted);margin-bottom:8px}
 .sugItem{display:grid;grid-template-columns:56px minmax(0,1fr) auto;grid-template-areas:"img txt buy";gap:6px 14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
 .sugItem>.sugPic{grid-area:img}.sugItem>.sugTxt{grid-area:txt;min-width:0}.sugItem>.sugBuy{grid-area:buy}
 .sugTxt a{color:var(--text);text-decoration:none;font-size:var(--fs-body-sm);font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -148,7 +155,8 @@ SHOP_CSS = """
 .sugMeta{font-size:var(--fs-caption);color:var(--text-weaker);margin-top:2px}
 .sugBuy{display:flex;align-items:center;gap:12px;justify-content:flex-end;white-space:nowrap}
 .sugPrice{font-weight:700;font-size:var(--fs-body);text-align:right;line-height:1.2}.sugPrice small{display:block;font-weight:400;font-size:var(--fs-caption);color:var(--text-weaker)}
-.sugAll{display:inline-flex;align-items:center;gap:6px;margin-top:10px;min-height:44px;color:var(--primary-d);font-weight:600;font-size:var(--fs-body-sm)}
+.sugAll{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding-right:14px;font-size:var(--fs-body-sm)}
+.sugAll .ic{width:18px;height:18px}
 .sugCats{display:flex;flex-direction:column}
 .sugCat{display:block;padding:8px 0;color:var(--text);text-decoration:none;font-size:var(--fs-body-sm);border-bottom:1px solid var(--line)}
 .sugCat:hover{text-decoration:underline}
@@ -171,7 +179,7 @@ SHOP_CSS = """
 .popWrap{position:relative;flex:none}
 .hdrBtn{display:flex;align-items:center;gap:10px;min-height:44px;padding:4px 10px;border:0;background:transparent;border-radius:var(--btn-radius);cursor:pointer;text-align:left;color:var(--text)}
 .hdrBtn:hover{background:var(--primary-10)}
-.hdrBtn .ic{width:24px;height:24px}
+.hdrBtn .ic{width:24px;height:24px}.hdrBtn:not(.cartBtn)>.ic{color:var(--primary-d)}
 .hdrBtn small{display:block;font-size:var(--fs-caption);color:var(--text-weaker)}
 .mono{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--primary-d);color:#fff;font-weight:700;font-size:14px}
 @supports (corner-shape:squircle){.mono{corner-shape:squircle;border-radius:50%}}
@@ -179,8 +187,9 @@ SHOP_CSS = """
 .cartBadge{position:absolute;top:-6px;right:-8px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--primary);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .cartBtn.empty .cartBadge{background:var(--text-muted)}
 .cartBtn{gap:14px;padding:6px 16px 6px 12px;min-height:52px;border:1px solid var(--input-border);background:#fff;transition:border-color .15s}
+.cartBtn{position:relative}.cartBtn .cartIco{position:static}.cartBtn .cartBadge{top:-9px;right:-9px;min-width:22px;height:22px;border-radius:11px;font-size:12px;padding:0 6px;box-shadow:0 0 0 2px #fff;z-index:1}
 .cartBtn:hover{border-color:var(--primary-d);background:#fff}
-.cartBtn strong{font-size:calc(var(--fs-price-md) - 2px);color:var(--primary);line-height:1.15}
+.cartBtn strong{font-size:calc(var(--fs-price-md) - 2px);color:var(--primary);line-height:1.15}.cartBtn .hdrTxt small{margin-top:-2px}
 .cartBtn.empty strong{color:var(--text)}
 .popScrim{display:none}
 @keyframes sheetIn{from{transform:translateY(100%)}to{transform:none}}@keyframes scrimIn{from{opacity:0}to{opacity:1}}
@@ -245,6 +254,8 @@ SHOP_CSS = """
 .dlgProd .ph,.dlgImg{width:80px;height:80px;object-fit:contain}
 .dlgSum{padding:12px 0;font-size:var(--fs-body-sm)}
 .dlgShades{border-bottom:1px solid var(--line);padding:12px 0}
+.dlgShImg{width:40px;height:40px;object-fit:contain;border:1px solid var(--line);border-radius:8px;background:#fff}
+.dlgShades li:has(.dlgShImg){grid-template-columns:40px minmax(0,1fr) auto auto}
 .dlgShH{font-size:var(--fs-caption);color:var(--text-muted);margin-bottom:6px}
 .dlgShades ul{list-style:none;margin:0;padding:0;max-height:220px;overflow:auto;display:flex;flex-direction:column;gap:4px}
 .dlgShades li{display:grid;grid-template-columns:22px minmax(0,1fr) auto auto;gap:10px;align-items:center;font-size:var(--fs-body-sm);padding:4px 0}
@@ -275,11 +286,21 @@ main{display:block;padding-bottom:var(--section-gap)}
 @media (max-width:1149px){.ContactsView{gap:8px}}
 .ctIcon{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--btn-radius);color:var(--primary-d);transition:background .2s}
 .ctIcon:hover{background:var(--primary-10)}.ctIcon .ic{width:24px;height:24px}
-@media (max-width:999px){.ContactsView .ctItem{display:none}.ctIcon{display:inline-flex}}
+.ctMail{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--btn-radius);color:var(--primary-d);transition:background .2s}
+.ctMail:hover{background:var(--primary-10)}.ctMail .ic{width:24px;height:24px}
+.ContactsView .ctMail,.ContactsView .ctIcon{color:var(--primary-d)}
+@media (max-width:1349px){.ctMail{display:inline-flex}}
+@media (max-width:899px){.ContactsView .ctItem{display:none}.ctMail{display:none}.ctIcon{display:inline-flex}}
+@media (min-width:560px) and (max-width:819px){.ContactsView .ctItem:first-child{display:flex}.ctMail{display:inline-flex}.ctIcon{display:none!important}.ContactsView{margin-right:4px}}
 @media (max-width:819px){.ctIcon{width:40px;height:40px}.ctIcon .ic{width:22px;height:22px}}
 @media (max-width:339px){.ContactsView{display:none}}
 @media (max-width:999px){.MenuCategoriesRwdView{display:none}.burger{display:inline-flex}}
 .SimpleSearchView{min-width:0}
+.grpTag{display:inline-flex;align-items:center;margin-left:10px;padding:2px 10px;border-radius:999px;background:var(--primary-10);color:var(--primary-d);font-size:var(--fs-caption);font-weight:600;vertical-align:middle;white-space:nowrap}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
+.searchClr{flex:none;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:0;background:transparent;border-radius:max(4px,calc(var(--btn-radius) - 4px));color:var(--text-weaker);cursor:pointer;transition:background .15s,color .15s}
+.searchClr:hover{background:var(--primary-10);color:var(--primary-d)}.searchClr .ic{width:20px;height:20px}.SimpleSearchView form,.searchBox{min-width:0}.searchBox input{width:0}
+@media (min-width:820px) and (max-width:999px){.HeaderView{position:relative}.hdrRow{position:static}.hdrRow>.SimpleSearchView{position:static}.hdrRow>.SimpleSearchView .sug{left:0;right:0;width:auto;top:100%;border-top:1px solid var(--line);border-left:0;border-right:0;border-radius:0 0 40px 40px;box-shadow:0 16px 32px rgba(0,0,0,.14);max-height:calc(100vh - var(--hdr-top-h,85px) - 16px);padding:20px var(--gutter) 28px}}
 .HeaderView.bleed{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
 .HeaderView .container{width:min(var(--content-max),100% - 2*var(--gutter))}
 @media (max-width:1399px){.hdrRow{gap:12px}.hdrBtn:not(.cartBtn) .hdrTxt{display:none}.SimpleSearchView{flex-basis:280px}}
@@ -328,7 +349,7 @@ main{display:block;padding-bottom:var(--section-gap)}
 .nlDone .ic{width:32px;height:32px;flex:none}.nlDone strong{display:block}.nlDone span{font-size:var(--fs-body-sm);color:rgba(255,255,255,.85)}
 @supports (corner-shape:squircle){.nlBox,.nlIco,.nlDone,.nlErr{corner-shape:squircle}}
 @media (max-width:1149px){.nlBox{grid-template-columns:auto minmax(0,1fr)}.nlAct{grid-column:1/-1}}
-@media (max-width:599px){.nlBox{grid-template-columns:1fr;padding:24px 20px;border-radius:28px;gap:16px}.nlIco{width:56px;height:56px;border-radius:18px}.nlRow{flex-direction:column}.nlBtn{width:100%;justify-content:center}}
+@media (max-width:599px){.nlBox{grid-template-columns:1fr;padding:24px 20px;border-radius:28px;gap:16px}.nlIco{width:56px;height:56px;border-radius:18px}.nlRow{flex-direction:column}.nlField{flex:none;width:100%;height:52px}.nlBtn{width:100%;justify-content:center;flex:none}}
 """
 
 # ---------- data (ze screenshotů současného webu Daver) ----------
@@ -343,8 +364,14 @@ const USER={name:'Jan Novák',ini:'JN',group:'Velkoobchod'};
 const DATA=__DATA__;
 const CATS=DATA.cats, PRODUCTS=DATA.products, IDS=DATA.ids, CAR=DATA.car;
 const avText=(s)=>s===0?'Na objednávku':(s>5?('Skladem > '+(s>=100?Math.floor(s/50)*50:s)+' ks'):('Skladem '+s+' ks'));
-const card=(p)=>Object.assign({},p,{unit:'ks',av:p.avRaw||avText(p.stock),blue:p.stock===0,max:p.stock,href:p.href||'Detail.dc.html'});
+const card=(p)=>Object.assign({},p,{unit:'ks',av:p.avRaw||avText(p.stock),blue:p.stock===0,max:p.stock,href:p.href||(p.variants?'DetailVariant.dc.html':'Detail.dc.html')});
 const byId=(id)=>PRODUCTS.find((p)=>p.id===id);
+/* Cenová skupina Velkoobchod: přihlášený zákazník má ceny o 2 % nižší */
+const GROUP_DISC=0.02;
+const isAuth=()=>lsGet('AuthV1')==='in';
+const gp=(base)=>isAuth()?Math.round(base*(1-GROUP_DISC)*100)/100:base;
+const applyGroup=()=>{PRODUCTS.forEach((p)=>{if(p.base==null)p.base=p.price;p.price=gp(p.base);});if(window.__AV)window.__AV.forEach((v)=>{if(v.base==null)v.base=v.price;v.price=gp(v.base);});};
+applyGroup(); window.addEventListener('daver-auth',applyGroup); window.addEventListener('storage',applyGroup);
 """
 
 DATA_JS = DATA_JS_T.replace("__DATA__", open(os.path.join(os.path.dirname(__file__), "data.json"), encoding="utf-8").read())
@@ -371,14 +398,15 @@ class Component extends DCLogic {
   this.phStart();
   this.lastY=window.scrollY||0; this.dirAcc=0;
   const hv=document.querySelector('.stickyTop .HeaderView');
-  if(hv&&window.ResizeObserver){this.ro2=new ResizeObserver(()=>document.documentElement.style.setProperty('--hdr-top-h',hv.offsetHeight+'px'));this.ro2.observe(hv);}
+  const hr=document.querySelector('.stickyTop .hdrRow');
+  if(hv&&window.ResizeObserver){this.ro2=new ResizeObserver(()=>{document.documentElement.style.setProperty('--hdr-top-h',hv.offsetHeight+'px');if(hr)document.documentElement.style.setProperty('--hdr-row-h',hr.offsetHeight+'px');});this.ro2.observe(hv);}
   this.onScrollNav=()=>{const y=Math.max(0,window.scrollY||0),d=y-this.lastY;this.lastY=y;if(!d)return;
    const h=document.querySelector('.stickyTop');if(!h)return;
    /* hystereze: směr musí trvat aspoň 24 px, jinak se při zastavení scrollu stav nepřepíná */
    this.dirAcc=(Math.sign(d)===Math.sign(this.dirAcc))?this.dirAcc+d:d;
    const hidden=h.classList.contains('navHidden');
    if(y<=120){if(hidden)h.classList.remove('navHidden');return;}
-   if(!hidden&&this.dirAcc>24&&window.innerWidth>=1000&&!this.state.sugOpen&&!this.state.pop)h.classList.add('navHidden');
+   if(!hidden&&this.dirAcc>24&&(window.innerWidth>=1000||window.innerWidth<820)&&!this.state.drawer&&!this.state.sugOpen&&!this.state.pop)h.classList.add('navHidden');
    else if(hidden&&this.dirAcc<-24)h.classList.remove('navHidden');};
   window.addEventListener('scroll',this.onScrollNav,{passive:true});
   if(this.pageMount)this.pageMount();
@@ -442,7 +470,8 @@ class Component extends DCLogic {
    nlOk:s.nlOk, nlForm:!s.nlOk, nlEmail:s.nlE, nlConsent:s.nlC, nlHasErr:!!s.nlErr, nlErrTxt:s.nlErr, nlInvalid:s.nlErr&&s.nlErr.indexOf('e-mail')>=0?'true':'false',
    nlOnEmail:(e)=>this.setState({nlE:e.target.value,nlErr:''}), nlOnConsent:(e)=>this.setState({nlC:e.target.checked,nlErr:''}),
    nlSubmit:(e)=>{e.preventDefault();const v=s.nlE.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){this.setState({nlErr:'Zadejte platný e-mail, např. jmeno@firma.cz.'});const i=document.getElementById('nlE');if(i)i.focus();return;}if(!s.nlC){this.setState({nlErr:'Pro přihlášení odběru potvrďte souhlas se zpracováním údajů.'});return;}this.setState({nlOk:true,nlE:v,nlErr:''});},
-   q:s.q, onQ:(e)=>this.setState({q:e.target.value,sugOpen:true,sugTop:this.sugTopOf(e)}), onQFocus:(e)=>this.setState({sugOpen:true,sugTop:this.sugTopOf(e)}), sugStyle:'--sugTop:'+(s.sugTop||120)+'px',
+   hasQ:!!s.q, clearQ:(e)=>{this.setState({q:'',sugOpen:false});const i=e.currentTarget.closest('.searchBox');const inp=i&&i.querySelector('input');if(inp)inp.focus();},
+   q:s.q, onQ:(e)=>this.setState({q:e.target.value,sugOpen:true,sugTop:this.sugTopOf(e)}), onQFocus:(e)=>{const st=document.querySelector('.stickyTop');const was=st&&st.classList.contains('navHidden');if(was)st.classList.remove('navHidden');const f=e.target.closest&&e.target.closest('form');this.setState({sugOpen:true,sugTop:this.sugTopOf(e)});if(was&&f)setTimeout(()=>this.setState({sugTop:Math.round(f.getBoundingClientRect().bottom)}),340);}, sugStyle:'--sugTop:'+(s.sugTop||120)+'px',
    qKey:this.esc(()=>this.setState({sugOpen:false})), onSearch:(e)=>{e.preventDefault();},
    sugOpen:s.sugOpen&&q.length>=2, sugHas:found.length>0||cats.length>0, sugNone:found.length===0&&cats.length===0,
    sugProducts:found.slice(0,4).map((p)=>({name:p.name,href:p.href||'Detail.dc.html',img:p.img||'',hasImg:!!p.img,noImg:!p.img,meta:'Kód '+p.code+' · '+(p.avRaw||avText(p.stock)),price:(p.from?'od ':'')+CZK(p.price),
@@ -458,7 +487,7 @@ class Component extends DCLogic {
    drawerKey:this.esc(()=>this.setState({drawer:false})), drawerCats:drawerCats,
    overlayClick:(e)=>{if(e.target===e.currentTarget)this.setState({drawer:false,dlg:null});},
    dlgOpen:!!dl, dlgName:dl?dl.name:'', dlgImg:dl&&dl.img?dl.img:'', dlgHasImg:!!(dl&&dl.img), dlgNoImg:!(dl&&dl.img), dlgCode:dl?dl.code:'', dlgAv:dl?avText(dl.stock):'',
-   dlgQty:s.dlg?s.dlg.qty+' ks':'', dlgPrice:dl?CZK(s.dlg.shades?s.dlg.shades.reduce((a,x)=>a+x.price*x.q,0):dl.price*s.dlg.qty):'', dlgHasShades:!!(s.dlg&&s.dlg.shades), dlgShades:(s.dlg&&s.dlg.shades||[]).map((x)=>({no:x.no,n:x.n,hex:x.hex,q:x.q+' ks',sum:CZK(x.price*x.q)})), dlgShadeTitle:s.dlg&&s.dlg.shades?(s.dlg.shades.length+(s.dlg.shades.length===1?' odstín':(s.dlg.shades.length<5?' odstíny':' odstínů'))):'',
+   dlgQty:s.dlg?s.dlg.qty+' ks':'', dlgPrice:dl?CZK(s.dlg.shades?s.dlg.shades.reduce((a,x)=>a+x.price*x.q,0):dl.price*s.dlg.qty):'', dlgHasShades:!!(s.dlg&&s.dlg.shades), dlgShades:(s.dlg&&s.dlg.shades||[]).map((x)=>({no:x.no,n:x.n,hex:x.hex,img:x.img||'',hasImg:!!x.img,noImg:!x.img,q:x.q+' ks',sum:CZK(x.price*x.q)})), dlgSingle:!(s.dlg&&s.dlg.multi), dlgShLbl:s.dlg&&s.dlg.multi?'Přidané produkty':'Přidané odstíny', dlgShadeTitle:s.dlg&&s.dlg.shades?(s.dlg.multi?(s.dlg.shades.length+(s.dlg.shades.length===1?' produkt':(s.dlg.shades.length<5?' produkty':' produktů'))):(s.dlg.shades.length+(s.dlg.shades.length===1?' odstín':(s.dlg.shades.length<5?' odstíny':' odstínů')))):'',
    dlgSum:'V košíku máte '+count+' ks celkem za '+CZK(total)+' bez DPH',
    closeDlg:()=>this.setState({dlg:null}), dlgKey:this.esc(()=>this.setState({dlg:null})),
    freeMsg:total>=FREE_FROM?'Máte dopravu zdarma.':'Do dopravy zdarma zbývá '+CZK(FREE_FROM-total)+' (zdarma od 1 000 Kč bez DPH)',
@@ -479,7 +508,7 @@ class Component extends DCLogic {
 def search_html(idp):
     return f'''<form class="SimpleSearchView" role="search" onSubmit="{{{{ onSearch }}}}" onKeyDown="{{{{ qKey }}}}">
 <label class="sr" for="{idp}">Hledat v e-shopu</label>
-<div class="searchBox">{I('magnifying-glass')}<input id="{idp}" type="search" autocomplete="off" placeholder="Hledejte název, kód nebo výrobce" value="{{{{ q }}}}" onChange="{{{{ onQ }}}}" onFocus="{{{{ onQFocus }}}}"><button class="btn btn-main searchBtn" type="submit">Hledat</button></div>
+<div class="searchBox">{I('magnifying-glass')}<input id="{idp}" type="search" autocomplete="off" placeholder="Hledejte název, kód nebo výrobce" value="{{{{ q }}}}" onChange="{{{{ onQ }}}}" onFocus="{{{{ onQFocus }}}}"><sc-if value="{{{{ hasQ }}}}" hint-placeholder-val="{{{{ false }}}}"><button class="searchClr" type="button" aria-label="Vymazat hledání" onClick="{{{{ clearQ }}}}">{I('x')}</button></sc-if><button class="btn btn-main searchBtn" type="submit">Hledat</button></div>
 <sc-if value="{{{{ sugOpen }}}}" hint-placeholder-val="{{{{ false }}}}">
 <div class="sug" role="region" aria-label="Návrhy vyhledávání" style="{{{{ sugStyle }}}}">
 <sc-if value="{{{{ sugHas }}}}" hint-placeholder-val="{{{{ true }}}}">
@@ -489,7 +518,7 @@ def search_html(idp):
 <sc-for list="{{{{ sugProducts }}}}" as="s" hint-placeholder-count="3">
 <div class="sugItem"><div class="sugPic"><sc-if value="{{{{ s.hasImg }}}}" hint-placeholder-val="{{{{ true }}}}"><img class="sugImg" src="{{{{ s.img }}}}" alt="" loading="lazy"></sc-if><sc-if value="{{{{ s.noImg }}}}" hint-placeholder-val="{{{{ false }}}}"><div class="ph">[FOTO]</div></sc-if></div><div class="sugTxt"><a href="{{{{ s.href }}}}">{{{{ s.name }}}}</a><div class="sugMeta">{{{{ s.meta }}}}</div></div><div class="sugBuy"><div class="sugPrice">{{{{ s.price }}}}<small>bez DPH</small></div><button class="btn btn-main btn-sm" type="button" onClick="{{{{ s.add }}}}">Koupit</button></div></div>
 </sc-for>
-<a class="sugAll" href="Kategorie.dc.html">{{{{ sugAllTxt }}}}{I('arrow-right')}</a>
+<a class="btn btn-out sugAll" href="Kategorie.dc.html">{{{{ sugAllTxt }}}}{I('caret-right')}</a>
 </div>
 <div>
 <div class="sugH">Kategorie</div>
@@ -511,7 +540,7 @@ HEADER_HTML = f'''<div class="stickyTop dcHeader">
 <div class="container hdrRow">
 <a class="LogoView" href="Main.dc.html" aria-label="Daver – úvodní stránka"><img class="logoImg" src="/_blob/31e51e752116e4c4eaf02fb3d12e760d" alt="" width="167" height="70"></a>
 {search_html('q1')}
-<div class="ContactsView"><a class="ctItem" href="tel:+420775570418" aria-label="Zavolat +420 775 570 418, Po–Pá 9:00–16:00">{I('phone')}<span class="ctTxt"><strong>+420 775 570 418</strong><small>Po–Pá 9:00–16:00</small></span></a><a class="ctItem" href="mailto:daver@daver.cz" aria-label="Napsat e-mail daver@daver.cz">{I('envelope')}<span class="ctTxt"><strong>daver@daver.cz</strong></span></a><a class="ctIcon" href="Kontakt.dc.html" aria-label="Kontakty" title="Kontakty">{I('phone')}</a></div>
+<div class="ContactsView"><a class="ctItem" href="tel:+420775570418" aria-label="Zavolat +420 775 570 418, Po–Pá 9:00–16:00">{I('phone')}<span class="ctTxt"><strong>+420 775 570 418</strong><small>Po–Pá 9:00–16:00</small></span></a><a class="ctItem" href="mailto:daver@daver.cz" aria-label="Napsat e-mail daver@daver.cz">{I('envelope')}<span class="ctTxt"><strong>daver@daver.cz</strong></span></a><a class="ctMail" href="mailto:daver@daver.cz" aria-label="Napsat e-mail daver@daver.cz" title="daver@daver.cz">{I('envelope')}</a><a class="ctIcon" href="Kontakt.dc.html" aria-label="Kontakty" title="Kontakty">{I('phone')}</a></div>
 <div class="popWrap LoginUserView" onKeyDown="{{{{ popKey }}}}">
 <sc-if value="{{{{ notAuth }}}}" hint-placeholder-val="{{{{ true }}}}">
 <button class="hdrBtn" type="button" aria-expanded="{{{{ accExp }}}}" aria-label="Přihlášení" onClick="{{{{ togglePop }}}}">{I('user')}<span class="hdrTxt"><strong>Přihlášení</strong><small>B2B účet</small></span></button>
@@ -572,8 +601,8 @@ DIALOG_HTML = f'''<sc-if value="{{{{ dlgOpen }}}}" hint-placeholder-val="{{{{ fa
 <div class="mdOverlay" onClick="{{{{ overlayClick }}}}" onKeyDown="{{{{ dlgKey }}}}">
 <div class="mdBox dlg BasketResultDialog" role="dialog" aria-modal="true" aria-labelledby="dlgT">
 <div class="dlgHead"><h2 id="dlgT">{I('check-circle')} Přidáno do košíku</h2><button class="iconBtn" type="button" aria-label="Zavřít" onClick="{{{{ closeDlg }}}}">{I('x')}</button></div>
-<div class="dlgProd"><sc-if value="{{{{ dlgHasImg }}}}" hint-placeholder-val="{{{{ true }}}}"><img class="dlgImg" src="{{{{ dlgImg }}}}" alt=""></sc-if><sc-if value="{{{{ dlgNoImg }}}}" hint-placeholder-val="{{{{ false }}}}"><div class="ph">[FOTO]</div></sc-if><div><strong>{{{{ dlgName }}}}</strong><div class="sugMeta">Kód {{{{ dlgCode }}}} · <span class="avOk">{{{{ dlgAv }}}}</span></div><div class="sugMeta">Množství: {{{{ dlgQty }}}}</div></div><div class="priceMain">{{{{ dlgPrice }}}}<div class="priceSub">bez DPH</div></div></div>
-<sc-if value="{{{{ dlgHasShades }}}}" hint-placeholder-val="{{{{ false }}}}"><div class="dlgShades"><div class="dlgShH">Přidané odstíny · {{{{ dlgShadeTitle }}}}</div><ul><sc-for list="{{{{ dlgShades }}}}" as="x" hint-placeholder-count="3"><li><span class="dlgDot" style="background:{{{{ x.hex }}}}"></span><span class="dlgShN">{{{{ x.no }}}} {{{{ x.n }}}}</span><span class="dlgShQ">{{{{ x.q }}}}</span><span class="dlgShP">{{{{ x.sum }}}}</span></li></sc-for></ul></div></sc-if>
+<sc-if value="{{{{ dlgSingle }}}}" hint-placeholder-val="{{{{ true }}}}"><div class="dlgProd"><sc-if value="{{{{ dlgHasImg }}}}" hint-placeholder-val="{{{{ true }}}}"><img class="dlgImg" src="{{{{ dlgImg }}}}" alt=""></sc-if><sc-if value="{{{{ dlgNoImg }}}}" hint-placeholder-val="{{{{ false }}}}"><div class="ph">[FOTO]</div></sc-if><div><strong>{{{{ dlgName }}}}</strong><div class="sugMeta">Kód {{{{ dlgCode }}}} · <span class="avOk">{{{{ dlgAv }}}}</span></div><div class="sugMeta">Množství: {{{{ dlgQty }}}}</div></div><div class="priceMain">{{{{ dlgPrice }}}}<div class="priceSub">bez DPH</div></div></div></sc-if>
+<sc-if value="{{{{ dlgHasShades }}}}" hint-placeholder-val="{{{{ false }}}}"><div class="dlgShades"><div class="dlgShH">{{{{ dlgShLbl }}}} · {{{{ dlgShadeTitle }}}}</div><ul><sc-for list="{{{{ dlgShades }}}}" as="x" hint-placeholder-count="3"><li><sc-if value="{{{{ x.hasImg }}}}" hint-placeholder-val="{{{{ false }}}}"><img class="dlgShImg" src="{{{{ x.img }}}}" alt=""></sc-if><sc-if value="{{{{ x.noImg }}}}" hint-placeholder-val="{{{{ true }}}}"><span class="dlgDot" style="background:{{{{ x.hex }}}}"></span></sc-if><span class="dlgShN">{{{{ x.no }}}} {{{{ x.n }}}}</span><span class="dlgShQ">{{{{ x.q }}}}</span><span class="dlgShP">{{{{ x.sum }}}}</span></li></sc-for></ul></div></sc-if>
 <p class="dlgSum">{{{{ dlgSum }}}}</p>
 <div class="freeBox"><span>{I('truck')}{{{{ freeMsg }}}}</span><progress max="100" value="{{{{ freePct }}}}" aria-label="Postup k dopravě zdarma od 1 000 Kč"></progress></div>
 <div class="dlgAct"><button class="btn btn-out" type="button" onClick="{{{{ closeDlg }}}}">Zpět do obchodu</button><a class="btn btn-main" href="Kosik.dc.html">Objednat zboží</a></div>

@@ -32,7 +32,7 @@
    "x": 3040,
    "y": 0,
    "w": 1440,
-   "h": 3020,
+   "h": 3300,
    "expand": "fill",
    "is_interactive": true,
    "title": "Detail produktu"
@@ -248,6 +248,14 @@
    "expand": "fill",
    "is_interactive": true,
    "title": "Detail – variantní produkt"
+  },
+  "Gallery.dc.html": {
+   "x": 4560,
+   "y": 4200,
+   "w": 720,
+   "h": 620,
+   "title": "Galerie produktu (komponenta)",
+   "is_interactive": true
   }
  },
  "order": [
@@ -279,7 +287,8 @@
   "Kosik.dc.html",
   "Udaje.dc.html",
   "Kontrola.dc.html",
-  "Dekujeme.dc.html"
+  "Dekujeme.dc.html",
+  "Gallery.dc.html"
  ],
  "notes": {
   "r1": {
