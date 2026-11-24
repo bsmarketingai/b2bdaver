@@ -1,5 +1,5 @@
 {
- "_info": "Bloby v canvasu Daver.cz. 'file' = odvozená WebP verze (max 600 px, q82) vytvořená z originálu v 'source' (zip) / 'source_entry'. Při Synchronizuj vygenerovat znovu stejným postupem a ověřit sha256. Hero (assets/hero) a ikony dopravy/plateb (assets/dopravy-platby) jsou v repu uložené přímo. PNG soubory se při zápisu přes most na disk překomprimují (bajty se liší, pixely ne) – u PNG proto ověřovat 'pixel_sha256' (sha256 z RGBA pixelů).",
+ "_info": "Bloby v canvasu Daver.cz. 'file' = odvozená WebP verze (max 600 px, q82) vytvořená z originálu v 'source' (zip) / 'source_entry'. Při Synchronizuj vygenerovat znovu stejným postupem a ověřit sha256. Hero (assets/hero) a ikony dopravy/plateb (assets/dopravy-platby) jsou v repu uložené přímo. PNG soubory se při zápisu přes most na disk překomprimují (bajty se liší, pixely ne) – u PNG (a u WebP, které mají uvedené 'pixel_sha256') proto ověřovat 'pixel_sha256' (sha256 z RGBA pixelů).",
  "/_blob/aee33865f02f71b834821c165a17deb0": {
   "file": "assets/produkty/barvy-media/01-amsterdam-akrylova-barva-120-ml.webp",
   "sha256": "0d7b882a19d9aed8b985afb4ca85fd45d4cc4ea6d4aed076f8bd965697472a44",
@@ -2133,7 +2133,8 @@
   "note": "DEMO fotka galerie (sada tří štětců) – nahradit skutečnou fotografií",
   "used_in": [
    "Detail.dc.html (galerie)"
-  ]
+  ],
+  "pixel_sha256": "1646213dc6e356f32dd841b105b5d992ca9f42950fd790cedcda893120ce776c"
  },
  "/_blob/5006f279fa16e8860d22d7115444542b": {
   "file": "assets/galerie/meyco-stippler-03-detail.webp",
@@ -2144,6 +2145,7 @@
   "note": "DEMO fotka galerie (detail štětiny) – nahradit skutečnou fotografií",
   "used_in": [
    "Detail.dc.html (galerie)"
-  ]
+  ],
+  "pixel_sha256": "fd3e129a3c8f023a90c8eccf46f67cf2b1c352798d1b5f2868c54680147d3ce1"
  }
 }
